@@ -1,0 +1,103 @@
+@import "../../styles/variables";
+
+@keyframes Pulsate-Red {
+  from {background: #CB0101;}
+  50% {background: #960000;}
+  to {background: #CB0101;}
+}
+
+@keyframes Pulsate-Blue {
+  from {background: #0FAEED;}
+  50% {background: #006696;}
+  to {background: #0FAEED;}
+}
+
+@keyframes Pulsate-Green {
+  from {background: #18BC18;}
+  50% {background: #26F526;}
+  to {background: #18BC18;}
+}
+
+@keyframes Pulsate-Yellow {
+  from {background: #FFD800;}
+  50% {background: #FFE65C;}
+  to {background: #FFD800;}
+}
+
+.vg-base-notification {
+	position: relative;
+	width: 90%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	float: right;
+	margin-bottom: 15px;
+	margin-right:13px;
+	color: #fff;
+	min-height: 70px;
+	box-shadow: 0 3px 11px 0 #c9c9c9;
+}
+
+.vg-base-notification .vgbn-body {
+	display: flex;
+	flex-flow: column;
+}
+
+.vg-base-notification .vgbn-title,
+.vg-base-notification .vgbn-content{
+	margin: 0;
+	margin-top: 0.5px;
+}
+
+.vg-base-notification .vgbn-title {
+	line-height: 30px;
+	font-size: 20px;
+}
+
+.vg-base-notification .vgbn-content {
+	font-size: 14px;
+	line-height: 15px;
+}
+
+.vg-base-notification.has-icon .vgbn-title,
+.vg-base-notification.has-icon .vgbn-content {
+	padding: 0 50px 0 0;
+}
+
+.vg-base-notification.error {
+	background:  #d62f2f;
+}
+.vg-base-notification.success {
+	background: #76dd55;
+}
+.vg-base-notification.warning {
+	background: #FFD800;
+}
+.vg-base-notification.info {
+	background:#0FAEED;
+}
+
+.vg-base-notification.error.blink {
+	animation: Pulsate-Red 4s linear 1s infinite;
+}
+.vg-base-notification.success.blink {
+	animation: Pulsate-Green 4s linear 1s infinite;
+}
+.vg-base-notification.warning.blink {
+	animation: Pulsate-Yellow 4s linear 1s infinite;
+}
+.vg-base-notification.info.blink {
+	animation: Pulsate-Blue 4s linear 1s infinite;
+}
+
+.vg-base-notification.warning div .vgbn-title,
+.vg-base-notification.warning div .vgbn-content,
+.vg-base-notification.warning div .vgbn-html {
+	color: #B77F00;
+}
+
+.close_icon {
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+}

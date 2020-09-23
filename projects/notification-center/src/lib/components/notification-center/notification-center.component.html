@@ -1,0 +1,17 @@
+<div *ngIf="notifications.length > 0" class="vg-base-notification-wrapper" [ngClass]="position">
+	<div class="notification-center_buttons">
+    <b2p-button *ngIf="hasTouchedNotifications(notificationType.Error)" [config]="errorButton" class="notification-center_button" (click)="onToggleNotification(notificationType.Error)"></b2p-button>
+    <b2p-button *ngIf="hasTouchedNotifications(notificationType.Warning)" [config]="warningButton" class="notification-center_button" (click)="onToggleNotification(notificationType.Warning)"></b2p-button>
+    <b2p-button *ngIf="hasTouchedNotifications(notificationType.Info)" [config]="infoButton" class="notification-center_button" (click)="onToggleNotification(notificationType.Info)"></b2p-button>
+	</div>
+	<div *ngIf="getNotificationToShow().length !== 0" class="notification-wrapper">
+		<span *ngIf="getMinimizeButtonColor() !== 'success'" class="minimize" (click)="onMinimize()">
+			<!-- To do: The color needs tob be the same as the message -->
+			<div name="up" size="lg3" [ngClass]="getMinimizeButtonColor()" [innerHTML]="upIcons"></div>
+		</span>
+		<div class="notifications-container hide-scrollbars">
+			<b2p-base-notification *ngFor="let a of getNotificationToShow(); let i = index" [item]="a"  [maxLength]="maxLength" [animate]="animate" [position]="i">
+			</b2p-base-notification>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,89 @@
+.vg-base-notification-wrapper {
+	position: fixed;
+	width: 300px;
+	z-index: 1000;
+	margin-right: -2px;
+
+}
+
+.vg-base-notification-wrapper.left {
+	left: 30px;
+}
+
+.vg-base-notification-wrapper.top {
+	top: 80px
+}
+
+.vg-base-notification-wrapper.right {
+	right: 30px;
+}
+
+.vg-base-notification-wrapper.bottom {
+	bottom: 20px;
+}
+
+.vg-base-notification-wrapper.center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.vg-base-notification-wrapper.middle {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.vg-base-notification-wrapper.middle.center {
+	transform: translate(-50%, -50%);
+}
+
+.notification-center_buttons {
+	text-align: end;
+	margin-right: 11px;
+}
+
+.notification-center_button {
+	margin-left: 8px;
+	border-radius: 3px;
+	box-shadow: 0 3px 11px 0 #c9c9c9;
+}
+
+
+
+.notification-wrapper {
+	position: absolute;
+	width: 300px;
+	top: 73px;
+	margin-right: 10px;
+}
+
+.notifications-container {
+	position: relative;
+	top: 33px;
+	max-height: calc(100vh - 183px);
+	overflow-y: auto;
+
+}
+
+.minimize {
+	position: absolute;
+	right: 120px;
+	cursor: pointer;
+
+}
+
+.hide-scrollbars {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE 10+ */
+	&::-webkit-scrollbar {
+		width: 0px;
+		background: transparent; /* Chrome/Safari/Webkit */
+	}
+}
+
+@media (max-width: 340px) {
+	.vg-base-notification-wrapper {
+		width: auto;
+		left: 30px;
+		right: 30px;
+	}
+}

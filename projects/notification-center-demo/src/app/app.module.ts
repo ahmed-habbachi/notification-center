@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NotificationCenterModule } from 'notification-center';
-
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotificationCenterModule } from 'dist/notification-center';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    NotificationCenterModule
+    BrowserAnimationsModule,
+    NotificationCenterModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

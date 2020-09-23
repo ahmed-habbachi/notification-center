@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve notification-center-demo",
     "lib:build": "ng build notification-center",
-    "build": "ng build",
+    "demo:build": "ng build notification-center-demo",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

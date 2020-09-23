@@ -1,0 +1,126 @@
+:host {
+	display: inline-block;
+	height: 36px;
+}
+
+.ui-button {
+	display: inline-block;
+	position: relative;
+	min-width: 36px;
+	height: 36px;
+	font-size: .75rem;
+	line-height: 20px;
+	text-transform: uppercase;
+	outline: none !important;
+
+	.ui-button__label {
+		padding: 0 12px 0 6px;
+	}
+
+	.ui-button__icon {
+		font-size: .875rem;
+		padding-top: 6px;
+  }
+}
+
+.ui-button.ui-button--danger {
+  background: #d62f2f;
+}
+.ui-button.ui-button--success {
+  background: #76dd55;
+}
+.ui-button.ui-button--warning {
+  background:#FFD800;
+}
+.ui-button.ui-button--info {
+  background: #0FAEED;
+}
+
+.ui-button.ui-button--icon {
+	background: none;
+	border: none;
+}
+
+.ui-button.ui-button--lined {
+	background: none;
+	border-radius: 4px;
+}
+
+.ui-button.ui-button--solid {
+	border: none;
+	border-radius: 4px;
+}
+
+.notification-badge {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	padding: 0 6px;
+	width: auto;
+	height: 20px;
+	//font-size: .5625rem;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #ffffff;
+	background: #ed6b06;
+	border-radius: 50px;
+
+
+}
+
+.wiggle {
+	&-1, &-2 {
+
+		transform: translate3d(0, 0, 0);
+		backface-visibility: hidden;
+		perspective: 1000px;
+
+	}
+
+	&-1 {
+		animation: wiggle1 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	}
+
+	&-2 {
+		animation: wiggle2 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	}
+}
+
+@keyframes wiggle1 {
+
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%, 60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes wiggle2 {
+
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%, 60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}

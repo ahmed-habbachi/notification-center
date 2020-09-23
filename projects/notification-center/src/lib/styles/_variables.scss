@@ -1,0 +1,38 @@
+$b2p-blue: #008bc5;
+$b2p-dark-blue: #173447;
+$b2p-pale-blue: #d9effd;
+$b2p-white: #ffffff;
+$b2p-black: #000000;
+$b2p-dark-gray: #3c3c3c;
+$b2p-fon-orange: #ed6b06;
+$b2p-medium-blue: #006ba8;
+$b2p-light-blue: #b7e2fa;
+$b2p-medium-gray: #545454;
+$b2p-gray: #b2b2b2;
+$b2p-light-gray: #ededed;
+$b2p-danger: #d62f2f;
+$b2p-green: #76dd55;
+$b2p-success: #18BC18;
+$b2p-warning: #FFD800;
+$b2p-info: #0FAEED;
+
+$theme-colors: (
+  'blue-pale': $b2p-pale-blue,
+	'blue-light': $b2p-light-blue,
+	'blue-medium': $b2p-medium-blue,
+	'blue-dark': $b2p-dark-blue,
+	'black': $b2p-black,
+	'danger': $b2p-danger,
+	'error': $b2p-danger,
+	'gray-light': $b2p-light-gray,
+	'gray-regular': $b2p-gray,
+	'gray-medium': $b2p-medium-gray,
+	'gray-dark': $b2p-dark-gray,
+	'info': $b2p-info,
+	'primary': $b2p-blue,
+  'secondary': $b2p-fon-orange,
+	'special-green': $b2p-green,
+	'success': $b2p-success,
+	'warning': $b2p-warning,
+	'white': $b2p-white,
+);

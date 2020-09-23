@@ -1,0 +1,20 @@
+<div class="vg-base-notification" [@enterLeave]="item.state" [ngClass]="{
+            'error': item.type === 'error',
+            'warning': item.type === 'warning',
+            'success': item.type === 'success',
+            'info': item.type === 'info',
+						'blink': !item.isTouched
+        }">
+	<span (click)="onClose()">
+		<div class="icon close_icon" [ngClass]="item.type === 'warning' ? 'black' : 'white'" [innerHTML]="closeIcons"></div>
+	</span>
+	<div class="vgbn-body">
+		<div class="vgbn-title">
+			<div class="vgbn-title" [innerHTML]="title"></div>
+		</div>
+		<div class="vgbn-content">
+			<div class="vgbn-content" [innerHTML]="content"></div>
+		</div>
+	</div>
+
+</div>
