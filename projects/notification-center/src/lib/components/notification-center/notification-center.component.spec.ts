@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
 import {NotificationCenterComponent} from './notification-center.component';
-import {StubVgBaseNotificationComponent} from '../base-notification/base-notification.component.stub';
+import {StubBaseNotificationComponent} from '../base-notification/base-notification.component.stub';
 import {NotificationCenterService} from '../../notification-center.service';
 import {OPTIONS, optionsFactory} from '../../notification-center.module';
 import {Notification} from '../../types/notification.type';
@@ -23,10 +23,10 @@ describe('NotificationCenterComponent', () => {
     destroyedOn: new Date()
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [],
-      declarations: [StubVgBaseNotificationComponent, NotificationCenterComponent],
+      declarations: [StubBaseNotificationComponent, NotificationCenterComponent],
       providers: [NotificationCenterService,
         {
           provide: OPTIONS,

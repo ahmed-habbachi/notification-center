@@ -1,7 +1,7 @@
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {DEFAULT_ICONS} from '../../../public-api';
+import {DEFAULT_ICONS} from '../../constants/default-icons.const';
 import {NotificationCenterService} from '../../notification-center.service';
 import {NotificationAnimationType} from '../../types/notification-animation-type.enum';
 import {NotificationType} from '../../types/notification-type.enum';

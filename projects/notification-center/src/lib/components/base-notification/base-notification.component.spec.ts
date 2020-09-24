@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
 import SpyObj = jasmine.SpyObj;
 import {BaseNotificationComponent} from './base-notification.component';
@@ -25,11 +25,12 @@ describe('BaseNotificationComponent', () => {
     destroyedOn: new Date()
   };
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule],
       declarations: [BaseNotificationComponent],
-      providers: [NotificationCenterService,
+      providers: [
+        NotificationCenterService,
         {
           provide: OPTIONS,
           useValue: {}
@@ -42,7 +43,7 @@ describe('BaseNotificationComponent', () => {
     })
       .compileComponents();
     sanitizer = TestBed.inject(DomSanitizer);
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BaseNotificationComponent);

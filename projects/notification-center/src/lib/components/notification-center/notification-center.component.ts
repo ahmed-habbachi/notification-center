@@ -17,7 +17,7 @@ import {NotificationCenterService} from '../../notification-center.service';
 import {NotificationType} from '../../types/notification-type.enum';
 import {NotificationEvent} from '../../types/notification-event.type';
 import {Color} from '../../types/color.type';
-import {DEFAULT_ICONS} from '../../../public-api';
+import {DEFAULT_ICONS} from '../../constants/default-icons.const';
 import {DomSanitizer} from '@angular/platform-browser';
 import {UiButtonConfig, UI_BUTTON_ICON_STYLE, UI_BUTTON_STYLES, UI_BUTTON_THEMES, UI_BUTTON_VARIANTS} from '../button/button.component';
 

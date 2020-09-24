@@ -9,7 +9,7 @@ import {Notification} from '../../types/notification.type';
   styleUrls: ['./base-notification.component.scss']
 })
 
-export class StubVgBaseNotificationComponent implements OnInit, OnDestroy {
+export class StubBaseNotificationComponent implements OnInit, OnDestroy {
 
   @Input() position: number;
   @Input() maxLength: number;

@@ -5,9 +5,7 @@ import {NotificationEvent} from './types/notification-event.type';
 import {NotificationType} from './types/notification-type.enum';
 import {Notification} from './types/notification.type';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class NotificationCenterService {
 
   emitter = new Subject<NotificationEvent>();
