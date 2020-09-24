@@ -1,24 +1,79 @@
-# NotificationCenter
+# B2P-Notification-Center
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+Credits:
+> This library is heavily inspired and a re-write of [Angular2-Notifications](https://github.com/flauc/angular2-notifications), started with some tweeks that a client needed and ends up changing a lot of principals of the original project.
 
-## Code scaffolding
+[![NPM Version](https://img.shields.io/npm/v/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
+[![NPM Downloads](https://img.shields.io/npm/dt/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
 
-Run `ng generate component component-name --project notification-center` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project notification-center`.
-> Note: Don't forget to add `--project notification-center` or else it will be added to the default project in your `angular.json` file. 
+## Setup
 
-## Build
+Install the library
 
-Run `ng build notification-center` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+npm i b2p-notification-center
+```
 
-## Publishing
+Import the `NotificationCenterModule` in to your root `AppModule`
 
-After building your library with `ng build notification-center`, go to the dist folder `cd dist/notification-center` and run `npm publish`.
+```ts
+import { NotificationCenterModule } from 'b2p-notification-center';
 
-## Running unit tests
+@NgModule({
+    imports: [
+        BrowserModule,
+        // Animations need to be imported in to your project to use the library
+        BrowserAnimationsModule,
+        NotificationCenterModule.forRoot()
+    ],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng test notification-center` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add the NotificationCenterModule in to the component where you want to use the notifications. Or in your top level component for use in child components.
 
-## Further help
+```js
+...
+template: '<b2p-notification-center></b2p-notification-center>'
+...
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You will also need to use the NotificationsService in your component to create or remove the notifications.
+
+```js
+...
+constructor( private notificationservice: NotificationCenterService ) {}
+...
+public addNotification(notificationType: NotificationType): void {
+    switch (notificationType) {
+      case NotificationType.Error:
+        this.notificationservice.error('', 'Test Error');
+        break;
+      case NotificationType.Warning:
+        this.notificationservice.warning('', 'Test Warning');
+        break;
+      case NotificationType.Info:
+        this.notificationservice.info('', 'Test Info');
+        break;
+      default:
+        this.notificationservice.success('', 'Test Success');
+        break;
+    }
+}
+...
+```
+
+## Demo Project
+
+In [github project repo](https://github.com/Ahmed-Habbachi/notification-center) you will find a project attached to the library, in order to run it locally follow these commands:
+
+```shell
+ng build notification-center #npm script 'build:lib'
+ng serve notification-center-demo #npm script 'start'
+```
+
+## License
+
+MIT © [Ahmed HABBACHI](http://ahmed-develop.net/)
