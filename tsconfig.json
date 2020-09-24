@@ -19,6 +19,10 @@
       "notification-center": [
         "dist/notification-center/notification-center",
         "dist/notification-center"
+      ],
+      "b2p-notification-center": [
+        "dist/b2p-notification-center/b2p-notification-center",
+        "dist/b2p-notification-center"
       ]
     }
   }

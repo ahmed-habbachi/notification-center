@@ -46,24 +46,30 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run:  |
+
+      - name: Install Packages 🔧
+        run: |
           npm ci
+
+      - name: Build demo 🔧
+        run: |
           npm run build:lib
 
-      - name: Install and Build demo 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Npm link
         run: |
-          npm install
-          npm run build:lib
+          cd /home/runner/work/notification-center/notification-center/dist/b2p-notification-center
+          npm link
+          cd ../..
+          npm link b2p-notification-center
+
+      - name: Build demo 🔧
+        run: |
           npm run build:demo
-      - run: |
-          cd /home/runner/work/notification-center/notification-center/dist
-          mv notification-center-demo/* .
-          rmdir notification-center-demo
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+          FOLDER: dist/notification-center-demo # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NotificationType } from 'dist/notification-center';
-import { NotificationCenterService } from 'dist/notification-center';
+import { NotificationType } from 'b2p-notification-center';
+import { NotificationCenterService } from 'b2p-notification-center';
 
 @Component({
   selector: 'app-root',

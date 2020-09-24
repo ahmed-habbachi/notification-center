@@ -1,27 +1,101 @@
-# NotificationCenter
+# B2P-Notification-Center
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+Credits:
+> This library is heavily inspired and a re-write of [Angular2-Notifications](https://github.com/flauc/angular2-notifications), started with some tweaks that a client needed and ends up changing a lot of principals of the original project.
 
-## Development server
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Ahmed-Habbachi/notification-center/Build%20and%20Deploy)
+[![NPM Version](https://img.shields.io/npm/v/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
+[![NPM Downloads](https://img.shields.io/npm/dt/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+This demo is provided by github pages as a result of a workflow (ci/cd deploy) means it is possible that i make a mistake and break it all [demo](https://ahmed-habbachi.github.io/notification-center/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+Install the library
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+npm i b2p-notification-center
+```
 
-## Running unit tests
+Import the `NotificationCenterModule` in to your root `AppModule`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+import { NotificationCenterModule } from 'b2p-notification-center';
 
-## Running end-to-end tests
+@NgModule({
+    imports: [
+        BrowserModule,
+        // Animations need to be imported in to your project to use the library
+        BrowserAnimationsModule,
+        NotificationCenterModule.forRoot()
+    ],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Add the NotificationCenterModule in to the component where you want to use the notifications. Or in your top level component for use in child components.
 
-## Further help
+```js
+...
+template: '<b2p-notification-center></b2p-notification-center>'
+...
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You will also need to use the NotificationsService in your component to create notifications.
+
+```js
+...
+constructor( private notificationservice: NotificationCenterService ) {}
+...
+public addNotification(notificationType: NotificationType): void {
+    switch (notificationType) {
+      case NotificationType.Error:
+        this.notificationservice.error('', 'Test Error');
+        break;
+      case NotificationType.Warning:
+        this.notificationservice.warning('', 'Test Warning');
+        break;
+      case NotificationType.Info:
+        this.notificationservice.info('', 'Test Info');
+        break;
+      default:
+        this.notificationservice.success('', 'Test Success');
+        break;
+    }
+}
+...
+```
+
+## Run demo project locally
+
+In [github project repo](https://github.com/Ahmed-Habbachi/notification-center) you will find a project attached to the library, in order to run it locally follow these commands:
+
+```shell
+ng build b2p-notification-center #npm script 'build:lib'
+cd dist/b2p-notification-center
+npm link
+cd ../..
+npm link b2p-notification-center
+ng serve notification-center-demo #npm script 'start'
+```
+
+### Bonus
+
+to be able to work on the library and test live without interruption:
+
+```shell
+cd my-lib
+ng build b2p-notification-center --watch
+cd my-app
+ng serve notification-center-demo
+```
+
+That's it
+
+## License
+
+MIT © [Ahmed HABBACHI](http://ahmed-develop.net/)
