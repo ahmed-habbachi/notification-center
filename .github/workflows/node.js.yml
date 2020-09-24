@@ -26,8 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build:lib
-    - run: npm lint
-    - run: npm test
+    - run: npm run lint
 
   build-and-deploy:
 
@@ -43,12 +42,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: actions/checkout@v2
       - name: Build library
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        run:  |
+      - run:  |
           npm ci
           npm run build:lib
 
@@ -57,12 +55,15 @@ jobs:
           npm install
           npm run build:lib
           npm run build:demo
-          mv ../dist/notification-center-demo ../
+      - run: |
+          cd /home/runner/work/notification-center/notification-center/dist
+          mv notification-center-demo/* .
+          rmdir notification-center-demo
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.1
         with:
-          GITHUB_TOKEN: ${{ secrets.NC_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
