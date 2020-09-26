@@ -310,14 +310,13 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
         upIconColor = Color.DANGER;
       }
     }
-    console.log(upIconColor);
     return this.domSanitizer.bypassSecurityTrustHtml(getIcon('up', this.getColorInHex(upIconColor)));
   }
 
   getColorInHex(colorName: string): string {
     switch (colorName) {
       case 'danger':
-        return ' #CB0101';
+        return '#CB0101';
       case 'warning':
         return '#FFD800';
       case 'info':

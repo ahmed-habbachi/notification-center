@@ -1,6 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {SafeHtml} from '@angular/platform-browser';
 import {Subject} from 'rxjs';
+import {NotificationOptions} from './types/notification-options.type';
 import {NotificationEvent} from './types/notification-event.type';
 import {NotificationType} from './types/notification-type.enum';
 import {Notification} from './types/notification.type';

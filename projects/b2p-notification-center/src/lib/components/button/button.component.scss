@@ -1,4 +1,6 @@
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -16,8 +18,7 @@
 	line-height: 20px;
 	text-transform: uppercase;
   outline: none !important;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 2px 8px 2px 8px;
 
 	.ui-button__label {
 		padding: 0 12px 0 4px;
@@ -77,8 +78,7 @@
 .ui-button.active {
   background: transparent;
   border-radius: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 0px 6px 0px 6px;
   border-width: 2px;
   border-style: solid;
 }
