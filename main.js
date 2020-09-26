@@ -407,7 +407,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 /*!**********************************************************************************************************************************!*\
   !*** /home/runner/work/notification-center/notification-center/dist/b2p-notification-center/fesm2015/b2p-notification-center.js ***!
   \**********************************************************************************************************************************/
-/*! exports provided: Color, DEFAULT_ICONS, DEFAULT_OPTIONS, NotificationAnimationType, NotificationCenterComponent, NotificationCenterModule, NotificationCenterService, NotificationType, OPTIONS, optionsFactory */
+/*! exports provided: Color, DEFAULT_ICONS, DEFAULT_OPTIONS, NotificationAnimationType, NotificationCenterComponent, NotificationCenterModule, NotificationCenterService, NotificationType, OPTIONS, getIcon, optionsFactory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -421,6 +421,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterService", function() { return NotificationCenterService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationType", function() { return NotificationType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OPTIONS", function() { return OPTIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIcon", function() { return getIcon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optionsFactory", function() { return optionsFactory; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "EM62");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "+kfY");
@@ -435,18 +436,18 @@ __webpack_require__.r(__webpack_exports__);
 
 const DEFAULT_ICONS = {
     alert: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="bi bi-alarm" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
     </svg>
   `,
     error: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
       <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
     </svg>
   `,
     info: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="bi bi-info-circle" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
       <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
       <circle cx="8" cy="4.5" r="1"/>
@@ -459,7 +460,7 @@ const DEFAULT_ICONS = {
     </svg>
   `,
     warning: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="bi bi-exclamation-triangle" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
       <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
     </svg>
@@ -476,6 +477,60 @@ const DEFAULT_ICONS = {
     </svg>
   `
 };
+function getIcon(icon, color) {
+    switch (icon) {
+        case 'alert':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+      </svg>
+    `;
+        case 'error':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+      </svg>
+      `;
+        case 'info':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+        <circle cx="8" cy="4.5" r="1"/>
+      </svg>
+      `;
+        case 'success':
+            return `
+      <svg class="b2p-notification-svg" xmlns="http://www.w3.org/2000/svg" fill="${color}" height="24" viewBox="0 0 16 16" width="24">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+      </svg>
+      `;
+        case 'warning':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+        <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+      </svg>
+      `;
+        case 'close':
+            return `
+      <svg class="b2p-notification-svg" width="24" height="24" viewBox="0 0 16 16" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      `;
+        case 'up':
+            return `
+      <svg class="b2p-notification-svg" width="3em" height="3em" viewBox="0 0 16 16" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+      </svg>
+      `;
+        default:
+            return '';
+    }
+}
 
 var NotificationAnimationType;
 (function (NotificationAnimationType) {
@@ -584,7 +639,7 @@ NotificationCenterService.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE
             }] }]; }, null); })();
 
 function B2PButtonComponent_span_1_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "span", 4);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "span", 5);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
 } if (rf & 2) {
@@ -592,14 +647,27 @@ function B2PButtonComponent_span_1_Template(rf, ctx) { if (rf & 1) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r0.config.buttonLabel);
 } }
+function B2PButtonComponent_i_2_Template(rf, ctx) { if (rf & 1) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "i");
+} if (rf & 2) {
+    const ctx_r1 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate2"])("ui-button__icon ", ctx_r1.currentIconStyle, " fa-", ctx_r1.currentIconName, "");
+} }
 function B2PButtonComponent_div_3_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 5);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "div", 6);
+} if (rf & 2) {
+    const ctx_r2 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"])("ui-button__icon ", ctx_r2.currentIconStyle, "");
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx_r2.currentIconSVG, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+} }
+function B2PButtonComponent_div_4_Template(rf, ctx) { if (rf & 1) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 7);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
 } if (rf & 2) {
-    const ctx_r1 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+    const ctx_r3 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r1.badged);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r3.badged);
 } }
 const _c0 = function (a0, a1, a2) { return { "active": a0, "wiggle-1": a1, "wiggle-2": a2 }; };
 class B2PButtonComponent {
@@ -607,6 +675,14 @@ class B2PButtonComponent {
     constructor(domSanitizer) {
         this.domSanitizer = domSanitizer;
         this.active = false;
+    }
+    get isActive() {
+        return this.active;
+    }
+    set isActive(value) {
+        if (value !== this.active) {
+            this.toggleStatus({ propagate: false });
+        }
     }
     // GETTER / SETTER ////////////////////////////////////////////////////////////////////////////////////////////////
     get isToggleButton() {
@@ -621,9 +697,11 @@ class B2PButtonComponent {
         this.config.tooltipTheme = this.config.tooltipTheme || this.config.buttonTheme;
         this.config.iconStyleActive = this.config.iconStyleActive || this.config.iconStyle;
         this.config.iconNameActive = this.config.iconNameActive || this.config.iconName;
+        this.config.iconSVGActive = this.config.iconSVGActive || this.config.iconSVG;
         this.config.tooltipActive = this.config.tooltipActive || this.config.tooltip;
         this.currentIconStyle = this.config.iconStyle;
-        this.currentIconName = this.domSanitizer.bypassSecurityTrustHtml(this.config.iconName);
+        this.currentIconName = this.config.iconName;
+        this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.config.iconSVG);
         this.currentTooltip = this.config.tooltip;
         if (this.config.active$ === undefined) {
             this.config.active$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
@@ -646,7 +724,8 @@ class B2PButtonComponent {
     toggleStatus({ propagate = true } = {}) {
         this.active = !this.active;
         this.currentIconStyle = this.active ? this.config.iconStyleActive : this.config.iconStyle;
-        this.currentIconName = this.domSanitizer.bypassSecurityTrustHtml(this.active ? this.config.iconNameActive : this.config.iconName);
+        this.currentIconName = this.active ? this.config.iconNameActive : this.config.iconName;
+        this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.active ? this.config.iconSVGActive : this.config.iconSVG);
         this.currentTooltip = this.active ? this.config.tooltipActive : this.config.tooltip;
         if (propagate) {
             this.config.active$.next(this.active);
@@ -676,24 +755,26 @@ class B2PButtonComponent {
     }
 }
 B2PButtonComponent.ɵfac = function B2PButtonComponent_Factory(t) { return new (t || B2PButtonComponent)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"])); };
-B2PButtonComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: B2PButtonComponent, selectors: [["b2p-button"]], inputs: { config: "config", badged: "badged" }, decls: 4, vars: 16, consts: [[3, "ngClass", "click"], ["class", "ui-button__label", 4, "ngIf"], [3, "innerHTML"], ["class", "notification-badge", 4, "ngIf"], [1, "ui-button__label"], [1, "notification-badge"]], template: function B2PButtonComponent_Template(rf, ctx) { if (rf & 1) {
+B2PButtonComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: B2PButtonComponent, selectors: [["b2p-button"]], inputs: { config: "config", badged: "badged", isActive: "isActive" }, decls: 5, vars: 14, consts: [[3, "ngClass", "click"], ["class", "ui-button__label", 4, "ngIf"], [3, "class", 4, "ngIf"], [3, "class", "innerHTML", 4, "ngIf"], ["class", "notification-badge", 4, "ngIf"], [1, "ui-button__label"], [3, "innerHTML"], [1, "notification-badge"]], template: function B2PButtonComponent_Template(rf, ctx) { if (rf & 1) {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "button", 0);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function B2PButtonComponent_Template_button_click_0_listener() { return ctx.onClick(); });
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, B2PButtonComponent_span_1_Template, 2, 1, "span", 1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(2, "div", 2);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, B2PButtonComponent_div_3_Template, 2, 1, "div", 3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, B2PButtonComponent_i_2_Template, 1, 4, "i", 2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, B2PButtonComponent_div_3_Template, 1, 4, "div", 3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(4, B2PButtonComponent_div_4_Template, 2, 1, "div", 4);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
     } if (rf & 2) {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate3"])("ui-button ui-button--", ctx.config.buttonVariant, " ui-button--", ctx.config.buttonTheme, " ui-button--", ctx.config.buttonStyle, "");
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction3"])(12, _c0, ctx.active, ctx.wiggle(0), ctx.wiggle(1)));
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction3"])(10, _c0, ctx.active, ctx.wiggle(0), ctx.wiggle(1)));
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.config.buttonLabel);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"])("ui-button__icon ", ctx.currentIconStyle, "");
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx.currentIconName, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.currentIconName);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", !ctx.currentIconName && ctx.currentIconSVG);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.badged && !ctx.active);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: [".ui-button[_ngcontent-%COMP%], [_nghost-%COMP%]{display:inline-block;height:36px}.ui-button[_ngcontent-%COMP%]{font-size:.75rem;line-height:20px;min-width:36px;outline:none!important;position:relative;text-transform:uppercase}.ui-button[_ngcontent-%COMP%]   .ui-button__label[_ngcontent-%COMP%]{padding:0 12px 0 6px}.ui-button[_ngcontent-%COMP%]   .ui-button__icon[_ngcontent-%COMP%]{font-size:.875rem;padding-top:6px}.ui-button.ui-button--danger[_ngcontent-%COMP%]{background:#d62f2f}.ui-button.ui-button--success[_ngcontent-%COMP%]{background:#76dd55}.ui-button.ui-button--warning[_ngcontent-%COMP%]{background:#ffd800}.ui-button.ui-button--info[_ngcontent-%COMP%]{background:#0faeed}.ui-button.ui-button--icon[_ngcontent-%COMP%]{background:none;border:none}.ui-button.ui-button--lined[_ngcontent-%COMP%]{background:none;border-radius:4px}.ui-button.ui-button--solid[_ngcontent-%COMP%]{border:none;border-radius:4px}.notification-badge[_ngcontent-%COMP%]{background:#ed6b06;border-radius:50px;color:#fff;font-size:14px;font-weight:700;height:20px;line-height:20px;padding:0 6px;position:absolute;right:-4px;top:-4px;width:auto}.wiggle-1[_ngcontent-%COMP%], .wiggle-2[_ngcontent-%COMP%]{-webkit-backface-visibility:hidden;backface-visibility:hidden;perspective:1000px;transform:translateZ(0)}.wiggle-1[_ngcontent-%COMP%]{-webkit-animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both}.wiggle-2[_ngcontent-%COMP%]{-webkit-animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both}@-webkit-keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@-webkit-keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: ["*[_ngcontent-%COMP%], [_ngcontent-%COMP%]:after, [_ngcontent-%COMP%]:before{box-sizing:border-box}.ui-button[_ngcontent-%COMP%], [_nghost-%COMP%]{display:inline-block;height:36px}.ui-button[_ngcontent-%COMP%]{font-size:.75rem;line-height:20px;min-width:36px;outline:none!important;padding-left:8px;padding-right:8px;position:relative;text-transform:uppercase}.ui-button[_ngcontent-%COMP%]   .ui-button__label[_ngcontent-%COMP%]{padding:0 12px 0 4px}.ui-button[_ngcontent-%COMP%]   .ui-button__icon[_ngcontent-%COMP%]{font-size:.875rem;padding-top:4px}.ui-button.ui-button--icon[_ngcontent-%COMP%]{background:none;border:none}.ui-button.ui-button--lined[_ngcontent-%COMP%]{background:none;border-radius:4px}.ui-button.ui-button--solid[_ngcontent-%COMP%]{border:none;border-radius:4px}.ui-button--solid.ui-button--danger[_ngcontent-%COMP%]{background:#cb0101;border-color:#cb0101}.ui-button--solid.ui-button--success[_ngcontent-%COMP%]{background:#76dd55;border-color:#76dd55}.ui-button--solid.ui-button--warning[_ngcontent-%COMP%]{background:#ffd800;border-color:#ffd800}.ui-button--solid.ui-button--info[_ngcontent-%COMP%]{background:#0faeed;border-color:#0faeed}.ui-button--lined.ui-button--danger[_ngcontent-%COMP%]{color:#cb0101}.ui-button--lined.ui-button--success[_ngcontent-%COMP%]{color:#76dd55}.ui-button--lined.ui-button--warning[_ngcontent-%COMP%]{color:#ffd800}.ui-button--lined.ui-button--info[_ngcontent-%COMP%]{color:#0faeed}.ui-button.active[_ngcontent-%COMP%]{background:transparent;border-radius:4px;border-style:solid;border-width:2px;padding-left:6px;padding-right:6px}.notification-badge[_ngcontent-%COMP%]{background:#ed6b06;border-radius:50px;color:#fff;font-size:14px;font-weight:700;height:20px;line-height:20px;padding:0 6px;position:absolute;right:-4px;top:-4px;width:auto}.wiggle-1[_ngcontent-%COMP%], .wiggle-2[_ngcontent-%COMP%]{-webkit-backface-visibility:hidden;backface-visibility:hidden;perspective:1000px;transform:translateZ(0)}.wiggle-1[_ngcontent-%COMP%]{-webkit-animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both}.wiggle-2[_ngcontent-%COMP%]{-webkit-animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both}@-webkit-keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@-webkit-keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}"] });
 /*@__PURE__*/ (function () { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(B2PButtonComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -704,6 +785,8 @@ B2PButtonComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
     }], function () { return [{ type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }]; }, { config: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], badged: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], isActive: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
 
@@ -791,7 +874,7 @@ BaseNotificationComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx.title, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx.content, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"]], styles: ["@-webkit-keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@-webkit-keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@-webkit-keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@-webkit-keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}@keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}.vg-base-notification{border-radius:5px;box-shadow:0 3px 11px 0 #c9c9c9;box-sizing:border-box;color:#fff;float:right;margin-bottom:15px;margin-right:13px;min-height:70px;padding:10px 20px;position:relative;width:90%}.vg-base-notification .vgbn-body{display:flex;flex-flow:column}.vg-base-notification .vgbn-content,.vg-base-notification .vgbn-title{margin:.5px 0 0}.vg-base-notification .vgbn-title{font-size:20px;line-height:30px}.vg-base-notification .vgbn-content{font-size:14px;line-height:15px}.vg-base-notification.has-icon .vgbn-content,.vg-base-notification.has-icon .vgbn-title{padding:0 50px 0 0}.vg-base-notification.error{background:#d62f2f}.vg-base-notification.success{background:#76dd55}.vg-base-notification.warning{background:#ffd800}.vg-base-notification.info{background:#0faeed}.vg-base-notification.error.blink{-webkit-animation:Pulsate-Red 4s linear 1s infinite;animation:Pulsate-Red 4s linear 1s infinite}.vg-base-notification.success.blink{-webkit-animation:Pulsate-Green 4s linear 1s infinite;animation:Pulsate-Green 4s linear 1s infinite}.vg-base-notification.warning.blink{-webkit-animation:Pulsate-Yellow 4s linear 1s infinite;animation:Pulsate-Yellow 4s linear 1s infinite}.vg-base-notification.info.blink{-webkit-animation:Pulsate-Blue 4s linear 1s infinite;animation:Pulsate-Blue 4s linear 1s infinite}.vg-base-notification.warning div .vgbn-content,.vg-base-notification.warning div .vgbn-html,.vg-base-notification.warning div .vgbn-title{color:#b77f00}.close_icon{cursor:pointer;position:absolute;right:10px}"], encapsulation: 2, data: { animation: [
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"]], styles: ["@-webkit-keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@-webkit-keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@-webkit-keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@-webkit-keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}@keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}.vg-base-notification{border-radius:5px;box-shadow:0 3px 11px 0 #c9c9c9;box-sizing:border-box;color:#fff;float:right;margin-bottom:15px;margin-right:13px;min-height:70px;padding:10px 20px;position:relative;width:90%}.vg-base-notification .vgbn-body{display:flex;flex-flow:column}.vg-base-notification .vgbn-content,.vg-base-notification .vgbn-title{margin:.5px 0 0}.vg-base-notification .vgbn-title{font-size:20px;line-height:30px}.vg-base-notification .vgbn-content{font-size:14px;line-height:15px}.vg-base-notification.has-icon .vgbn-content,.vg-base-notification.has-icon .vgbn-title{padding:0 50px 0 0}.vg-base-notification.error{background:#cb0101}.vg-base-notification.success{background:#76dd55}.vg-base-notification.warning{background:#ffd800}.vg-base-notification.info{background:#0faeed}.vg-base-notification.error.blink{-webkit-animation:Pulsate-Red 4s linear 1s infinite;animation:Pulsate-Red 4s linear 1s infinite}.vg-base-notification.success.blink{-webkit-animation:Pulsate-Green 4s linear 1s infinite;animation:Pulsate-Green 4s linear 1s infinite}.vg-base-notification.warning.blink{-webkit-animation:Pulsate-Yellow 4s linear 1s infinite;animation:Pulsate-Yellow 4s linear 1s infinite}.vg-base-notification.info.blink{-webkit-animation:Pulsate-Blue 4s linear 1s infinite;animation:Pulsate-Blue 4s linear 1s infinite}.vg-base-notification.warning div .vgbn-content,.vg-base-notification.warning div .vgbn-html,.vg-base-notification.warning div .vgbn-title{color:#855d02}.close_icon{cursor:pointer;position:absolute;right:10px}"], encapsulation: 2, data: { animation: [
             Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["trigger"])('enterLeave', [
                 // Fade
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fade', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 })),
@@ -935,7 +1018,7 @@ function NotificationCenterComponent_div_0_b2p_button_2_Template(rf, ctx) { if (
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
 } if (rf & 2) {
     const ctx_r1 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r1.errorButton);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r1.errorButtonConfig)("isActive", !ctx_r1.hasMinimizedNotifications(ctx_r1.notificationType.Error));
 } }
 function NotificationCenterComponent_div_0_b2p_button_3_Template(rf, ctx) { if (rf & 1) {
     const _r8 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
@@ -944,7 +1027,7 @@ function NotificationCenterComponent_div_0_b2p_button_3_Template(rf, ctx) { if (
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
 } if (rf & 2) {
     const ctx_r2 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r2.warningButton);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r2.warningButtonConfig)("isActive", !ctx_r2.hasMinimizedNotifications(ctx_r2.notificationType.Warning));
 } }
 function NotificationCenterComponent_div_0_b2p_button_4_Template(rf, ctx) { if (rf & 1) {
     const _r10 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
@@ -953,7 +1036,7 @@ function NotificationCenterComponent_div_0_b2p_button_4_Template(rf, ctx) { if (
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
 } if (rf & 2) {
     const ctx_r3 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r3.infoButton);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r3.infoButtonConfig)("isActive", !ctx_r3.hasMinimizedNotifications(ctx_r3.notificationType.Info));
 } }
 function NotificationCenterComponent_div_0_div_5_span_1_Template(rf, ctx) { if (rf & 1) {
     const _r14 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
@@ -964,7 +1047,7 @@ function NotificationCenterComponent_div_0_div_5_span_1_Template(rf, ctx) { if (
 } if (rf & 2) {
     const ctx_r11 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", ctx_r11.getMinimizeButtonColor())("innerHTML", ctx_r11.upIcons, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx_r11.getMinimizeIcon(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
 } }
 function NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Template(rf, ctx) { if (rf & 1) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "b2p-base-notification", 12);
@@ -976,7 +1059,7 @@ function NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Templat
 } }
 function NotificationCenterComponent_div_0_div_5_Template(rf, ctx) { if (rf & 1) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 6);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, NotificationCenterComponent_div_0_div_5_span_1_Template, 2, 2, "span", 7);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, NotificationCenterComponent_div_0_div_5_span_1_Template, 2, 1, "span", 7);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "div", 8);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Template, 1, 4, "b2p-base-notification", 9);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
@@ -991,9 +1074,9 @@ function NotificationCenterComponent_div_0_div_5_Template(rf, ctx) { if (rf & 1)
 function NotificationCenterComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 1);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, NotificationCenterComponent_div_0_b2p_button_2_Template, 1, 1, "b2p-button", 3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, NotificationCenterComponent_div_0_b2p_button_3_Template, 1, 1, "b2p-button", 3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(4, NotificationCenterComponent_div_0_b2p_button_4_Template, 1, 1, "b2p-button", 3);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, NotificationCenterComponent_div_0_b2p_button_2_Template, 1, 2, "b2p-button", 3);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, NotificationCenterComponent_div_0_b2p_button_3_Template, 1, 2, "b2p-button", 3);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(4, NotificationCenterComponent_div_0_b2p_button_4_Template, 1, 2, "b2p-button", 3);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(5, NotificationCenterComponent_div_0_div_5_Template, 4, 2, "div", 4);
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
@@ -1019,34 +1102,37 @@ class NotificationCenterComponent {
         this.lastOnBottom = true;
         this.maxStack = 8;
         this.usingComponentOptions = false;
-        this.errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
-        this.warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
-        this.infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
+        // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
+        // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
+        // infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
         this.upIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.up);
         this.notificationType = NotificationType;
         this.notifications = [];
         this.position = ['bottom', 'right'];
         this.maxLength = 0;
         this.animate = NotificationAnimationType.FromRight;
-        this.errorButton = {
+        this.errorButtonConfig = {
             buttonVariant: "toggle" /* TOGGLE */,
             buttonStyle: "solid" /* SOLID */,
             buttonTheme: Color.DANGER,
-            iconName: DEFAULT_ICONS.error,
+            iconSVG: getIcon('error', '#ffffff'),
+            iconSVGActive: getIcon('error', this.getColorInHex(Color.DANGER)),
             iconStyle: "far" /* REGULAR */,
         };
-        this.warningButton = {
+        this.warningButtonConfig = {
             buttonVariant: "toggle" /* TOGGLE */,
             buttonStyle: "solid" /* SOLID */,
             buttonTheme: Color.WARNING,
-            iconName: DEFAULT_ICONS.warning,
+            iconSVG: getIcon('warning', '#ffffff'),
+            iconSVGActive: getIcon('warning', this.getColorInHex(Color.WARNING)),
             iconStyle: "far" /* REGULAR */,
         };
-        this.infoButton = {
+        this.infoButtonConfig = {
             buttonVariant: "toggle" /* TOGGLE */,
             buttonStyle: "solid" /* SOLID */,
             buttonTheme: Color.INFO,
-            iconName: DEFAULT_ICONS.info,
+            iconSVG: getIcon('info', '#ffffff'),
+            iconSVGActive: getIcon('info', this.getColorInHex(Color.INFO)),
             iconStyle: "far" /* REGULAR */,
         };
     }
@@ -1231,9 +1317,49 @@ class NotificationCenterComponent {
         }
         return Color.BLACK;
     }
+    getMinimizeIcon() {
+        let upIconColor = Color.BLACK;
+        const showntypes = this.getShownTypes();
+        if (showntypes.length === 2) {
+            const indexSucess = showntypes.indexOf(NotificationType.Success);
+            if (indexSucess > -1) {
+                showntypes.splice(indexSucess, 1);
+            }
+        }
+        if (showntypes.length === 1) {
+            if (showntypes[0] === NotificationType.Success) {
+                upIconColor = Color.SUCCESS;
+            }
+            else if (showntypes[0] === NotificationType.Info) {
+                upIconColor = Color.INFO;
+            }
+            else if (showntypes[0] === NotificationType.Warning) {
+                upIconColor = Color.WARNING;
+            }
+            else if (showntypes[0] === NotificationType.Error) {
+                upIconColor = Color.DANGER;
+            }
+        }
+        console.log(upIconColor);
+        return this.domSanitizer.bypassSecurityTrustHtml(getIcon('up', this.getColorInHex(upIconColor)));
+    }
+    getColorInHex(colorName) {
+        switch (colorName) {
+            case 'danger':
+                return ' #CB0101';
+            case 'warning':
+                return '#FFD800';
+            case 'info':
+                return '#0FAEED';
+            case 'success':
+                return '#76dd55';
+            default:
+                return '#000000';
+        }
+    }
 }
 NotificationCenterComponent.ɵfac = function NotificationCenterComponent_Factory(t) { return new (t || NotificationCenterComponent)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(NotificationCenterService), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
-NotificationCenterComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: NotificationCenterComponent, selectors: [["b2p-notification-center"]], inputs: { options: "options" }, outputs: { create: "create", destroy: "destroy" }, decls: 1, vars: 1, consts: [["class", "vg-base-notification-wrapper", 3, "ngClass", 4, "ngIf"], [1, "vg-base-notification-wrapper", 3, "ngClass"], [1, "notification-center_buttons"], ["class", "notification-center_button", 3, "config", "click", 4, "ngIf"], ["class", "notification-wrapper", 4, "ngIf"], [1, "notification-center_button", 3, "config", "click"], [1, "notification-wrapper"], ["class", "minimize", 3, "click", 4, "ngIf"], [1, "notifications-container", "hide-scrollbars"], [3, "item", "maxLength", "animate", "position", 4, "ngFor", "ngForOf"], [1, "minimize", 3, "click"], ["name", "up", "size", "lg3", 3, "ngClass", "innerHTML"], [3, "item", "maxLength", "animate", "position"]], template: function NotificationCenterComponent_Template(rf, ctx) { if (rf & 1) {
+NotificationCenterComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: NotificationCenterComponent, selectors: [["b2p-notification-center"]], inputs: { options: "options" }, outputs: { create: "create", destroy: "destroy" }, decls: 1, vars: 1, consts: [["class", "vg-base-notification-wrapper", 3, "ngClass", 4, "ngIf"], [1, "vg-base-notification-wrapper", 3, "ngClass"], [1, "notification-center_buttons"], ["class", "notification-center_button", 3, "config", "isActive", "click", 4, "ngIf"], ["class", "notification-wrapper", 4, "ngIf"], [1, "notification-center_button", 3, "config", "isActive", "click"], [1, "notification-wrapper"], ["class", "minimize", 3, "click", 4, "ngIf"], [1, "notifications-container", "hide-scrollbars"], [3, "item", "maxLength", "animate", "position", 4, "ngFor", "ngForOf"], [1, "minimize", 3, "click"], [3, "innerHTML"], [3, "item", "maxLength", "animate", "position"]], template: function NotificationCenterComponent_Template(rf, ctx) { if (rf & 1) {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(0, NotificationCenterComponent_div_0_Template, 6, 5, "div", 0);
     } if (rf & 2) {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.notifications.length > 0);
