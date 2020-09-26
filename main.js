@@ -40,6 +40,1079 @@ const environment = {
 
 /***/ }),
 
+/***/ "HIqd":
+/*!***********************************************************************************************************************************************!*\
+  !*** /home/runner/work/notification-center/notification-center/dist/b2p-notification-center/__ivy_ngcc__/fesm2015/b2p-notification-center.js ***!
+  \***********************************************************************************************************************************************/
+/*! exports provided: Color, DEFAULT_ICONS, DEFAULT_OPTIONS, NotificationAnimationType, NotificationCenterComponent, NotificationCenterModule, NotificationCenterService, NotificationType, OPTIONS, getIcon, optionsFactory, ɵa, ɵb */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_ICONS", function() { return DEFAULT_ICONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_OPTIONS", function() { return DEFAULT_OPTIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationAnimationType", function() { return NotificationAnimationType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterComponent", function() { return NotificationCenterComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterModule", function() { return NotificationCenterModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterService", function() { return NotificationCenterService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationType", function() { return NotificationType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OPTIONS", function() { return OPTIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIcon", function() { return getIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optionsFactory", function() { return optionsFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return B2PButtonComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return BaseNotificationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "EM62");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "+kfY");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "e4iD");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "2kYt");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/animations */ "f7+R");
+
+
+
+
+
+
+
+
+
+function NotificationCenterComponent_div_0_b2p_button_2_Template(rf, ctx) { if (rf & 1) {
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "b2p-button", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_b2p_button_2_Template_b2p_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r5.onToggleNotification(ctx_r5.notificationType.Error); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r1.errorButtonConfig)("isActive", !ctx_r1.hasMinimizedNotifications(ctx_r1.notificationType.Error));
+} }
+function NotificationCenterComponent_div_0_b2p_button_3_Template(rf, ctx) { if (rf & 1) {
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "b2p-button", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_b2p_button_3_Template_b2p_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r7.onToggleNotification(ctx_r7.notificationType.Warning); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r2.warningButtonConfig)("isActive", !ctx_r2.hasMinimizedNotifications(ctx_r2.notificationType.Warning));
+} }
+function NotificationCenterComponent_div_0_b2p_button_4_Template(rf, ctx) { if (rf & 1) {
+    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "b2p-button", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_b2p_button_4_Template_b2p_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r10); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r9.onToggleNotification(ctx_r9.notificationType.Info); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r3.infoButtonConfig)("isActive", !ctx_r3.hasMinimizedNotifications(ctx_r3.notificationType.Info));
+} }
+function NotificationCenterComponent_div_0_div_5_span_1_Template(rf, ctx) { if (rf & 1) {
+    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_div_5_span_1_Template_span_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14); const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3); return ctx_r13.onMinimize(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx_r11.getMinimizeIcon(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+} }
+function NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "b2p-base-notification", 12);
+} if (rf & 2) {
+    const a_r15 = ctx.$implicit;
+    const i_r16 = ctx.index;
+    const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("item", a_r15)("maxLength", ctx_r12.maxLength)("animate", ctx_r12.animate)("position", i_r16);
+} }
+function NotificationCenterComponent_div_0_div_5_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, NotificationCenterComponent_div_0_div_5_span_1_Template, 2, 1, "span", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Template, 1, 4, "b2p-base-notification", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r4.getMinimizeButtonColor() !== "success");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r4.getNotificationToShow());
+} }
+function NotificationCenterComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, NotificationCenterComponent_div_0_b2p_button_2_Template, 1, 2, "b2p-button", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, NotificationCenterComponent_div_0_b2p_button_3_Template, 1, 2, "b2p-button", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, NotificationCenterComponent_div_0_b2p_button_4_Template, 1, 2, "b2p-button", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, NotificationCenterComponent_div_0_div_5_Template, 4, 2, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx_r0.position);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Error));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Warning));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Info));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.getNotificationToShow().length !== 0);
+} }
+const _c0 = function (a0, a1, a2, a3, a4) { return { "error": a0, "warning": a1, "success": a2, "info": a3, "blink": a4 }; };
+function B2PButtonComponent_span_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.config.buttonLabel);
+} }
+function B2PButtonComponent_i_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "i");
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate2"]("ui-button__icon ", ctx_r1.currentIconStyle, " fa-", ctx_r1.currentIconName, "");
+} }
+function B2PButtonComponent_div_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div", 6);
+} if (rf & 2) {
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("ui-button__icon ", ctx_r2.currentIconStyle, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx_r2.currentIconSVG, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+} }
+function B2PButtonComponent_div_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.badged);
+} }
+const _c1 = function (a0, a1, a2) { return { "active": a0, "wiggle-1": a1, "wiggle-2": a2 }; };
+const DEFAULT_ICONS = {
+    alert: `
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+    </svg>
+  `,
+    error: `
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+    </svg>
+  `,
+    info: `
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+      <circle cx="8" cy="4.5" r="1"/>
+    </svg>
+  `,
+    success: `
+    <svg class="b2p-notification-svg" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="24" viewBox="0 0 16 16" width="24">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+    </svg>
+  `,
+    warning: `
+    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+      <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+    </svg>
+  `,
+    close: `
+    <svg class="b2p-notification-svg" width="24" height="24" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+      <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+  `,
+    up: `
+    <svg class="b2p-notification-svg" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+    </svg>
+  `
+};
+function getIcon(icon, color) {
+    switch (icon) {
+        case 'alert':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+      </svg>
+    `;
+        case 'error':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+      </svg>
+      `;
+        case 'info':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+        <circle cx="8" cy="4.5" r="1"/>
+      </svg>
+      `;
+        case 'success':
+            return `
+      <svg class="b2p-notification-svg" xmlns="http://www.w3.org/2000/svg" fill="${color}" height="24" viewBox="0 0 16 16" width="24">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+      </svg>
+      `;
+        case 'warning':
+            return `
+      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+        <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+      </svg>
+      `;
+        case 'close':
+            return `
+      <svg class="b2p-notification-svg" width="24" height="24" viewBox="0 0 16 16" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      `;
+        case 'up':
+            return `
+      <svg class="b2p-notification-svg" width="3em" height="3em" viewBox="0 0 16 16" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+      </svg>
+      `;
+        default:
+            return '';
+    }
+}
+
+var NotificationAnimationType;
+(function (NotificationAnimationType) {
+    NotificationAnimationType["Fade"] = "fade";
+    NotificationAnimationType["FromTop"] = "fromTop";
+    NotificationAnimationType["FromRight"] = "fromRight";
+    NotificationAnimationType["FromBottom"] = "fromBottom";
+    NotificationAnimationType["FromLeft"] = "fromLeft";
+    NotificationAnimationType["Scale"] = "scale";
+    NotificationAnimationType["Rotate"] = "rotate";
+})(NotificationAnimationType || (NotificationAnimationType = {}));
+
+const DEFAULT_OPTIONS = {
+    position: ['top', 'right'],
+    lastOnBottom: true,
+    maxLength: 0,
+    maxStack: 100,
+    animate: NotificationAnimationType.FromTop
+};
+
+var Color;
+(function (Color) {
+    Color["PRIMARY"] = "primary";
+    Color["SECONDARY"] = "secondary";
+    Color["SUCCESS"] = "success";
+    Color["WARNING"] = "warning";
+    Color["DANGER"] = "danger";
+    Color["INFO"] = "info";
+    Color["WHITE"] = "white";
+    Color["BLACK"] = "black";
+})(Color || (Color = {}));
+
+var NotificationType;
+(function (NotificationType) {
+    NotificationType["Success"] = "success";
+    NotificationType["Error"] = "error";
+    NotificationType["Warning"] = "warning";
+    NotificationType["Info"] = "info";
+})(NotificationType || (NotificationType = {}));
+
+class NotificationCenterService {
+    constructor(globalOptions) {
+        this.globalOptions = globalOptions;
+        this.emitter = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+    }
+    set(notification, to) {
+        const radix = 36;
+        const substring = 3;
+        notification.id = Math.random().toString(radix).substring(substring);
+        this.emitter.next({ command: 'set', notification, add: to });
+        return notification;
+    }
+    success(title = '', content = '') {
+        return this.set({
+            title,
+            content: content || '',
+            type: NotificationType.Success
+        }, true);
+    }
+    info(title = '', content = '') {
+        return this.set({
+            title,
+            content: content || '',
+            type: NotificationType.Info
+        }, true);
+    }
+    error(title = '', content = '') {
+        return this.set({
+            title,
+            content: content || '',
+            type: NotificationType.Error
+        }, true);
+    }
+    warning(title = '', content = '') {
+        return this.set({
+            title,
+            content: content || '',
+            type: NotificationType.Warning
+        }, true);
+    }
+    // With type method
+    create(title = '', content = '', type = NotificationType.Success) {
+        return this.set({
+            title,
+            content,
+            type
+        }, true);
+    }
+    // Remove all notifications method
+    remove(id) {
+        if (id) {
+            this.emitter.next({ command: 'clean', id });
+        }
+        else {
+            this.emitter.next({ command: 'cleanAll' });
+        }
+    }
+}
+NotificationCenterService.ɵfac = function NotificationCenterService_Factory(t) { return new (t || NotificationCenterService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"]('options')); };
+NotificationCenterService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: NotificationCenterService, factory: NotificationCenterService.ɵfac });
+NotificationCenterService.ctorParameters = () => [
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: ['options',] }] }
+];
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NotificationCenterService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], function () { return [{ type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: ['options']
+            }] }]; }, null); })();
+
+class NotificationCenterComponent {
+    constructor(service, domSanitizer, cd) {
+        this.service = service;
+        this.domSanitizer = domSanitizer;
+        this.cd = cd;
+        this.create = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.destroy = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.lastOnBottom = true;
+        this.maxStack = 8;
+        this.usingComponentOptions = false;
+        // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
+        // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
+        // infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
+        this.upIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.up);
+        this.notificationType = NotificationType;
+        this.notifications = [];
+        this.position = ['bottom', 'right'];
+        this.maxLength = 0;
+        this.animate = NotificationAnimationType.FromRight;
+        this.errorButtonConfig = {
+            buttonVariant: "toggle" /* TOGGLE */,
+            buttonStyle: "solid" /* SOLID */,
+            buttonTheme: Color.DANGER,
+            iconSVG: getIcon('error', '#ffffff'),
+            iconSVGActive: getIcon('error', this.getColorInHex(Color.DANGER)),
+            iconStyle: "far" /* REGULAR */,
+        };
+        this.warningButtonConfig = {
+            buttonVariant: "toggle" /* TOGGLE */,
+            buttonStyle: "solid" /* SOLID */,
+            buttonTheme: Color.WARNING,
+            iconSVG: getIcon('warning', '#ffffff'),
+            iconSVGActive: getIcon('warning', this.getColorInHex(Color.WARNING)),
+            iconStyle: "far" /* REGULAR */,
+        };
+        this.infoButtonConfig = {
+            buttonVariant: "toggle" /* TOGGLE */,
+            buttonStyle: "solid" /* SOLID */,
+            buttonTheme: Color.INFO,
+            iconSVG: getIcon('info', '#ffffff'),
+            iconSVGActive: getIcon('info', this.getColorInHex(Color.INFO)),
+            iconStyle: "far" /* REGULAR */,
+        };
+    }
+    set options(opt) {
+        this.usingComponentOptions = true;
+        this.attachChanges(opt);
+    }
+    ngOnInit() {
+        if (!this.usingComponentOptions) {
+            this.attachChanges(this.service.globalOptions);
+        }
+        this.listener = this.service.emitter
+            .subscribe(item => {
+            switch (item.command) {
+                case 'cleanAll':
+                    this.notifications = [];
+                    break;
+                case 'clean':
+                    this.cleanSingle(item.id);
+                    break;
+                case 'set':
+                    if (item.add) {
+                        this.add(item.notification);
+                    }
+                    else {
+                        this.defaultBehavior(item);
+                    }
+                    break;
+                default:
+                    this.defaultBehavior(item);
+                    break;
+            }
+            if (!this.cd.destroyed) {
+                this.cd.detectChanges();
+            }
+        });
+    }
+    ngOnDestroy() {
+        if (this.listener) {
+            this.listener.unsubscribe();
+        }
+        this.cd.detach();
+    }
+    defaultBehavior(value) {
+        this.notifications.splice(this.notifications.indexOf(value.notification), 1);
+        this.destroy.emit(this.buildEmit(value.notification, false));
+    }
+    add(item) {
+        if (!item) {
+            return;
+        }
+        item.createdOn = new Date();
+        if (this.lastOnBottom) {
+            if (this.notifications.length >= this.maxStack) {
+                this.notifications.splice(0, 1);
+            }
+            this.notifications.push(item);
+        }
+        else {
+            if (this.notifications.length >= this.maxStack) {
+                this.notifications.splice(this.notifications.length - 1, 1);
+            }
+            this.notifications.splice(0, 0, item);
+        }
+        this.create.emit(this.buildEmit(item, true));
+    }
+    checkStandard(checker, item) {
+        return checker.type === item.type
+            && checker.title === item.title
+            && checker.content === item.content;
+    }
+    // tslint:disable-next-line: no-any
+    attachChanges(options) {
+        for (const key in options) {
+            if (this.hasOwnProperty(key)) {
+                // tslint:disable-next-line: no-any
+                this[key] = options[key];
+            }
+        }
+    }
+    buildEmit(notification, to) {
+        const toEmit = {
+            createdOn: notification.createdOn,
+            type: notification.type,
+            id: notification.id
+        };
+        toEmit.title = notification.title;
+        toEmit.content = notification.content;
+        if (!to) {
+            toEmit.destroyedOn = new Date();
+        }
+        return toEmit;
+    }
+    cleanSingle(id) {
+        if (!id) {
+            return;
+        }
+        let indexOfDelete = 0;
+        let doDelete = false;
+        let noti;
+        this.notifications.forEach((notification, idx) => {
+            if (notification.id === id) {
+                indexOfDelete = idx;
+                noti = notification;
+                doDelete = true;
+            }
+        });
+        if (doDelete) {
+            this.notifications.splice(indexOfDelete, 1);
+            this.destroy.emit(this.buildEmit(noti, false));
+        }
+    }
+    hasTouchedNotifications(notificationType) {
+        return this.notifications.some(notif => notif.type === notificationType && notif.isTouched);
+    }
+    hasMinimizedNotifications(notificationType) {
+        return this.notifications.some(notif => notif.type === notificationType && notif.isMinimized);
+    }
+    onMinimize() {
+        this.notifications.forEach(notif => {
+            if (notif.type !== NotificationType.Success) {
+                notif.isMinimized = true;
+                notif.isTouched = true;
+            }
+        });
+    }
+    onToggleNotification(notificationType) {
+        if (this.getShownTypes().length > 1) {
+            this.notifications.forEach(notif => {
+                if (notif.type !== notificationType) {
+                    notif.isMinimized = true;
+                    notif.isTouched = true;
+                }
+                else {
+                    notif.isMinimized = false;
+                }
+            });
+        }
+        else {
+            this.notifications.forEach(notif => {
+                if (notif.type === notificationType && this.hasMinimizedNotifications(notif.type)) {
+                    notif.isMinimized = !notif.isMinimized;
+                    if (notif.isMinimized) {
+                        notif.isTouched = true;
+                    }
+                }
+                else {
+                    notif.isMinimized = true;
+                    notif.isTouched = true;
+                }
+            });
+        }
+    }
+    getNotificationToShow() {
+        return this.notifications.filter(notif => !notif.isMinimized);
+    }
+    getShownTypes() {
+        return this.notifications.filter(notif => !notif.isMinimized)
+            .map(notif => notif.type).filter((type, index, self) => self.indexOf(type) === index);
+    }
+    getMinimizeButtonColor() {
+        const showntypes = this.getShownTypes();
+        if (showntypes.length === 2) {
+            const indexSucess = showntypes.indexOf(NotificationType.Success);
+            if (indexSucess > -1) {
+                showntypes.splice(indexSucess, 1);
+            }
+        }
+        if (showntypes.length === 1) {
+            if (showntypes[0] === NotificationType.Success) {
+                return Color.SUCCESS;
+            }
+            else if (showntypes[0] === NotificationType.Info) {
+                return Color.INFO;
+            }
+            else if (showntypes[0] === NotificationType.Warning) {
+                return Color.WARNING;
+            }
+            else if (showntypes[0] === NotificationType.Error) {
+                return Color.DANGER;
+            }
+        }
+        return Color.BLACK;
+    }
+    getMinimizeIcon() {
+        let upIconColor = Color.BLACK;
+        const showntypes = this.getShownTypes();
+        if (showntypes.length === 2) {
+            const indexSucess = showntypes.indexOf(NotificationType.Success);
+            if (indexSucess > -1) {
+                showntypes.splice(indexSucess, 1);
+            }
+        }
+        if (showntypes.length === 1) {
+            if (showntypes[0] === NotificationType.Success) {
+                upIconColor = Color.SUCCESS;
+            }
+            else if (showntypes[0] === NotificationType.Info) {
+                upIconColor = Color.INFO;
+            }
+            else if (showntypes[0] === NotificationType.Warning) {
+                upIconColor = Color.WARNING;
+            }
+            else if (showntypes[0] === NotificationType.Error) {
+                upIconColor = Color.DANGER;
+            }
+        }
+        return this.domSanitizer.bypassSecurityTrustHtml(getIcon('up', this.getColorInHex(upIconColor)));
+    }
+    getColorInHex(colorName) {
+        switch (colorName) {
+            case 'danger':
+                return '#CB0101';
+            case 'warning':
+                return '#FFD800';
+            case 'info':
+                return '#0FAEED';
+            case 'success':
+                return '#76dd55';
+            default:
+                return '#000000';
+        }
+    }
+}
+NotificationCenterComponent.ɵfac = function NotificationCenterComponent_Factory(t) { return new (t || NotificationCenterComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](NotificationCenterService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
+NotificationCenterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NotificationCenterComponent, selectors: [["b2p-notification-center"]], inputs: { options: "options" }, outputs: { create: "create", destroy: "destroy" }, decls: 1, vars: 1, consts: [["class", "vg-base-notification-wrapper", 3, "ngClass", 4, "ngIf"], [1, "vg-base-notification-wrapper", 3, "ngClass"], [1, "notification-center_buttons"], ["class", "notification-center_button", 3, "config", "isActive", "click", 4, "ngIf"], ["class", "notification-wrapper", 4, "ngIf"], [1, "notification-center_button", 3, "config", "isActive", "click"], [1, "notification-wrapper"], ["class", "minimize", 3, "click", 4, "ngIf"], [1, "notifications-container", "hide-scrollbars"], [3, "item", "maxLength", "animate", "position", 4, "ngFor", "ngForOf"], [1, "minimize", 3, "click"], [3, "innerHTML"], [3, "item", "maxLength", "animate", "position"]], template: function NotificationCenterComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, NotificationCenterComponent_div_0_Template, 6, 5, "div", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.notifications.length > 0);
+    } }, directives: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], B2PButtonComponent, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], BaseNotificationComponent]; }, styles: [".vg-base-notification-wrapper{margin-right:-2px;position:fixed;width:300px;z-index:1000}.vg-base-notification-wrapper.left{left:30px}.vg-base-notification-wrapper.top{top:80px}.vg-base-notification-wrapper.right{right:30px}.vg-base-notification-wrapper.bottom{bottom:20px}.vg-base-notification-wrapper.center{left:50%;transform:translateX(-50%)}.vg-base-notification-wrapper.middle{top:50%;transform:translateY(-50%)}.vg-base-notification-wrapper.middle.center{transform:translate(-50%,-50%)}.notification-center_buttons{margin-right:11px;max-height:36px;text-align:end}.notification-center_button{border-radius:3px;box-shadow:0 3px 11px 0 #c9c9c9;margin-left:8px}.notification-wrapper{margin-right:10px;position:absolute;top:73px;width:300px}.notifications-container{max-height:calc(100vh - 183px);overflow-y:auto;position:relative;top:33px}.minimize{cursor:pointer;position:absolute;right:120px}.hide-scrollbars{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbars::-webkit-scrollbar{background:transparent;width:0}@media (max-width:340px){.vg-base-notification-wrapper{left:30px;right:30px;width:auto}}"], encapsulation: 2, changeDetection: 0 });
+NotificationCenterComponent.ctorParameters = () => [
+    { type: NotificationCenterService },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
+];
+NotificationCenterComponent.propDecorators = {
+    options: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    create: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+    destroy: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NotificationCenterComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'b2p-notification-center',
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
+                template: "<div *ngIf=\"notifications.length > 0\" class=\"vg-base-notification-wrapper\" [ngClass]=\"position\">\n\t<div class=\"notification-center_buttons\">\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.Error)\" [config]=\"errorButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.Error)\" (click)=\"onToggleNotification(notificationType.Error)\" ></b2p-button>\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.Warning)\" [config]=\"warningButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.Warning)\" (click)=\"onToggleNotification(notificationType.Warning)\" ></b2p-button>\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.Info)\" [config]=\"infoButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.Info)\" (click)=\"onToggleNotification(notificationType.Info)\"></b2p-button>\n\t</div>\n\t<div *ngIf=\"getNotificationToShow().length !== 0\" class=\"notification-wrapper\">\n\t\t<span *ngIf=\"getMinimizeButtonColor() !== 'success'\" class=\"minimize\" (click)=\"onMinimize()\">\n\t\t\t<div [innerHTML]=\"getMinimizeIcon()\"></div>\n\t\t</span>\n\t\t<div class=\"notifications-container hide-scrollbars\">\n\t\t\t<b2p-base-notification *ngFor=\"let a of getNotificationToShow(); let i = index\" [item]=\"a\"  [maxLength]=\"maxLength\" [animate]=\"animate\" [position]=\"i\">\n\t\t\t</b2p-base-notification>\n\t\t</div>\n\t</div>\n</div>\n",
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectionStrategy"].OnPush,
+                styles: [".vg-base-notification-wrapper{margin-right:-2px;position:fixed;width:300px;z-index:1000}.vg-base-notification-wrapper.left{left:30px}.vg-base-notification-wrapper.top{top:80px}.vg-base-notification-wrapper.right{right:30px}.vg-base-notification-wrapper.bottom{bottom:20px}.vg-base-notification-wrapper.center{left:50%;transform:translateX(-50%)}.vg-base-notification-wrapper.middle{top:50%;transform:translateY(-50%)}.vg-base-notification-wrapper.middle.center{transform:translate(-50%,-50%)}.notification-center_buttons{margin-right:11px;max-height:36px;text-align:end}.notification-center_button{border-radius:3px;box-shadow:0 3px 11px 0 #c9c9c9;margin-left:8px}.notification-wrapper{margin-right:10px;position:absolute;top:73px;width:300px}.notifications-container{max-height:calc(100vh - 183px);overflow-y:auto;position:relative;top:33px}.minimize{cursor:pointer;position:absolute;right:120px}.hide-scrollbars{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbars::-webkit-scrollbar{background:transparent;width:0}@media (max-width:340px){.vg-base-notification-wrapper{left:30px;right:30px;width:auto}}"]
+            }]
+    }], function () { return [{ type: NotificationCenterService }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, { create: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], destroy: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }], options: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+class BaseNotificationComponent {
+    constructor(notificationService, domSanitizer, cd) {
+        this.notificationService = notificationService;
+        this.domSanitizer = domSanitizer;
+        this.cd = cd;
+        this.closeIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.close);
+    }
+    ngOnInit() {
+        if (this.animate) {
+            this.item.state = this.animate;
+        }
+        this.initNotificationContent(this.item.title, 'title');
+        this.initNotificationContent(this.item.content, 'content');
+        if (this.item.type === NotificationType.Success) {
+            const timeout = 5000;
+            setTimeout(() => {
+                this.remove();
+            }, timeout);
+        }
+    }
+    ngOnDestroy() {
+        this.cd.detach();
+    }
+    onClose() {
+        this.remove();
+    }
+    remove() {
+        if (this.animate) {
+            this.item.state = this.animate + 'Out';
+            const timeout = 310;
+            setTimeout(() => {
+                this.notificationService.set(this.item, false);
+            }, timeout);
+        }
+        else {
+            this.notificationService.set(this.item, false);
+        }
+    }
+    initNotificationContent(item, key) {
+        switch (key) {
+            case 'title':
+                if (typeof item === 'string') {
+                    this.title = this.domSanitizer.bypassSecurityTrustHtml(item);
+                }
+                else {
+                    this.title = item;
+                }
+                break;
+            case 'content':
+                if (typeof item === 'string') {
+                    this.content = this.domSanitizer.bypassSecurityTrustHtml(item);
+                }
+                else {
+                    this.title = item;
+                }
+                break;
+        }
+    }
+}
+BaseNotificationComponent.ɵfac = function BaseNotificationComponent_Factory(t) { return new (t || BaseNotificationComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](NotificationCenterService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
+BaseNotificationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BaseNotificationComponent, selectors: [["b2p-base-notification"]], inputs: { position: "position", maxLength: "maxLength", animate: "animate", item: "item" }, decls: 8, vars: 12, consts: [[1, "vg-base-notification", 3, "ngClass"], [3, "click"], [1, "icon", "close_icon", 3, "ngClass", "innerHTML"], [1, "vgbn-body"], [1, "vgbn-title"], [1, "vgbn-title", 3, "innerHTML"], [1, "vgbn-content"], [1, "vgbn-content", 3, "innerHTML"]], template: function BaseNotificationComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BaseNotificationComponent_Template_span_click_1_listener() { return ctx.onClose(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@enterLeave", ctx.item.state)("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction5"](6, _c0, ctx.item.type === "error", ctx.item.type === "warning", ctx.item.type === "success", ctx.item.type === "info", !ctx.item.isTouched));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx.item.type === "warning" ? "black" : "white")("innerHTML", ctx.closeIcons, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.title, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.content, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"]], styles: ["@-webkit-keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@-webkit-keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@-webkit-keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@-webkit-keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}@keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}.vg-base-notification{border-radius:5px;box-shadow:0 3px 11px 0 #c9c9c9;box-sizing:border-box;color:#fff;float:right;margin-bottom:15px;margin-right:13px;min-height:70px;padding:10px 20px;position:relative;width:90%}.vg-base-notification .vgbn-body{display:flex;flex-flow:column}.vg-base-notification .vgbn-content,.vg-base-notification .vgbn-title{margin:.5px 0 0}.vg-base-notification .vgbn-title{font-size:20px;line-height:30px}.vg-base-notification .vgbn-content{font-size:14px;line-height:15px}.vg-base-notification.has-icon .vgbn-content,.vg-base-notification.has-icon .vgbn-title{padding:0 50px 0 0}.vg-base-notification.error{background:#cb0101}.vg-base-notification.success{background:#76dd55}.vg-base-notification.warning{background:#ffd800}.vg-base-notification.info{background:#0faeed}.vg-base-notification.error.blink{-webkit-animation:Pulsate-Red 4s linear 1s infinite;animation:Pulsate-Red 4s linear 1s infinite}.vg-base-notification.success.blink{-webkit-animation:Pulsate-Green 4s linear 1s infinite;animation:Pulsate-Green 4s linear 1s infinite}.vg-base-notification.warning.blink{-webkit-animation:Pulsate-Yellow 4s linear 1s infinite;animation:Pulsate-Yellow 4s linear 1s infinite}.vg-base-notification.info.blink{-webkit-animation:Pulsate-Blue 4s linear 1s infinite;animation:Pulsate-Blue 4s linear 1s infinite}.vg-base-notification.warning div .vgbn-content,.vg-base-notification.warning div .vgbn-html,.vg-base-notification.warning div .vgbn-title{color:#855d02}.close_icon{cursor:pointer;position:absolute;right:10px}"], encapsulation: 2, data: { animation: [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["trigger"])('enterLeave', [
+                // Fade
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fade', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fade', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fadeOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fade => fadeOut', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                ]),
+                // Enter from top
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTop', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromTop', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTopOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromTop => fromTopOut', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                ]),
+                // Enter from right
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromRight', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRightOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromRight => fromRightOut', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                ]),
+                // Enter from bottom
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromBottom', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottomOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromBottom => fromBottomOut', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                ]),
+                // Enter from left
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromLeft', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeftOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromLeft => fromLeftOut', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                ])
+            ])
+        ] }, changeDetection: 0 });
+BaseNotificationComponent.ctorParameters = () => [
+    { type: NotificationCenterService },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
+];
+BaseNotificationComponent.propDecorators = {
+    position: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    maxLength: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    animate: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    item: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BaseNotificationComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'b2p-base-notification',
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
+                animations: [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["trigger"])('enterLeave', [
+                        // Fade
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fade', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fade', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                        ]),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fadeOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fade => fadeOut', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                        ]),
+                        // Enter from top
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTop', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromTop', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                        ]),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTopOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromTop => fromTopOut', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                        ]),
+                        // Enter from right
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromRight', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                        ]),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRightOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromRight => fromRightOut', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                        ]),
+                        // Enter from bottom
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromBottom', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                        ]),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottomOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromBottom => fromBottomOut', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                        ]),
+                        // Enter from left
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromLeft', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
+                        ]),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeftOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' })),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromLeft => fromLeftOut', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
+                        ])
+                    ])
+                ],
+                template: "<div class=\"vg-base-notification\" [@enterLeave]=\"item.state\" [ngClass]=\"{\n            'error': item.type === 'error',\n            'warning': item.type === 'warning',\n            'success': item.type === 'success',\n            'info': item.type === 'info',\n\t\t\t\t\t\t'blink': !item.isTouched\n        }\">\n\t<span (click)=\"onClose()\">\n\t\t<div class=\"icon close_icon\" [ngClass]=\"item.type === 'warning' ? 'black' : 'white'\" [innerHTML]=\"closeIcons\"></div>\n\t</span>\n\t<div class=\"vgbn-body\">\n\t\t<div class=\"vgbn-title\">\n\t\t\t<div class=\"vgbn-title\" [innerHTML]=\"title\"></div>\n\t\t</div>\n\t\t<div class=\"vgbn-content\">\n\t\t\t<div class=\"vgbn-content\" [innerHTML]=\"content\"></div>\n\t\t</div>\n\t</div>\n\n</div>\n",
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectionStrategy"].OnPush,
+                styles: ["@-webkit-keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@-webkit-keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@-webkit-keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@-webkit-keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}@keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}.vg-base-notification{border-radius:5px;box-shadow:0 3px 11px 0 #c9c9c9;box-sizing:border-box;color:#fff;float:right;margin-bottom:15px;margin-right:13px;min-height:70px;padding:10px 20px;position:relative;width:90%}.vg-base-notification .vgbn-body{display:flex;flex-flow:column}.vg-base-notification .vgbn-content,.vg-base-notification .vgbn-title{margin:.5px 0 0}.vg-base-notification .vgbn-title{font-size:20px;line-height:30px}.vg-base-notification .vgbn-content{font-size:14px;line-height:15px}.vg-base-notification.has-icon .vgbn-content,.vg-base-notification.has-icon .vgbn-title{padding:0 50px 0 0}.vg-base-notification.error{background:#cb0101}.vg-base-notification.success{background:#76dd55}.vg-base-notification.warning{background:#ffd800}.vg-base-notification.info{background:#0faeed}.vg-base-notification.error.blink{-webkit-animation:Pulsate-Red 4s linear 1s infinite;animation:Pulsate-Red 4s linear 1s infinite}.vg-base-notification.success.blink{-webkit-animation:Pulsate-Green 4s linear 1s infinite;animation:Pulsate-Green 4s linear 1s infinite}.vg-base-notification.warning.blink{-webkit-animation:Pulsate-Yellow 4s linear 1s infinite;animation:Pulsate-Yellow 4s linear 1s infinite}.vg-base-notification.info.blink{-webkit-animation:Pulsate-Blue 4s linear 1s infinite;animation:Pulsate-Blue 4s linear 1s infinite}.vg-base-notification.warning div .vgbn-content,.vg-base-notification.warning div .vgbn-html,.vg-base-notification.warning div .vgbn-title{color:#855d02}.close_icon{cursor:pointer;position:absolute;right:10px}"]
+            }]
+    }], function () { return [{ type: NotificationCenterService }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, { position: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], maxLength: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], animate: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], item: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+class B2PButtonComponent {
+    // CONSTRUCTOR ////////////////////////////////////////////////////////////////////////////////////////////////////
+    constructor(domSanitizer) {
+        this.domSanitizer = domSanitizer;
+        this.active = false;
+    }
+    get isActive() {
+        return this.active;
+    }
+    set isActive(value) {
+        if (value !== this.active) {
+            this.toggleStatus({ propagate: false });
+        }
+    }
+    // GETTER / SETTER ////////////////////////////////////////////////////////////////////////////////////////////////
+    get isToggleButton() {
+        return this.config.buttonVariant === "toggle" /* TOGGLE */;
+    }
+    // PUBLIC FUNCTIONS ///////////////////////////////////////////////////////////////////////////////////////////////
+    ngOnInit() {
+        this.config.buttonVariant = this.config.buttonVariant || "simple" /* SIMPLE */;
+        this.config.buttonStyle = this.config.buttonStyle || "lined" /* LINED */;
+        this.config.buttonTheme = this.config.buttonTheme || "primary" /* PRIMARY */;
+        this.config.iconStyle = this.config.iconStyle || "fas" /* SOLID */;
+        this.config.tooltipTheme = this.config.tooltipTheme || this.config.buttonTheme;
+        this.config.iconStyleActive = this.config.iconStyleActive || this.config.iconStyle;
+        this.config.iconNameActive = this.config.iconNameActive || this.config.iconName;
+        this.config.iconSVGActive = this.config.iconSVGActive || this.config.iconSVG;
+        this.config.tooltipActive = this.config.tooltipActive || this.config.tooltip;
+        this.currentIconStyle = this.config.iconStyle;
+        this.currentIconName = this.config.iconName;
+        this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.config.iconSVG);
+        this.currentTooltip = this.config.tooltip;
+        if (this.config.active$ === undefined) {
+            this.config.active$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
+        }
+        // if (this.config.clicked$ === undefined) {
+        // 	this.config.clicked$ = new Subject<never>();
+        // }
+        this.activeSubscription = this.config.active$.subscribe(active => {
+            if (active !== undefined && active !== this.active) {
+                this.toggleStatus({ propagate: false });
+            }
+        });
+    }
+    ngOnDestroy() {
+        if (this.activeSubscription) {
+            this.activeSubscription.unsubscribe();
+        }
+    }
+    // •◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦
+    toggleStatus({ propagate = true } = {}) {
+        this.active = !this.active;
+        this.currentIconStyle = this.active ? this.config.iconStyleActive : this.config.iconStyle;
+        this.currentIconName = this.active ? this.config.iconNameActive : this.config.iconName;
+        this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.active ? this.config.iconSVGActive : this.config.iconSVG);
+        this.currentTooltip = this.active ? this.config.tooltipActive : this.config.tooltip;
+        if (propagate) {
+            this.config.active$.next(this.active);
+            if (this.config.onClick2) {
+                this.config.onClick2(this.active);
+            }
+        }
+    }
+    // PROTECTED FUNCTIONS ////////////////////////////////////////////////////////////////////////////////////////////
+    // PRIVATE FUNCTIONS //////////////////////////////////////////////////////////////////////////////////////////////
+    // EVENT HANDLER //////////////////////////////////////////////////////////////////////////////////////////////////
+    onClick() {
+        if (this.config.clicked$) {
+            this.config.clicked$.next();
+            if (this.isToggleButton) {
+                this.toggleStatus();
+            }
+        }
+        else {
+            if (this.isToggleButton) {
+                this.toggleStatus();
+            }
+        }
+    }
+    wiggle(rem) {
+        return this.badged > 0 && ((+this.badged % 2) === rem) && !this.active;
+    }
+}
+B2PButtonComponent.ɵfac = function B2PButtonComponent_Factory(t) { return new (t || B2PButtonComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"])); };
+B2PButtonComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: B2PButtonComponent, selectors: [["b2p-button"]], inputs: { isActive: "isActive", config: "config", badged: "badged" }, decls: 5, vars: 14, consts: [[3, "ngClass", "click"], ["class", "ui-button__label", 4, "ngIf"], [3, "class", 4, "ngIf"], [3, "class", "innerHTML", 4, "ngIf"], ["class", "notification-badge", 4, "ngIf"], [1, "ui-button__label"], [3, "innerHTML"], [1, "notification-badge"]], template: function B2PButtonComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function B2PButtonComponent_Template_button_click_0_listener() { return ctx.onClick(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, B2PButtonComponent_span_1_Template, 2, 1, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, B2PButtonComponent_i_2_Template, 1, 4, "i", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, B2PButtonComponent_div_3_Template, 1, 4, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, B2PButtonComponent_div_4_Template, 2, 1, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate3"]("ui-button ui-button--", ctx.config.buttonVariant, " ui-button--", ctx.config.buttonTheme, " ui-button--", ctx.config.buttonStyle, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction3"](10, _c1, ctx.active, ctx.wiggle(0), ctx.wiggle(1)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.config.buttonLabel);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.currentIconName);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.currentIconName && ctx.currentIconSVG);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.badged && !ctx.active);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: ["*[_ngcontent-%COMP%], [_ngcontent-%COMP%]:after, [_ngcontent-%COMP%]:before{box-sizing:border-box}.ui-button[_ngcontent-%COMP%], [_nghost-%COMP%]{display:inline-block;height:36px}.ui-button[_ngcontent-%COMP%]{font-size:.75rem;line-height:20px;min-width:36px;outline:none!important;padding:2px 8px;position:relative;text-transform:uppercase}.ui-button[_ngcontent-%COMP%]   .ui-button__label[_ngcontent-%COMP%]{padding:0 12px 0 4px}.ui-button[_ngcontent-%COMP%]   .ui-button__icon[_ngcontent-%COMP%]{font-size:.875rem;padding-top:4px}.ui-button.ui-button--icon[_ngcontent-%COMP%]{background:none;border:none}.ui-button.ui-button--lined[_ngcontent-%COMP%]{background:none;border-radius:4px}.ui-button.ui-button--solid[_ngcontent-%COMP%]{border:none;border-radius:4px}.ui-button--solid.ui-button--danger[_ngcontent-%COMP%]{background:#cb0101;border-color:#cb0101}.ui-button--solid.ui-button--success[_ngcontent-%COMP%]{background:#76dd55;border-color:#76dd55}.ui-button--solid.ui-button--warning[_ngcontent-%COMP%]{background:#ffd800;border-color:#ffd800}.ui-button--solid.ui-button--info[_ngcontent-%COMP%]{background:#0faeed;border-color:#0faeed}.ui-button--lined.ui-button--danger[_ngcontent-%COMP%]{color:#cb0101}.ui-button--lined.ui-button--success[_ngcontent-%COMP%]{color:#76dd55}.ui-button--lined.ui-button--warning[_ngcontent-%COMP%]{color:#ffd800}.ui-button--lined.ui-button--info[_ngcontent-%COMP%]{color:#0faeed}.ui-button.active[_ngcontent-%COMP%]{background:transparent;border-radius:4px;border-style:solid;border-width:2px;padding:0 6px}.notification-badge[_ngcontent-%COMP%]{background:#ed6b06;border-radius:50px;color:#fff;font-size:14px;font-weight:700;height:20px;line-height:20px;padding:0 6px;position:absolute;right:-4px;top:-4px;width:auto}.wiggle-1[_ngcontent-%COMP%], .wiggle-2[_ngcontent-%COMP%]{-webkit-backface-visibility:hidden;backface-visibility:hidden;perspective:1000px;transform:translateZ(0)}.wiggle-1[_ngcontent-%COMP%]{-webkit-animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both}.wiggle-2[_ngcontent-%COMP%]{-webkit-animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both}@-webkit-keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@-webkit-keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}"] });
+B2PButtonComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }
+];
+B2PButtonComponent.propDecorators = {
+    config: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    badged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    isActive: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](B2PButtonComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'b2p-button',
+                template: "<button [ngClass]=\"{\n\t'active': active,\n\t'wiggle-1': wiggle(0),\n\t'wiggle-2': wiggle(1)\n\t}\" class=\"ui-button ui-button--{{config.buttonVariant}} ui-button--{{config.buttonTheme}} ui-button--{{config.buttonStyle}}\" (click)=\"onClick()\">\n  <span *ngIf=\"config.buttonLabel\" class=\"ui-button__label\">{{config.buttonLabel}}</span>\n    <i *ngIf=\"currentIconName\" class=\"ui-button__icon {{currentIconStyle}} fa-{{currentIconName}}\"></i>\n    <div *ngIf=\"!currentIconName && currentIconSVG\" class=\"ui-button__icon {{currentIconStyle}}\" [innerHTML]=\"currentIconSVG\"></div>\n\t<div *ngIf=\"badged && !active\" class=\"notification-badge\">{{badged}}</div>\n</button>\n",
+                styles: ["*,:after,:before{box-sizing:border-box}.ui-button,:host{display:inline-block;height:36px}.ui-button{font-size:.75rem;line-height:20px;min-width:36px;outline:none!important;padding:2px 8px;position:relative;text-transform:uppercase}.ui-button .ui-button__label{padding:0 12px 0 4px}.ui-button .ui-button__icon{font-size:.875rem;padding-top:4px}.ui-button.ui-button--icon{background:none;border:none}.ui-button.ui-button--lined{background:none;border-radius:4px}.ui-button.ui-button--solid{border:none;border-radius:4px}.ui-button--solid.ui-button--danger{background:#cb0101;border-color:#cb0101}.ui-button--solid.ui-button--success{background:#76dd55;border-color:#76dd55}.ui-button--solid.ui-button--warning{background:#ffd800;border-color:#ffd800}.ui-button--solid.ui-button--info{background:#0faeed;border-color:#0faeed}.ui-button--lined.ui-button--danger{color:#cb0101}.ui-button--lined.ui-button--success{color:#76dd55}.ui-button--lined.ui-button--warning{color:#ffd800}.ui-button--lined.ui-button--info{color:#0faeed}.ui-button.active{background:transparent;border-radius:4px;border-style:solid;border-width:2px;padding:0 6px}.notification-badge{background:#ed6b06;border-radius:50px;color:#fff;font-size:14px;font-weight:700;height:20px;line-height:20px;padding:0 6px;position:absolute;right:-4px;top:-4px;width:auto}.wiggle-1,.wiggle-2{-webkit-backface-visibility:hidden;backface-visibility:hidden;perspective:1000px;transform:translateZ(0)}.wiggle-1{-webkit-animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both}.wiggle-2{-webkit-animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both}@-webkit-keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@-webkit-keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}"]
+            }]
+    }], function () { return [{ type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }]; }, { isActive: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], config: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], badged: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+const OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('options');
+function optionsFactory(options) {
+    return Object.assign(Object.assign({}, DEFAULT_OPTIONS), options);
+}
+class NotificationCenterModule {
+    static forRoot(options = {}) {
+        return {
+            ngModule: NotificationCenterModule,
+            providers: [
+                NotificationCenterService,
+                {
+                    provide: OPTIONS,
+                    useValue: options
+                },
+                {
+                    provide: 'options',
+                    useFactory: optionsFactory,
+                    deps: [OPTIONS]
+                }
+            ]
+        };
+    }
+}
+NotificationCenterModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: NotificationCenterModule });
+NotificationCenterModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function NotificationCenterModule_Factory(t) { return new (t || NotificationCenterModule)(); }, imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](NotificationCenterModule, { declarations: function () { return [B2PButtonComponent, BaseNotificationComponent, NotificationCenterComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]]; }, exports: function () { return [NotificationCenterComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NotificationCenterModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                declarations: [
+                    B2PButtonComponent,
+                    BaseNotificationComponent,
+                    NotificationCenterComponent
+                ],
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]
+                ],
+                exports: [
+                    NotificationCenterComponent
+                ]
+            }]
+    }], null, null); })();
+
+/*
+ * Public API Surface of notification-center
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=b2p-notification-center.js.map
+
+/***/ }),
+
 /***/ "Sy1n":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -51,7 +1124,7 @@ const environment = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "EM62");
-/* harmony import */ var b2p_notification_center__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! b2p-notification-center */ "kbZ8");
+/* harmony import */ var b2p_notification_center__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! b2p-notification-center */ "HIqd");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "2kYt");
 
 
@@ -366,7 +1439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "EM62");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "Sy1n");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "5lCh");
-/* harmony import */ var b2p_notification_center__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! b2p-notification-center */ "kbZ8");
+/* harmony import */ var b2p_notification_center__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! b2p-notification-center */ "HIqd");
 
 
 
@@ -399,1045 +1472,6 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
             }]
     }], null, null); })();
-
-
-/***/ }),
-
-/***/ "kbZ8":
-/*!**********************************************************************************************************************************!*\
-  !*** /home/runner/work/notification-center/notification-center/dist/b2p-notification-center/fesm2015/b2p-notification-center.js ***!
-  \**********************************************************************************************************************************/
-/*! exports provided: Color, DEFAULT_ICONS, DEFAULT_OPTIONS, NotificationAnimationType, NotificationCenterComponent, NotificationCenterModule, NotificationCenterService, NotificationType, OPTIONS, getIcon, optionsFactory */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_ICONS", function() { return DEFAULT_ICONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_OPTIONS", function() { return DEFAULT_OPTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationAnimationType", function() { return NotificationAnimationType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterComponent", function() { return NotificationCenterComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterModule", function() { return NotificationCenterModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationCenterService", function() { return NotificationCenterService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationType", function() { return NotificationType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OPTIONS", function() { return OPTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIcon", function() { return getIcon; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optionsFactory", function() { return optionsFactory; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "EM62");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "+kfY");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "e4iD");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "2kYt");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/animations */ "f7+R");
-
-
-
-
-
-
-const DEFAULT_ICONS = {
-    alert: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-    </svg>
-  `,
-    error: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-    </svg>
-  `,
-    info: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-      <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
-      <circle cx="8" cy="4.5" r="1"/>
-    </svg>
-  `,
-    success: `
-    <svg class="b2p-notification-svg" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="24" viewBox="0 0 16 16" width="24">
-        <path d="M0 0h24v24H0z" fill="none"/>
-        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-    </svg>
-  `,
-    warning: `
-    <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
-      <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
-    </svg>
-  `,
-    close: `
-    <svg class="b2p-notification-svg" width="24" height="24" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-      <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-    </svg>
-  `,
-    up: `
-    <svg class="b2p-notification-svg" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
-    </svg>
-  `
-};
-function getIcon(icon, color) {
-    switch (icon) {
-        case 'alert':
-            return `
-      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-      </svg>
-    `;
-        case 'error':
-            return `
-      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-      </svg>
-      `;
-        case 'info':
-            return `
-      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
-        <circle cx="8" cy="4.5" r="1"/>
-      </svg>
-      `;
-        case 'success':
-            return `
-      <svg class="b2p-notification-svg" xmlns="http://www.w3.org/2000/svg" fill="${color}" height="24" viewBox="0 0 16 16" width="24">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-      </svg>
-      `;
-        case 'warning':
-            return `
-      <svg width="24" height="24" viewBox="0 0 16 16" class="b2p-notification-svg" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
-        <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
-      </svg>
-      `;
-        case 'close':
-            return `
-      <svg class="b2p-notification-svg" width="24" height="24" viewBox="0 0 16 16" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-        <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-      </svg>
-      `;
-        case 'up':
-            return `
-      <svg class="b2p-notification-svg" width="3em" height="3em" viewBox="0 0 16 16" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
-      </svg>
-      `;
-        default:
-            return '';
-    }
-}
-
-var NotificationAnimationType;
-(function (NotificationAnimationType) {
-    NotificationAnimationType["Fade"] = "fade";
-    NotificationAnimationType["FromTop"] = "fromTop";
-    NotificationAnimationType["FromRight"] = "fromRight";
-    NotificationAnimationType["FromBottom"] = "fromBottom";
-    NotificationAnimationType["FromLeft"] = "fromLeft";
-    NotificationAnimationType["Scale"] = "scale";
-    NotificationAnimationType["Rotate"] = "rotate";
-})(NotificationAnimationType || (NotificationAnimationType = {}));
-
-const DEFAULT_OPTIONS = {
-    position: ['top', 'right'],
-    lastOnBottom: true,
-    maxLength: 0,
-    maxStack: 100,
-    animate: NotificationAnimationType.FromTop
-};
-
-var Color;
-(function (Color) {
-    Color["PRIMARY"] = "primary";
-    Color["SECONDARY"] = "secondary";
-    Color["SUCCESS"] = "success";
-    Color["WARNING"] = "warning";
-    Color["DANGER"] = "danger";
-    Color["INFO"] = "info";
-    Color["WHITE"] = "white";
-    Color["BLACK"] = "black";
-})(Color || (Color = {}));
-
-var NotificationType;
-(function (NotificationType) {
-    NotificationType["Success"] = "success";
-    NotificationType["Error"] = "error";
-    NotificationType["Warning"] = "warning";
-    NotificationType["Info"] = "info";
-})(NotificationType || (NotificationType = {}));
-
-class NotificationCenterService {
-    constructor(globalOptions) {
-        this.globalOptions = globalOptions;
-        this.emitter = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-    }
-    set(notification, to) {
-        const radix = 36;
-        const substring = 3;
-        notification.id = Math.random().toString(radix).substring(substring);
-        this.emitter.next({ command: 'set', notification, add: to });
-        return notification;
-    }
-    success(title = '', content = '') {
-        return this.set({
-            title,
-            content: content || '',
-            type: NotificationType.Success
-        }, true);
-    }
-    info(title = '', content = '') {
-        return this.set({
-            title,
-            content: content || '',
-            type: NotificationType.Info
-        }, true);
-    }
-    error(title = '', content = '') {
-        return this.set({
-            title,
-            content: content || '',
-            type: NotificationType.Error
-        }, true);
-    }
-    warning(title = '', content = '') {
-        return this.set({
-            title,
-            content: content || '',
-            type: NotificationType.Warning
-        }, true);
-    }
-    // With type method
-    create(title = '', content = '', type = NotificationType.Success) {
-        return this.set({
-            title,
-            content,
-            type
-        }, true);
-    }
-    // Remove all notifications method
-    remove(id) {
-        if (id) {
-            this.emitter.next({ command: 'clean', id });
-        }
-        else {
-            this.emitter.next({ command: 'cleanAll' });
-        }
-    }
-}
-NotificationCenterService.ɵfac = function NotificationCenterService_Factory(t) { return new (t || NotificationCenterService)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"])('options')); };
-NotificationCenterService.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"])({ token: NotificationCenterService, factory: NotificationCenterService.ɵfac });
-/*@__PURE__*/ (function () { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(NotificationCenterService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
-    }], function () { return [{ type: undefined, decorators: [{
-                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
-                args: ['options']
-            }] }]; }, null); })();
-
-function B2PButtonComponent_span_1_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "span", 5);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r0 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r0.config.buttonLabel);
-} }
-function B2PButtonComponent_i_2_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "i");
-} if (rf & 2) {
-    const ctx_r1 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate2"])("ui-button__icon ", ctx_r1.currentIconStyle, " fa-", ctx_r1.currentIconName, "");
-} }
-function B2PButtonComponent_div_3_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "div", 6);
-} if (rf & 2) {
-    const ctx_r2 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"])("ui-button__icon ", ctx_r2.currentIconStyle, "");
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx_r2.currentIconSVG, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-} }
-function B2PButtonComponent_div_4_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 7);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r3 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r3.badged);
-} }
-const _c0 = function (a0, a1, a2) { return { "active": a0, "wiggle-1": a1, "wiggle-2": a2 }; };
-class B2PButtonComponent {
-    // CONSTRUCTOR ////////////////////////////////////////////////////////////////////////////////////////////////////
-    constructor(domSanitizer) {
-        this.domSanitizer = domSanitizer;
-        this.active = false;
-    }
-    get isActive() {
-        return this.active;
-    }
-    set isActive(value) {
-        if (value !== this.active) {
-            this.toggleStatus({ propagate: false });
-        }
-    }
-    // GETTER / SETTER ////////////////////////////////////////////////////////////////////////////////////////////////
-    get isToggleButton() {
-        return this.config.buttonVariant === "toggle" /* TOGGLE */;
-    }
-    // PUBLIC FUNCTIONS ///////////////////////////////////////////////////////////////////////////////////////////////
-    ngOnInit() {
-        this.config.buttonVariant = this.config.buttonVariant || "simple" /* SIMPLE */;
-        this.config.buttonStyle = this.config.buttonStyle || "lined" /* LINED */;
-        this.config.buttonTheme = this.config.buttonTheme || "primary" /* PRIMARY */;
-        this.config.iconStyle = this.config.iconStyle || "fas" /* SOLID */;
-        this.config.tooltipTheme = this.config.tooltipTheme || this.config.buttonTheme;
-        this.config.iconStyleActive = this.config.iconStyleActive || this.config.iconStyle;
-        this.config.iconNameActive = this.config.iconNameActive || this.config.iconName;
-        this.config.iconSVGActive = this.config.iconSVGActive || this.config.iconSVG;
-        this.config.tooltipActive = this.config.tooltipActive || this.config.tooltip;
-        this.currentIconStyle = this.config.iconStyle;
-        this.currentIconName = this.config.iconName;
-        this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.config.iconSVG);
-        this.currentTooltip = this.config.tooltip;
-        if (this.config.active$ === undefined) {
-            this.config.active$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
-        }
-        // if (this.config.clicked$ === undefined) {
-        // 	this.config.clicked$ = new Subject<never>();
-        // }
-        this.activeSubscription = this.config.active$.subscribe(active => {
-            if (active !== undefined && active !== this.active) {
-                this.toggleStatus({ propagate: false });
-            }
-        });
-    }
-    ngOnDestroy() {
-        if (this.activeSubscription) {
-            this.activeSubscription.unsubscribe();
-        }
-    }
-    // •◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦
-    toggleStatus({ propagate = true } = {}) {
-        this.active = !this.active;
-        this.currentIconStyle = this.active ? this.config.iconStyleActive : this.config.iconStyle;
-        this.currentIconName = this.active ? this.config.iconNameActive : this.config.iconName;
-        this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.active ? this.config.iconSVGActive : this.config.iconSVG);
-        this.currentTooltip = this.active ? this.config.tooltipActive : this.config.tooltip;
-        if (propagate) {
-            this.config.active$.next(this.active);
-            if (this.config.onClick2) {
-                this.config.onClick2(this.active);
-            }
-        }
-    }
-    // PROTECTED FUNCTIONS ////////////////////////////////////////////////////////////////////////////////////////////
-    // PRIVATE FUNCTIONS //////////////////////////////////////////////////////////////////////////////////////////////
-    // EVENT HANDLER //////////////////////////////////////////////////////////////////////////////////////////////////
-    onClick() {
-        if (this.config.clicked$) {
-            this.config.clicked$.next();
-            if (this.isToggleButton) {
-                this.toggleStatus();
-            }
-        }
-        else {
-            if (this.isToggleButton) {
-                this.toggleStatus();
-            }
-        }
-    }
-    wiggle(rem) {
-        return this.badged > 0 && ((+this.badged % 2) === rem) && !this.active;
-    }
-}
-B2PButtonComponent.ɵfac = function B2PButtonComponent_Factory(t) { return new (t || B2PButtonComponent)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"])); };
-B2PButtonComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: B2PButtonComponent, selectors: [["b2p-button"]], inputs: { config: "config", badged: "badged", isActive: "isActive" }, decls: 5, vars: 14, consts: [[3, "ngClass", "click"], ["class", "ui-button__label", 4, "ngIf"], [3, "class", 4, "ngIf"], [3, "class", "innerHTML", 4, "ngIf"], ["class", "notification-badge", 4, "ngIf"], [1, "ui-button__label"], [3, "innerHTML"], [1, "notification-badge"]], template: function B2PButtonComponent_Template(rf, ctx) { if (rf & 1) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "button", 0);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function B2PButtonComponent_Template_button_click_0_listener() { return ctx.onClick(); });
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, B2PButtonComponent_span_1_Template, 2, 1, "span", 1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, B2PButtonComponent_i_2_Template, 1, 4, "i", 2);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, B2PButtonComponent_div_3_Template, 1, 4, "div", 3);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(4, B2PButtonComponent_div_4_Template, 2, 1, "div", 4);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-    } if (rf & 2) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate3"])("ui-button ui-button--", ctx.config.buttonVariant, " ui-button--", ctx.config.buttonTheme, " ui-button--", ctx.config.buttonStyle, "");
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction3"])(10, _c0, ctx.active, ctx.wiggle(0), ctx.wiggle(1)));
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.config.buttonLabel);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.currentIconName);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", !ctx.currentIconName && ctx.currentIconSVG);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.badged && !ctx.active);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: ["*[_ngcontent-%COMP%], [_ngcontent-%COMP%]:after, [_ngcontent-%COMP%]:before{box-sizing:border-box}.ui-button[_ngcontent-%COMP%], [_nghost-%COMP%]{display:inline-block;height:36px}.ui-button[_ngcontent-%COMP%]{font-size:.75rem;line-height:20px;min-width:36px;outline:none!important;padding-left:8px;padding-right:8px;position:relative;text-transform:uppercase}.ui-button[_ngcontent-%COMP%]   .ui-button__label[_ngcontent-%COMP%]{padding:0 12px 0 4px}.ui-button[_ngcontent-%COMP%]   .ui-button__icon[_ngcontent-%COMP%]{font-size:.875rem;padding-top:4px}.ui-button.ui-button--icon[_ngcontent-%COMP%]{background:none;border:none}.ui-button.ui-button--lined[_ngcontent-%COMP%]{background:none;border-radius:4px}.ui-button.ui-button--solid[_ngcontent-%COMP%]{border:none;border-radius:4px}.ui-button--solid.ui-button--danger[_ngcontent-%COMP%]{background:#cb0101;border-color:#cb0101}.ui-button--solid.ui-button--success[_ngcontent-%COMP%]{background:#76dd55;border-color:#76dd55}.ui-button--solid.ui-button--warning[_ngcontent-%COMP%]{background:#ffd800;border-color:#ffd800}.ui-button--solid.ui-button--info[_ngcontent-%COMP%]{background:#0faeed;border-color:#0faeed}.ui-button--lined.ui-button--danger[_ngcontent-%COMP%]{color:#cb0101}.ui-button--lined.ui-button--success[_ngcontent-%COMP%]{color:#76dd55}.ui-button--lined.ui-button--warning[_ngcontent-%COMP%]{color:#ffd800}.ui-button--lined.ui-button--info[_ngcontent-%COMP%]{color:#0faeed}.ui-button.active[_ngcontent-%COMP%]{background:transparent;border-radius:4px;border-style:solid;border-width:2px;padding-left:6px;padding-right:6px}.notification-badge[_ngcontent-%COMP%]{background:#ed6b06;border-radius:50px;color:#fff;font-size:14px;font-weight:700;height:20px;line-height:20px;padding:0 6px;position:absolute;right:-4px;top:-4px;width:auto}.wiggle-1[_ngcontent-%COMP%], .wiggle-2[_ngcontent-%COMP%]{-webkit-backface-visibility:hidden;backface-visibility:hidden;perspective:1000px;transform:translateZ(0)}.wiggle-1[_ngcontent-%COMP%]{-webkit-animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle1 .82s cubic-bezier(.36,.07,.19,.97) both}.wiggle-2[_ngcontent-%COMP%]{-webkit-animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both;animation:wiggle2 .82s cubic-bezier(.36,.07,.19,.97) both}@-webkit-keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle1{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@-webkit-keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}@keyframes wiggle2{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}"] });
-/*@__PURE__*/ (function () { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(B2PButtonComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'b2p-button',
-                templateUrl: './button.component.html',
-                styleUrls: ['./button.component.scss'],
-            }]
-    }], function () { return [{ type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }]; }, { config: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], badged: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], isActive: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }] }); })();
-
-const _c0$1 = function (a0, a1, a2, a3, a4) { return { "error": a0, "warning": a1, "success": a2, "info": a3, "blink": a4 }; };
-class BaseNotificationComponent {
-    constructor(notificationService, domSanitizer, cd) {
-        this.notificationService = notificationService;
-        this.domSanitizer = domSanitizer;
-        this.cd = cd;
-        this.closeIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.close);
-    }
-    ngOnInit() {
-        if (this.animate) {
-            this.item.state = this.animate;
-        }
-        this.initNotificationContent(this.item.title, 'title');
-        this.initNotificationContent(this.item.content, 'content');
-        if (this.item.type === NotificationType.Success) {
-            const timeout = 5000;
-            setTimeout(() => {
-                this.remove();
-            }, timeout);
-        }
-    }
-    ngOnDestroy() {
-        this.cd.detach();
-    }
-    onClose() {
-        this.remove();
-    }
-    remove() {
-        if (this.animate) {
-            this.item.state = this.animate + 'Out';
-            const timeout = 310;
-            setTimeout(() => {
-                this.notificationService.set(this.item, false);
-            }, timeout);
-        }
-        else {
-            this.notificationService.set(this.item, false);
-        }
-    }
-    initNotificationContent(item, key) {
-        switch (key) {
-            case 'title':
-                if (typeof item === 'string') {
-                    this.title = this.domSanitizer.bypassSecurityTrustHtml(item);
-                }
-                else {
-                    this.title = item;
-                }
-                break;
-            case 'content':
-                if (typeof item === 'string') {
-                    this.content = this.domSanitizer.bypassSecurityTrustHtml(item);
-                }
-                else {
-                    this.title = item;
-                }
-                break;
-        }
-    }
-}
-BaseNotificationComponent.ɵfac = function BaseNotificationComponent_Factory(t) { return new (t || BaseNotificationComponent)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(NotificationCenterService), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
-BaseNotificationComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: BaseNotificationComponent, selectors: [["b2p-base-notification"]], inputs: { position: "position", maxLength: "maxLength", animate: "animate", item: "item" }, decls: 8, vars: 12, consts: [[1, "vg-base-notification", 3, "ngClass"], [3, "click"], [1, "icon", "close_icon", 3, "ngClass", "innerHTML"], [1, "vgbn-body"], [1, "vgbn-title"], [1, "vgbn-title", 3, "innerHTML"], [1, "vgbn-content"], [1, "vgbn-content", 3, "innerHTML"]], template: function BaseNotificationComponent_Template(rf, ctx) { if (rf & 1) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 0);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "span", 1);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function BaseNotificationComponent_Template_span_click_1_listener() { return ctx.onClose(); });
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(2, "div", 2);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(3, "div", 3);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(4, "div", 4);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(5, "div", 5);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(6, "div", 6);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(7, "div", 7);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-    } if (rf & 2) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("@enterLeave", ctx.item.state)("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction5"])(6, _c0$1, ctx.item.type === "error", ctx.item.type === "warning", ctx.item.type === "success", ctx.item.type === "info", !ctx.item.isTouched));
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", ctx.item.type === "warning" ? "black" : "white")("innerHTML", ctx.closeIcons, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx.title, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx.content, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"]], styles: ["@-webkit-keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@keyframes Pulsate-Red{0%{background:#cb0101}50%{background:#960000}to{background:#cb0101}}@-webkit-keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@keyframes Pulsate-Blue{0%{background:#0faeed}50%{background:#006696}to{background:#0faeed}}@-webkit-keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@keyframes Pulsate-Green{0%{background:#18bc18}50%{background:#26f526}to{background:#18bc18}}@-webkit-keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}@keyframes Pulsate-Yellow{0%{background:#ffd800}50%{background:#ffe65c}to{background:#ffd800}}.vg-base-notification{border-radius:5px;box-shadow:0 3px 11px 0 #c9c9c9;box-sizing:border-box;color:#fff;float:right;margin-bottom:15px;margin-right:13px;min-height:70px;padding:10px 20px;position:relative;width:90%}.vg-base-notification .vgbn-body{display:flex;flex-flow:column}.vg-base-notification .vgbn-content,.vg-base-notification .vgbn-title{margin:.5px 0 0}.vg-base-notification .vgbn-title{font-size:20px;line-height:30px}.vg-base-notification .vgbn-content{font-size:14px;line-height:15px}.vg-base-notification.has-icon .vgbn-content,.vg-base-notification.has-icon .vgbn-title{padding:0 50px 0 0}.vg-base-notification.error{background:#cb0101}.vg-base-notification.success{background:#76dd55}.vg-base-notification.warning{background:#ffd800}.vg-base-notification.info{background:#0faeed}.vg-base-notification.error.blink{-webkit-animation:Pulsate-Red 4s linear 1s infinite;animation:Pulsate-Red 4s linear 1s infinite}.vg-base-notification.success.blink{-webkit-animation:Pulsate-Green 4s linear 1s infinite;animation:Pulsate-Green 4s linear 1s infinite}.vg-base-notification.warning.blink{-webkit-animation:Pulsate-Yellow 4s linear 1s infinite;animation:Pulsate-Yellow 4s linear 1s infinite}.vg-base-notification.info.blink{-webkit-animation:Pulsate-Blue 4s linear 1s infinite;animation:Pulsate-Blue 4s linear 1s infinite}.vg-base-notification.warning div .vgbn-content,.vg-base-notification.warning div .vgbn-html,.vg-base-notification.warning div .vgbn-title{color:#855d02}.close_icon{cursor:pointer;position:absolute;right:10px}"], encapsulation: 2, data: { animation: [
-            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["trigger"])('enterLeave', [
-                // Fade
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fade', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fade', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fadeOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fade => fadeOut', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                ]),
-                // Enter from top
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTop', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromTop', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTopOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromTop => fromTopOut', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                ]),
-                // Enter from right
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromRight', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRightOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromRight => fromRightOut', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                ]),
-                // Enter from bottom
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromBottom', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottomOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromBottom => fromBottomOut', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                ]),
-                // Enter from left
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromLeft', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                ]),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeftOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromLeft => fromLeftOut', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                ])
-            ])
-        ] }, changeDetection: 0 });
-/*@__PURE__*/ (function () { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(BaseNotificationComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'b2p-base-notification',
-                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
-                animations: [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["trigger"])('enterLeave', [
-                        // Fade
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fade', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fade', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                        ]),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fadeOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0 })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fade => fadeOut', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1 }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                        ]),
-                        // Enter from top
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTop', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromTop', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                        ]),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromTopOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromTop => fromTopOut', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                        ]),
-                        // Enter from right
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromRight', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                        ]),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromRightOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromRight => fromRightOut', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                        ]),
-                        // Enter from bottom
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromBottom', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(5%)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                        ]),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromBottomOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateY(-5%)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromBottom => fromBottomOut', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateY(0)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                        ]),
-                        // Enter from left
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('* => fromLeft', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(-5%)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('400ms ease-in-out')
-                        ]),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["state"])('fromLeftOut', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 0, transform: 'translateX(5%)' })),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["transition"])('fromLeft => fromLeftOut', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["style"])({ opacity: 1, transform: 'translateX(0)' }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_4__["animate"])('300ms ease-in-out')
-                        ])
-                    ])
-                ],
-                templateUrl: './base-notification.component.html',
-                styleUrls: ['./base-notification.component.scss'],
-                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectionStrategy"].OnPush
-            }]
-    }], function () { return [{ type: NotificationCenterService }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, { position: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], maxLength: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], animate: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], item: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }] }); })();
-
-function NotificationCenterComponent_div_0_b2p_button_2_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "b2p-button", 5);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function NotificationCenterComponent_div_0_b2p_button_2_Template_b2p_button_click_0_listener() { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r6); const ctx_r5 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2); return ctx_r5.onToggleNotification(ctx_r5.notificationType.Error); });
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r1 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r1.errorButtonConfig)("isActive", !ctx_r1.hasMinimizedNotifications(ctx_r1.notificationType.Error));
-} }
-function NotificationCenterComponent_div_0_b2p_button_3_Template(rf, ctx) { if (rf & 1) {
-    const _r8 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "b2p-button", 5);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function NotificationCenterComponent_div_0_b2p_button_3_Template_b2p_button_click_0_listener() { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r8); const ctx_r7 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2); return ctx_r7.onToggleNotification(ctx_r7.notificationType.Warning); });
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r2 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r2.warningButtonConfig)("isActive", !ctx_r2.hasMinimizedNotifications(ctx_r2.notificationType.Warning));
-} }
-function NotificationCenterComponent_div_0_b2p_button_4_Template(rf, ctx) { if (rf & 1) {
-    const _r10 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "b2p-button", 5);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function NotificationCenterComponent_div_0_b2p_button_4_Template_b2p_button_click_0_listener() { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r10); const ctx_r9 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2); return ctx_r9.onToggleNotification(ctx_r9.notificationType.Info); });
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r3 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("config", ctx_r3.infoButtonConfig)("isActive", !ctx_r3.hasMinimizedNotifications(ctx_r3.notificationType.Info));
-} }
-function NotificationCenterComponent_div_0_div_5_span_1_Template(rf, ctx) { if (rf & 1) {
-    const _r14 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "span", 10);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function NotificationCenterComponent_div_0_div_5_span_1_Template_span_click_0_listener() { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r14); const ctx_r13 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3); return ctx_r13.onMinimize(); });
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(1, "div", 11);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r11 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("innerHTML", ctx_r11.getMinimizeIcon(), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-} }
-function NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "b2p-base-notification", 12);
-} if (rf & 2) {
-    const a_r15 = ctx.$implicit;
-    const i_r16 = ctx.index;
-    const ctx_r12 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("item", a_r15)("maxLength", ctx_r12.maxLength)("animate", ctx_r12.animate)("position", i_r16);
-} }
-function NotificationCenterComponent_div_0_div_5_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 6);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, NotificationCenterComponent_div_0_div_5_span_1_Template, 2, 1, "span", 7);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "div", 8);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, NotificationCenterComponent_div_0_div_5_b2p_base_notification_3_Template, 1, 4, "b2p-base-notification", 9);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r4 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r4.getMinimizeButtonColor() !== "success");
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngForOf", ctx_r4.getNotificationToShow());
-} }
-function NotificationCenterComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, NotificationCenterComponent_div_0_b2p_button_2_Template, 1, 2, "b2p-button", 3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, NotificationCenterComponent_div_0_b2p_button_3_Template, 1, 2, "b2p-button", 3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(4, NotificationCenterComponent_div_0_b2p_button_4_Template, 1, 2, "b2p-button", 3);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(5, NotificationCenterComponent_div_0_div_5_Template, 4, 2, "div", 4);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
-} if (rf & 2) {
-    const ctx_r0 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", ctx_r0.position);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Error));
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Warning));
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Info));
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r0.getNotificationToShow().length !== 0);
-} }
-class NotificationCenterComponent {
-    constructor(service, domSanitizer, cd) {
-        this.service = service;
-        this.domSanitizer = domSanitizer;
-        this.cd = cd;
-        this.create = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.destroy = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.lastOnBottom = true;
-        this.maxStack = 8;
-        this.usingComponentOptions = false;
-        // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
-        // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
-        // infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
-        this.upIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.up);
-        this.notificationType = NotificationType;
-        this.notifications = [];
-        this.position = ['bottom', 'right'];
-        this.maxLength = 0;
-        this.animate = NotificationAnimationType.FromRight;
-        this.errorButtonConfig = {
-            buttonVariant: "toggle" /* TOGGLE */,
-            buttonStyle: "solid" /* SOLID */,
-            buttonTheme: Color.DANGER,
-            iconSVG: getIcon('error', '#ffffff'),
-            iconSVGActive: getIcon('error', this.getColorInHex(Color.DANGER)),
-            iconStyle: "far" /* REGULAR */,
-        };
-        this.warningButtonConfig = {
-            buttonVariant: "toggle" /* TOGGLE */,
-            buttonStyle: "solid" /* SOLID */,
-            buttonTheme: Color.WARNING,
-            iconSVG: getIcon('warning', '#ffffff'),
-            iconSVGActive: getIcon('warning', this.getColorInHex(Color.WARNING)),
-            iconStyle: "far" /* REGULAR */,
-        };
-        this.infoButtonConfig = {
-            buttonVariant: "toggle" /* TOGGLE */,
-            buttonStyle: "solid" /* SOLID */,
-            buttonTheme: Color.INFO,
-            iconSVG: getIcon('info', '#ffffff'),
-            iconSVGActive: getIcon('info', this.getColorInHex(Color.INFO)),
-            iconStyle: "far" /* REGULAR */,
-        };
-    }
-    set options(opt) {
-        this.usingComponentOptions = true;
-        this.attachChanges(opt);
-    }
-    ngOnInit() {
-        if (!this.usingComponentOptions) {
-            this.attachChanges(this.service.globalOptions);
-        }
-        this.listener = this.service.emitter
-            .subscribe(item => {
-            switch (item.command) {
-                case 'cleanAll':
-                    this.notifications = [];
-                    break;
-                case 'clean':
-                    this.cleanSingle(item.id);
-                    break;
-                case 'set':
-                    if (item.add) {
-                        this.add(item.notification);
-                    }
-                    else {
-                        this.defaultBehavior(item);
-                    }
-                    break;
-                default:
-                    this.defaultBehavior(item);
-                    break;
-            }
-            if (!this.cd.destroyed) {
-                this.cd.detectChanges();
-            }
-        });
-    }
-    ngOnDestroy() {
-        if (this.listener) {
-            this.listener.unsubscribe();
-        }
-        this.cd.detach();
-    }
-    defaultBehavior(value) {
-        this.notifications.splice(this.notifications.indexOf(value.notification), 1);
-        this.destroy.emit(this.buildEmit(value.notification, false));
-    }
-    add(item) {
-        if (!item) {
-            return;
-        }
-        item.createdOn = new Date();
-        if (this.lastOnBottom) {
-            if (this.notifications.length >= this.maxStack) {
-                this.notifications.splice(0, 1);
-            }
-            this.notifications.push(item);
-        }
-        else {
-            if (this.notifications.length >= this.maxStack) {
-                this.notifications.splice(this.notifications.length - 1, 1);
-            }
-            this.notifications.splice(0, 0, item);
-        }
-        this.create.emit(this.buildEmit(item, true));
-    }
-    checkStandard(checker, item) {
-        return checker.type === item.type
-            && checker.title === item.title
-            && checker.content === item.content;
-    }
-    // tslint:disable-next-line: no-any
-    attachChanges(options) {
-        for (const key in options) {
-            if (this.hasOwnProperty(key)) {
-                // tslint:disable-next-line: no-any
-                this[key] = options[key];
-            }
-        }
-    }
-    buildEmit(notification, to) {
-        const toEmit = {
-            createdOn: notification.createdOn,
-            type: notification.type,
-            id: notification.id
-        };
-        toEmit.title = notification.title;
-        toEmit.content = notification.content;
-        if (!to) {
-            toEmit.destroyedOn = new Date();
-        }
-        return toEmit;
-    }
-    cleanSingle(id) {
-        if (!id) {
-            return;
-        }
-        let indexOfDelete = 0;
-        let doDelete = false;
-        let noti;
-        this.notifications.forEach((notification, idx) => {
-            if (notification.id === id) {
-                indexOfDelete = idx;
-                noti = notification;
-                doDelete = true;
-            }
-        });
-        if (doDelete) {
-            this.notifications.splice(indexOfDelete, 1);
-            this.destroy.emit(this.buildEmit(noti, false));
-        }
-    }
-    hasTouchedNotifications(notificationType) {
-        return this.notifications.some(notif => notif.type === notificationType && notif.isTouched);
-    }
-    hasMinimizedNotifications(notificationType) {
-        return this.notifications.some(notif => notif.type === notificationType && notif.isMinimized);
-    }
-    onMinimize() {
-        this.notifications.forEach(notif => {
-            if (notif.type !== NotificationType.Success) {
-                notif.isMinimized = true;
-                notif.isTouched = true;
-            }
-        });
-    }
-    onToggleNotification(notificationType) {
-        if (this.getShownTypes().length > 1) {
-            this.notifications.forEach(notif => {
-                if (notif.type !== notificationType) {
-                    notif.isMinimized = true;
-                    notif.isTouched = true;
-                }
-                else {
-                    notif.isMinimized = false;
-                }
-            });
-        }
-        else {
-            this.notifications.forEach(notif => {
-                if (notif.type === notificationType && this.hasMinimizedNotifications(notif.type)) {
-                    notif.isMinimized = !notif.isMinimized;
-                    if (notif.isMinimized) {
-                        notif.isTouched = true;
-                    }
-                }
-                else {
-                    notif.isMinimized = true;
-                    notif.isTouched = true;
-                }
-            });
-        }
-    }
-    getNotificationToShow() {
-        return this.notifications.filter(notif => !notif.isMinimized);
-    }
-    getShownTypes() {
-        return this.notifications.filter(notif => !notif.isMinimized)
-            .map(notif => notif.type).filter((type, index, self) => self.indexOf(type) === index);
-    }
-    getMinimizeButtonColor() {
-        const showntypes = this.getShownTypes();
-        if (showntypes.length === 2) {
-            const indexSucess = showntypes.indexOf(NotificationType.Success);
-            if (indexSucess > -1) {
-                showntypes.splice(indexSucess, 1);
-            }
-        }
-        if (showntypes.length === 1) {
-            if (showntypes[0] === NotificationType.Success) {
-                return Color.SUCCESS;
-            }
-            else if (showntypes[0] === NotificationType.Info) {
-                return Color.INFO;
-            }
-            else if (showntypes[0] === NotificationType.Warning) {
-                return Color.WARNING;
-            }
-            else if (showntypes[0] === NotificationType.Error) {
-                return Color.DANGER;
-            }
-        }
-        return Color.BLACK;
-    }
-    getMinimizeIcon() {
-        let upIconColor = Color.BLACK;
-        const showntypes = this.getShownTypes();
-        if (showntypes.length === 2) {
-            const indexSucess = showntypes.indexOf(NotificationType.Success);
-            if (indexSucess > -1) {
-                showntypes.splice(indexSucess, 1);
-            }
-        }
-        if (showntypes.length === 1) {
-            if (showntypes[0] === NotificationType.Success) {
-                upIconColor = Color.SUCCESS;
-            }
-            else if (showntypes[0] === NotificationType.Info) {
-                upIconColor = Color.INFO;
-            }
-            else if (showntypes[0] === NotificationType.Warning) {
-                upIconColor = Color.WARNING;
-            }
-            else if (showntypes[0] === NotificationType.Error) {
-                upIconColor = Color.DANGER;
-            }
-        }
-        console.log(upIconColor);
-        return this.domSanitizer.bypassSecurityTrustHtml(getIcon('up', this.getColorInHex(upIconColor)));
-    }
-    getColorInHex(colorName) {
-        switch (colorName) {
-            case 'danger':
-                return ' #CB0101';
-            case 'warning':
-                return '#FFD800';
-            case 'info':
-                return '#0FAEED';
-            case 'success':
-                return '#76dd55';
-            default:
-                return '#000000';
-        }
-    }
-}
-NotificationCenterComponent.ɵfac = function NotificationCenterComponent_Factory(t) { return new (t || NotificationCenterComponent)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(NotificationCenterService), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
-NotificationCenterComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({ type: NotificationCenterComponent, selectors: [["b2p-notification-center"]], inputs: { options: "options" }, outputs: { create: "create", destroy: "destroy" }, decls: 1, vars: 1, consts: [["class", "vg-base-notification-wrapper", 3, "ngClass", 4, "ngIf"], [1, "vg-base-notification-wrapper", 3, "ngClass"], [1, "notification-center_buttons"], ["class", "notification-center_button", 3, "config", "isActive", "click", 4, "ngIf"], ["class", "notification-wrapper", 4, "ngIf"], [1, "notification-center_button", 3, "config", "isActive", "click"], [1, "notification-wrapper"], ["class", "minimize", 3, "click", 4, "ngIf"], [1, "notifications-container", "hide-scrollbars"], [3, "item", "maxLength", "animate", "position", 4, "ngFor", "ngForOf"], [1, "minimize", 3, "click"], [3, "innerHTML"], [3, "item", "maxLength", "animate", "position"]], template: function NotificationCenterComponent_Template(rf, ctx) { if (rf & 1) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(0, NotificationCenterComponent_div_0_Template, 6, 5, "div", 0);
-    } if (rf & 2) {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.notifications.length > 0);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgClass"], B2PButtonComponent, _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], BaseNotificationComponent], styles: [".vg-base-notification-wrapper{margin-right:-2px;position:fixed;width:300px;z-index:1000}.vg-base-notification-wrapper.left{left:30px}.vg-base-notification-wrapper.top{top:80px}.vg-base-notification-wrapper.right{right:30px}.vg-base-notification-wrapper.bottom{bottom:20px}.vg-base-notification-wrapper.center{left:50%;transform:translateX(-50%)}.vg-base-notification-wrapper.middle{top:50%;transform:translateY(-50%)}.vg-base-notification-wrapper.middle.center{transform:translate(-50%,-50%)}.notification-center_buttons{margin-right:11px;text-align:end}.notification-center_button{border-radius:3px;box-shadow:0 3px 11px 0 #c9c9c9;margin-left:8px}.notification-wrapper{margin-right:10px;position:absolute;top:73px;width:300px}.notifications-container{max-height:calc(100vh - 183px);overflow-y:auto;position:relative;top:33px}.minimize{cursor:pointer;position:absolute;right:120px}.hide-scrollbars{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbars::-webkit-scrollbar{background:transparent;width:0}@media (max-width:340px){.vg-base-notification-wrapper{left:30px;right:30px;width:auto}}"], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(NotificationCenterComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'b2p-notification-center',
-                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
-                templateUrl: './notification-center.component.html',
-                styleUrls: ['./notification-center.component.scss'],
-                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectionStrategy"].OnPush
-            }]
-    }], function () { return [{ type: NotificationCenterService }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }]; }, { options: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], create: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
-        }], destroy: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
-        }] }); })();
-
-const OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('options');
-function optionsFactory(options) {
-    return Object.assign(Object.assign({}, DEFAULT_OPTIONS), options);
-}
-class NotificationCenterModule {
-    static forRoot(options = {}) {
-        return {
-            ngModule: NotificationCenterModule,
-            providers: [
-                NotificationCenterService,
-                {
-                    provide: OPTIONS,
-                    useValue: options
-                },
-                {
-                    provide: 'options',
-                    useFactory: optionsFactory,
-                    deps: [OPTIONS]
-                }
-            ]
-        };
-    }
-}
-NotificationCenterModule.ɵmod = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"])({ type: NotificationCenterModule });
-NotificationCenterModule.ɵinj = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"])({ factory: function NotificationCenterModule_Factory(t) { return new (t || NotificationCenterModule)(); }, imports: [[
-            _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]
-        ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"])(NotificationCenterModule, { declarations: [B2PButtonComponent,
-        BaseNotificationComponent,
-        NotificationCenterComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]], exports: [NotificationCenterComponent] }); })();
-/*@__PURE__*/ (function () { Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(NotificationCenterModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
-        args: [{
-                declarations: [
-                    B2PButtonComponent,
-                    BaseNotificationComponent,
-                    NotificationCenterComponent
-                ],
-                imports: [
-                    _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]
-                ],
-                exports: [
-                    NotificationCenterComponent
-                ]
-            }]
-    }], null, null); })();
-
-/*
- * Public API Surface of notification-center
- */
-
-/**
- * Generated bundle index. Do not edit.
- */
-
-
-//# sourceMappingURL=b2p-notification-center.js.map
 
 
 /***/ }),
