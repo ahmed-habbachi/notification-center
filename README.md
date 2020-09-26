@@ -1,3 +1,4 @@
+<!-- omit in toc -->
 # B2P-Notification-Center
 
 Credits:
@@ -6,6 +7,12 @@ Credits:
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Ahmed-Habbachi/notification-center/Build%20and%20Deploy)
 [![NPM Version](https://img.shields.io/npm/v/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
 [![NPM Downloads](https://img.shields.io/npm/dt/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
+
+- [Demo](#demo)
+- [Setup](#setup)
+- [Run demo project locally](#run-demo-project-locally)
+  - [Bonus](#bonus)
+- [License](#license)
 
 ## Demo
 
@@ -88,9 +95,7 @@ ng serve notification-center-demo #npm script 'start'
 to be able to work on the library and test live without interruption:
 
 ```shell
-cd my-lib
 ng build b2p-notification-center --watch
-cd my-app
 ng serve notification-center-demo
 ```
 

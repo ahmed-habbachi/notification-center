@@ -27,6 +27,7 @@ jobs:
     - run: npm ci
     - run: npm run build:lib
     - run: npm run lint
+    - run: npm run test:ci
 
   build-and-deploy:
 

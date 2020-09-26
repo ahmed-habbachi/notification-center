@@ -17,8 +17,8 @@ import {NotificationCenterService} from '../../notification-center.service';
 import {NotificationType} from '../../types/notification-type.enum';
 import {NotificationEvent} from '../../types/notification-event.type';
 import {Color} from '../../types/color.type';
-import {DEFAULT_ICONS} from '../../constants/default-icons.const';
-import {DomSanitizer} from '@angular/platform-browser';
+import {DEFAULT_ICONS, getIcon} from '../../constants/default-icons.const';
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {UiButtonConfig, UI_BUTTON_ICON_STYLE, UI_BUTTON_STYLES, UI_BUTTON_THEMES, UI_BUTTON_VARIANTS} from '../button/button.component';
 
 @Component({
@@ -43,9 +43,9 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
   private maxStack = 8;
   private usingComponentOptions = false;
 
-  errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
-  warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
-  infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
+  // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
+  // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
+  // infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
   upIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.up);
   notificationType = NotificationType;
   notifications: Array<Notification> = [];
@@ -53,27 +53,30 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
   maxLength = 0;
   animate: NotificationAnimationType = NotificationAnimationType.FromRight;
 
-  errorButton: UiButtonConfig = {
+  errorButtonConfig: UiButtonConfig = {
     buttonVariant: UI_BUTTON_VARIANTS.TOGGLE,
     buttonStyle: UI_BUTTON_STYLES.SOLID,
     buttonTheme: Color.DANGER,
-    iconName: DEFAULT_ICONS.error,
+    iconSVG: getIcon('error', '#ffffff'),
+    iconSVGActive: getIcon('error', this.getColorInHex(Color.DANGER)),
     iconStyle: UI_BUTTON_ICON_STYLE.REGULAR,
   };
 
-  warningButton: UiButtonConfig = {
+  warningButtonConfig: UiButtonConfig = {
     buttonVariant: UI_BUTTON_VARIANTS.TOGGLE,
     buttonStyle: UI_BUTTON_STYLES.SOLID,
     buttonTheme: Color.WARNING,
-    iconName: DEFAULT_ICONS.warning,
+    iconSVG: getIcon('warning', '#ffffff'),
+    iconSVGActive: getIcon('warning', this.getColorInHex(Color.WARNING)),
     iconStyle: UI_BUTTON_ICON_STYLE.REGULAR,
   };
 
-  infoButton: UiButtonConfig = {
+  infoButtonConfig: UiButtonConfig = {
     buttonVariant: UI_BUTTON_VARIANTS.TOGGLE,
     buttonStyle: UI_BUTTON_STYLES.SOLID,
     buttonTheme: Color.INFO,
-    iconName: DEFAULT_ICONS.info,
+    iconSVG: getIcon('info', '#ffffff'),
+    iconSVGActive: getIcon('info', this.getColorInHex(Color.INFO)),
     iconStyle: UI_BUTTON_ICON_STYLE.REGULAR,
   };
 
@@ -284,5 +287,45 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
     }
 
     return Color.BLACK;
+  }
+
+  getMinimizeIcon(): SafeHtml {
+    let upIconColor: string = Color.BLACK;
+    const showntypes: Array<NotificationType> = this.getShownTypes();
+    if (showntypes.length === 2) {
+      const indexSucess: number = showntypes.indexOf(NotificationType.Success);
+      if (indexSucess > -1) {
+        showntypes.splice(indexSucess, 1);
+      }
+    }
+
+    if (showntypes.length === 1) {
+      if (showntypes[0] === NotificationType.Success) {
+        upIconColor = Color.SUCCESS;
+      } else if (showntypes[0] === NotificationType.Info) {
+        upIconColor = Color.INFO;
+      } else if (showntypes[0] === NotificationType.Warning) {
+        upIconColor = Color.WARNING;
+      } else if (showntypes[0] === NotificationType.Error) {
+        upIconColor = Color.DANGER;
+      }
+    }
+    console.log(upIconColor);
+    return this.domSanitizer.bypassSecurityTrustHtml(getIcon('up', this.getColorInHex(upIconColor)));
+  }
+
+  getColorInHex(colorName: string): string {
+    switch (colorName) {
+      case 'danger':
+        return ' #CB0101';
+      case 'warning':
+        return '#FFD800';
+      case 'info':
+        return '#0FAEED';
+      case 'success':
+        return '#76dd55';
+      default:
+        return '#000000';
+    }
   }
 }

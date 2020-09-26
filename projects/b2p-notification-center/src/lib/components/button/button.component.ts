@@ -46,7 +46,9 @@ export interface UiButtonConfig {
   iconStyle?: string;
   iconStyleActive?: string;
   iconName?: string;
+  iconSVG?: string;
   iconNameActive?: string;
+  iconSVGActive?: string;
   tooltip?: string;
   tooltipActive?: string;
   tooltipTheme?: string;
@@ -69,10 +71,22 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
   @Input() config: UiButtonConfig;
   @Input() badged: boolean | number;
 
+  public get isActive(): boolean {
+    return this.active;
+  }
+
+  @Input()
+  public set isActive(value: boolean) {
+    if (value !== this.active) {
+      this.toggleStatus({propagate: false});
+    }
+  }
+
   active = false;
 
   currentIconStyle: string;
-  currentIconName: SafeHtml;
+  currentIconName: string;
+  currentIconSVG: SafeHtml;
   currentTooltip: string;
 
   activeSubscription: Subscription;
@@ -98,10 +112,12 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
 
     this.config.iconStyleActive = this.config.iconStyleActive || this.config.iconStyle;
     this.config.iconNameActive = this.config.iconNameActive || this.config.iconName;
+    this.config.iconSVGActive = this.config.iconSVGActive || this.config.iconSVG;
     this.config.tooltipActive = this.config.tooltipActive || this.config.tooltip;
 
     this.currentIconStyle = this.config.iconStyle;
-    this.currentIconName = this.domSanitizer.bypassSecurityTrustHtml(this.config.iconName);
+    this.currentIconName = this.config.iconName;
+    this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.config.iconSVG);
     this.currentTooltip = this.config.tooltip;
 
     if (this.config.active$ === undefined) {
@@ -132,7 +148,8 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
     this.active = !this.active;
 
     this.currentIconStyle = this.active ? this.config.iconStyleActive : this.config.iconStyle;
-    this.currentIconName = this.domSanitizer.bypassSecurityTrustHtml(this.active ? this.config.iconNameActive : this.config.iconName);
+    this.currentIconName = this.active ? this.config.iconNameActive : this.config.iconName;
+    this.currentIconSVG = this.domSanitizer.bypassSecurityTrustHtml(this.active ? this.config.iconSVGActive : this.config.iconSVG);
     this.currentTooltip = this.active ? this.config.tooltipActive : this.config.tooltip;
 
     if (propagate) {

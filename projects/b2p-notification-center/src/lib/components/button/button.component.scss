@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 :host {
 	display: inline-block;
 	height: 36px;
@@ -11,29 +15,18 @@
 	font-size: .75rem;
 	line-height: 20px;
 	text-transform: uppercase;
-	outline: none !important;
+  outline: none !important;
+  padding-left: 8px;
+  padding-right: 8px;
 
 	.ui-button__label {
-		padding: 0 12px 0 6px;
+		padding: 0 12px 0 4px;
 	}
 
 	.ui-button__icon {
 		font-size: .875rem;
-		padding-top: 6px;
+		padding-top: 4px;
   }
-}
-
-.ui-button.ui-button--danger {
-  background: #d62f2f;
-}
-.ui-button.ui-button--success {
-  background: #76dd55;
-}
-.ui-button.ui-button--warning {
-  background:#FFD800;
-}
-.ui-button.ui-button--info {
-  background: #0FAEED;
 }
 
 .ui-button.ui-button--icon {
@@ -43,12 +36,51 @@
 
 .ui-button.ui-button--lined {
 	background: none;
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 .ui-button.ui-button--solid {
 	border: none;
 	border-radius: 4px;
+}
+
+.ui-button--solid.ui-button--danger {
+  background:  #CB0101;
+  border-color:  #CB0101;
+}
+.ui-button--solid.ui-button--success {
+  background: #76dd55;
+  border-color: #76dd55;
+}
+.ui-button--solid.ui-button--warning {
+  background:#FFD800;
+  border-color:#FFD800;
+}
+.ui-button--solid.ui-button--info {
+  background: #0FAEED;
+  border-color: #0FAEED;
+}
+
+.ui-button--lined.ui-button--danger {
+  color:  #CB0101;
+}
+.ui-button--lined.ui-button--success {
+  color: #76dd55;
+}
+.ui-button--lined.ui-button--warning {
+  color:#FFD800;
+}
+.ui-button--lined.ui-button--info {
+  color: #0FAEED;
+}
+
+.ui-button.active {
+  background: transparent;
+  border-radius: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .notification-badge {
