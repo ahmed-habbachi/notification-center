@@ -125,10 +125,10 @@ export class BaseNotificationComponent implements OnInit, OnDestroy {
       this.item.state = this.animate + 'Out';
       const timeout = 310;
       setTimeout(() => {
-        this.notificationService.set(this.item, false);
+        this.notificationService.remove(this.item.id);
       }, timeout);
     } else {
-      this.notificationService.set(this.item, false);
+      this.notificationService.remove(this.item.id);
     }
   }
 

@@ -12,13 +12,14 @@ export class NotificationCenterService {
   emitter = new Subject<NotificationEvent>();
   constructor(
     @Inject('options') public globalOptions: NotificationOptions
-  ) {}
+  ) { }
 
   set(notification: Notification, to: boolean): Notification {
     const radix = 36;
     const substring = 3;
-    notification.id = Math.random().toString(radix).substring(substring);
-
+    if (!notification.id) {
+      notification.id = Math.random().toString(radix).substring(substring);
+    }
     this.emitter.next({command: 'set', notification, add: to});
     return notification;
   }
