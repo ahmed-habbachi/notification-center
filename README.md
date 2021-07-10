@@ -11,12 +11,12 @@ Credits:
 - [Demo](#demo)
 - [Setup](#setup)
 - [Run demo project locally](#run-demo-project-locally)
-  - [Bonus](#bonus)
+- [Bonus](#bonus)
 - [License](#license)
 
 ## Demo
 
-This demo is provided by github pages as a result of a workflow (ci/cd deploy) means it is possible that i make a mistake and break it all [demo](https://ahmed-habbachi.github.io/notification-center/)
+[This demo](https://ahmed-habbachi.github.io/notification-center/) is provided by github pages as a result of a workflow (ci/cd deploy) means it is possible that i make a mistake and break it all.
 
 ## Setup
 
@@ -26,7 +26,7 @@ Install the library
 npm i b2p-notification-center
 ```
 
-Import the `NotificationCenterModule` in to your root `AppModule`
+Import the `NotificationCenterModule` in your root `AppModule`
 
 ```ts
 import { NotificationCenterModule } from 'b2p-notification-center';
@@ -44,7 +44,7 @@ import { NotificationCenterModule } from 'b2p-notification-center';
 export class AppModule { }
 ```
 
-Add the NotificationCenterModule in to the component where you want to use the notifications. Or in your top level component for use in child components.
+Add the NotificationCenterModule to the component where you want to use the notifications. Or in your top level component for use in child components.
 
 ```js
 ...
@@ -90,7 +90,7 @@ npm link b2p-notification-center
 ng serve notification-center-demo #npm script 'start'
 ```
 
-### Bonus
+## Bonus
 
 to be able to work on the library and test live without interruption:
 
@@ -99,7 +99,7 @@ ng build b2p-notification-center --watch
 ng serve notification-center-demo
 ```
 
-That's it
+That's it.
 
 ## License
 

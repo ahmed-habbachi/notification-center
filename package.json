@@ -1,6 +1,6 @@
 {
   "name": "notification-center-demo",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve notification-center-demo",
@@ -8,7 +8,7 @@
     "build:lib": "ng build b2p-notification-center --prod",
     "build:demo": "ng build notification-center-demo",
     "test": "ng test b2p-notification-center",
-    "test:ci": "ng test b2p-notification-center --browsers=ChromeHeadlessCI",
+    "test:ci": "ng test b2p-notification-center --browsers=ChromeHeadlessCI --watch=false",
     "lint": "ng lint b2p-notification-center",
     "e2e": "ng e2e b2p-notification-center",
     "lib:package": "cd dist/b2p-notification-center && npm pack"

@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - run: npm run build:lib
     - run: npm run lint
-    # - run: npm run test:ci
+    - run: npm run test:ci
 
   build-and-deploy:
 
@@ -43,27 +43,27 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Build library
+      - name: Build library 🔧
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install Packages 🔧
+      - name: Install Packages 📦
         run: |
           npm ci
 
-      - name: Build demo 🔧
+      - name: Build library 🔧🧱
         run: |
           npm run build:lib
 
-      - name: Npm link
+      - name: Npm link 🔌
         run: |
           cd /home/runner/work/notification-center/notification-center/dist/b2p-notification-center
           npm link
           cd ../..
           npm link b2p-notification-center
 
-      - name: Build demo 🔧
+      - name: Build demo 🔧🎆
         run: |
           npm run build:demo
 

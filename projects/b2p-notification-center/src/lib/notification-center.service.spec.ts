@@ -44,7 +44,7 @@ describe('NotificationCenterService', () => {
     inject([NotificationCenterService], (service: NotificationCenterService) => {
 
       let notificationEvent: NotificationEvent = null;
-
+      defaultNotification.id = null; // simulate new notification
       service.emitter.subscribe(item => notificationEvent = item);
 
       service.set(defaultNotification, true);
