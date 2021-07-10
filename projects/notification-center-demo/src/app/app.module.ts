@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NotificationCenterModule} from 'b2p-notification-center';
 import {FormsModule} from '@angular/forms';
+import {MarkdownModule} from 'ngx-markdown';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    NotificationCenterModule.forRoot()
+    HttpClientModule,
+    NotificationCenterModule.forRoot(),
+    MarkdownModule.forRoot({ loader: HttpClient })
   ],
   providers: [],
   bootstrap: [AppComponent]

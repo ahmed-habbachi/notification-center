@@ -25,12 +25,20 @@
             "aot": true,
             "assets": [
               "projects/notification-center-demo/src/favicon.ico",
-              "projects/notification-center-demo/src/assets"
+              "projects/notification-center-demo/src/assets",
+              {"input":"./", "glob": "README.md", "output": "/assets/" }
             ],
             "styles": [
-              "projects/notification-center-demo/src/styles.scss"
+              "projects/notification-center-demo/src/styles.scss",
+              "node_modules/prismjs/themes/prism-okaidia.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/lib/marked.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-bash.min.js",
+              "node_modules/prismjs/components/prism-json.min.js",
+              "node_modules/prismjs/components/prism-typescript.min.js"
+            ]
           },
           "configurations": {
             "production": {
