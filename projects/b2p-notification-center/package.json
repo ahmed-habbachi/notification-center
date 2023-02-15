@@ -1,6 +1,6 @@
 {
   "name": "b2p-notification-center",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "Angular component to show/hide (manage) notification",
   "homepage": "https://github.com/Ahmed-Habbachi/notification-center",
   "bugs": {
@@ -13,11 +13,11 @@
   "private": false,
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "~11.2.14",
-    "@angular/core": "~11.2.14"
+    "@angular/common": "~14.2.10",
+    "@angular/core": "~14.2.10"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.5.0"
   },
   "author": "Ahmed HABBACHI",
   "keywords": [

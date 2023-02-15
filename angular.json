@@ -22,7 +22,6 @@
             "main": "projects/notification-center-demo/src/main.ts",
             "polyfills": "projects/notification-center-demo/src/polyfills.ts",
             "tsConfig": "projects/notification-center-demo/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/notification-center-demo/src/favicon.ico",
               "projects/notification-center-demo/src/assets",
@@ -33,12 +32,18 @@
               "node_modules/prismjs/themes/prism-okaidia.css"
             ],
             "scripts": [
-              "node_modules/marked/lib/marked.js",
+              "node_modules/marked/marked.min.js",
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-bash.min.js",
               "node_modules/prismjs/components/prism-json.min.js",
               "node_modules/prismjs/components/prism-typescript.min.js"
-            ]
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -68,7 +73,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -170,6 +176,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "notification-center-demo"
+    }
+  }
 }
