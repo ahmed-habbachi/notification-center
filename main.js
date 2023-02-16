@@ -280,8 +280,9 @@ __webpack_require__.r(__webpack_exports__);
 if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.production) {
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.enableProdMode)();
 }
-_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__.platformBrowser().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule)
-    .catch(err => console.error(err));
+_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__.platformBrowser()
+    .bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule)
+    .catch((err) => console.error(err));
 
 
 /***/ }),
@@ -1374,13 +1375,13 @@ class NotificationCenterComponent {
 
   checkStandard(checker, item) {
     return checker.type === item.type && checker.title === item.title && checker.content === item.content;
-  } // tslint:disable-next-line: no-any
+  } // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 
   attachChanges(options) {
     for (const key in options) {
       if (this.hasOwnProperty(key)) {
-        // tslint:disable-next-line: no-any
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         this[key] = options[key];
       }
     }
