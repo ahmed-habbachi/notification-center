@@ -10,41 +10,42 @@ import {B2PButtonComponent} from './components/button/button.component';
 
 export const OPTIONS: InjectionToken<NotificationOptions> =
   new InjectionToken<NotificationOptions>('options');
+
 export function optionsFactory(options: NotificationOptions): NotificationOptions {
-  return {
-    ...DEFAULT_OPTIONS,
-    ...options
-  };
+    return {
+        ...DEFAULT_OPTIONS,
+        ...options
+    };
 }
 
 @NgModule({
-  declarations: [
-    B2PButtonComponent,
-    BaseNotificationComponent,
-    NotificationCenterComponent],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    NotificationCenterComponent
-  ]
+    declarations: [
+        B2PButtonComponent,
+        BaseNotificationComponent,
+        NotificationCenterComponent],
+    imports: [
+        CommonModule
+    ],
+    exports: [
+        NotificationCenterComponent
+    ]
 })
 export class NotificationCenterModule {
-  static forRoot(options: NotificationOptions = {}): ModuleWithProviders<NotificationCenterModule> {
-    return {
-      ngModule: NotificationCenterModule,
-      providers: [
-        NotificationCenterService,
-        {
-          provide: OPTIONS,
-          useValue: options
-        },
-        {
-          provide: 'options',
-          useFactory: optionsFactory,
-          deps: [OPTIONS]
-        }
-      ]
-    };
-  }
+    static forRoot(options: NotificationOptions = {}): ModuleWithProviders<NotificationCenterModule> {
+        return {
+            ngModule: NotificationCenterModule,
+            providers: [
+                NotificationCenterService,
+                {
+                    provide: OPTIONS,
+                    useValue: options
+                },
+                {
+                    provide: 'options',
+                    useFactory: optionsFactory,
+                    deps: [OPTIONS]
+                }
+            ]
+        };
+    }
 }

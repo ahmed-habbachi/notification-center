@@ -164,11 +164,11 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
       && checker.content === item.content;
   }
 
-  // tslint:disable-next-line: no-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   attachChanges(options: any): void {
     for (const key in options) {
       if (this.hasOwnProperty(key)) {
-        // tslint:disable-next-line: no-any
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (this as any)[key] = options[key];
       }
     }

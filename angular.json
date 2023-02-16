@@ -25,7 +25,11 @@
             "assets": [
               "projects/notification-center-demo/src/favicon.ico",
               "projects/notification-center-demo/src/assets",
-              {"input":"./", "glob": "README.md", "output": "/assets/" }
+              {
+                "input": "./",
+                "glob": "README.md",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "projects/notification-center-demo/src/styles.scss",
@@ -111,15 +115,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/notification-center-demo/tsconfig.app.json",
-              "projects/notification-center-demo/tsconfig.spec.json",
-              "projects/notification-center-demo/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/**/*.ts",
+              "projects/**/*.html"
             ]
           }
         },
@@ -164,18 +164,20 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/b2p-notification-center/tsconfig.lib.json",
-              "projects/b2p-notification-center/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/b2p-notification-center/**/*.ts",
+              "projects/b2p-notification-center/**/*.html"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
