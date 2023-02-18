@@ -26,7 +26,7 @@ class AppComponent {
         this.notification = {
             title: '',
             content: '',
-            type: b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.Success,
+            type: b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.success,
         };
         // notification: Notification = {
         //   title: 'Notification test',
@@ -44,13 +44,13 @@ class AppComponent {
             _notification.content = 'Test Content';
         }
         switch (notificationType) {
-            case b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.Error:
+            case b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.error:
                 this.notificationservice.error(_notification.title, _notification.content);
                 break;
-            case b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.Warning:
+            case b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.warning:
                 this.notificationservice.warning(_notification.title, _notification.content);
                 break;
-            case b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.Info:
+            case b2p_notification_center__WEBPACK_IMPORTED_MODULE_0__.NotificationType.info:
                 this.notificationservice.info(_notification.title, _notification.content);
                 break;
             default:
@@ -98,7 +98,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](26, "input", 18, 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "div", 20)(29, "div", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_29_listener() { return ctx.addNotification(ctx.notificationType.Success); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_29_listener() { return ctx.addNotification(ctx.notificationType.success); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnamespaceSVG"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "svg", 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](31, "path", 23);
@@ -108,7 +108,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](33, "Success");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "div", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_34_listener() { return ctx.addNotification(ctx.notificationType.Info); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_34_listener() { return ctx.addNotification(ctx.notificationType.info); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnamespaceSVG"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "svg", 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](36, "path", 23);
@@ -118,7 +118,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](38, "Info");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "div", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_39_listener() { return ctx.addNotification(ctx.notificationType.Warning); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_39_listener() { return ctx.addNotification(ctx.notificationType.warning); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnamespaceSVG"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "svg", 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](41, "path", 23);
@@ -128,7 +128,7 @@ AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["�
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](43, "Warning");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "div", 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_44_listener() { return ctx.addNotification(ctx.notificationType.Error); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AppComponent_Template_div_click_44_listener() { return ctx.addNotification(ctx.notificationType.error); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnamespaceSVG"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "svg", 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](46, "path", 23);
@@ -398,14 +398,14 @@ function NotificationCenterComponent_div_0_b2p_button_2_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_b2p_button_2_Template_b2p_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6);
       const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r5.onToggleNotification(ctx_r5.notificationType.Error));
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r5.onToggleNotification(ctx_r5.notificationType.error));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r1.errorButtonConfig)("isActive", !ctx_r1.hasMinimizedNotifications(ctx_r1.notificationType.Error));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r1.errorButtonConfig)("isActive", !ctx_r1.hasMinimizedNotifications(ctx_r1.notificationType.error));
   }
 }
 
@@ -417,14 +417,14 @@ function NotificationCenterComponent_div_0_b2p_button_3_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_b2p_button_3_Template_b2p_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
       const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r7.onToggleNotification(ctx_r7.notificationType.Warning));
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r7.onToggleNotification(ctx_r7.notificationType.warning));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
     const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r2.warningButtonConfig)("isActive", !ctx_r2.hasMinimizedNotifications(ctx_r2.notificationType.Warning));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r2.warningButtonConfig)("isActive", !ctx_r2.hasMinimizedNotifications(ctx_r2.notificationType.warning));
   }
 }
 
@@ -436,14 +436,14 @@ function NotificationCenterComponent_div_0_b2p_button_4_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NotificationCenterComponent_div_0_b2p_button_4_Template_b2p_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r10);
       const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r9.onToggleNotification(ctx_r9.notificationType.Info));
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r9.onToggleNotification(ctx_r9.notificationType.info));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
     const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r3.infoButtonConfig)("isActive", !ctx_r3.hasMinimizedNotifications(ctx_r3.notificationType.Info));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx_r3.infoButtonConfig)("isActive", !ctx_r3.hasMinimizedNotifications(ctx_r3.notificationType.info));
   }
 }
 
@@ -514,11 +514,11 @@ function NotificationCenterComponent_div_0_Template(rf, ctx) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx_r0.position);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Error));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.error));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Warning));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.warning));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.Info));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.hasTouchedNotifications(ctx_r0.notificationType.info));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.getNotificationToShow().length !== 0);
   }
@@ -568,7 +568,7 @@ const DEFAULT_ICONS = {
   `
 };
 
-function getIcon(icon, color) {
+const getIcon = (icon, color) => {
   switch (icon) {
     case 'alert':
       return `
@@ -628,18 +628,18 @@ function getIcon(icon, color) {
     default:
       return '';
   }
-}
+};
 
 var NotificationAnimationType;
 
 (function (NotificationAnimationType) {
-  NotificationAnimationType["Fade"] = "fade";
-  NotificationAnimationType["FromTop"] = "fromTop";
-  NotificationAnimationType["FromRight"] = "fromRight";
-  NotificationAnimationType["FromBottom"] = "fromBottom";
-  NotificationAnimationType["FromLeft"] = "fromLeft";
-  NotificationAnimationType["Scale"] = "scale";
-  NotificationAnimationType["Rotate"] = "rotate";
+  NotificationAnimationType["fade"] = "fade";
+  NotificationAnimationType["fromTop"] = "fromTop";
+  NotificationAnimationType["fromRight"] = "fromRight";
+  NotificationAnimationType["fromBottom"] = "fromBottom";
+  NotificationAnimationType["fromLeft"] = "fromLeft";
+  NotificationAnimationType["scale"] = "scale";
+  NotificationAnimationType["rotate"] = "rotate";
 })(NotificationAnimationType || (NotificationAnimationType = {}));
 
 const DEFAULT_OPTIONS = {
@@ -647,28 +647,28 @@ const DEFAULT_OPTIONS = {
   lastOnBottom: true,
   maxLength: 0,
   maxStack: 100,
-  animate: NotificationAnimationType.FromTop
+  animate: NotificationAnimationType.fromTop
 };
 var Color;
 
 (function (Color) {
-  Color["PRIMARY"] = "primary";
-  Color["SECONDARY"] = "secondary";
-  Color["SUCCESS"] = "success";
-  Color["WARNING"] = "warning";
-  Color["DANGER"] = "danger";
-  Color["INFO"] = "info";
-  Color["WHITE"] = "white";
-  Color["BLACK"] = "black";
+  Color["primary"] = "primary";
+  Color["secondary"] = "secondary";
+  Color["success"] = "success";
+  Color["warning"] = "warning";
+  Color["danger"] = "danger";
+  Color["info"] = "info";
+  Color["white"] = "white";
+  Color["black"] = "black";
 })(Color || (Color = {}));
 
 var NotificationType;
 
 (function (NotificationType) {
-  NotificationType["Success"] = "success";
-  NotificationType["Error"] = "error";
-  NotificationType["Warning"] = "warning";
-  NotificationType["Info"] = "info";
+  NotificationType["success"] = "success";
+  NotificationType["error"] = "error";
+  NotificationType["warning"] = "warning";
+  NotificationType["info"] = "info";
 })(NotificationType || (NotificationType = {}));
 
 class NotificationCenterService {
@@ -697,7 +697,7 @@ class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Success
+      type: NotificationType.success
     }, true);
   }
 
@@ -705,7 +705,7 @@ class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Info
+      type: NotificationType.info
     }, true);
   }
 
@@ -713,7 +713,7 @@ class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Error
+      type: NotificationType.error
     }, true);
   }
 
@@ -721,12 +721,12 @@ class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Warning
+      type: NotificationType.warning
     }, true);
   } // With type method
 
 
-  create(title = '', content = '', type = NotificationType.Success) {
+  create(title = '', content = '', type = NotificationType.success) {
     return this.set({
       title,
       content,
@@ -772,12 +772,19 @@ NotificationCenterService.ɵprov = /* @__PURE__ */_angular_core__WEBPACK_IMPORTE
     }];
   }, null);
 })();
+/* eslint-disable @typescript-eslint/naming-convention */
+
 
 class B2PButtonComponent {
-  // CONSTRUCTOR ////////////////////////////////////////////////////////////////////////////////////////////////////
   constructor(domSanitizer) {
     this.domSanitizer = domSanitizer;
     this.active = false;
+  }
+
+  get isToggleButton() {
+    return this.config.buttonVariant === "toggle"
+    /* TOGGLE */
+    ;
   }
 
   get isActive() {
@@ -790,15 +797,7 @@ class B2PButtonComponent {
         propagate: false
       });
     }
-  } // GETTER / SETTER ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-  get isToggleButton() {
-    return this.config.buttonVariant === "toggle"
-    /* TOGGLE */
-    ;
-  } // PUBLIC FUNCTIONS ///////////////////////////////////////////////////////////////////////////////////////////////
-
+  }
 
   ngOnInit() {
     this.config.buttonVariant = this.config.buttonVariant || "simple"
@@ -973,7 +972,7 @@ class BaseNotificationComponent {
     this.initNotificationContent(this.item.title, 'title');
     this.initNotificationContent(this.item.content, 'content');
 
-    if (this.item.type === NotificationType.Success) {
+    if (this.item.type === NotificationType.success) {
       const timeout = 5000;
       setTimeout(() => {
         this.remove();
@@ -1239,10 +1238,7 @@ class NotificationCenterComponent {
     this.domSanitizer = domSanitizer;
     this.cd = cd;
     this.create = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
-    this.destroy = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
-    this.lastOnBottom = true;
-    this.maxStack = 8;
-    this.usingComponentOptions = false; // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
+    this.destroy = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter(); // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
     // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
     // infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
 
@@ -1251,7 +1247,7 @@ class NotificationCenterComponent {
     this.notifications = [];
     this.position = ['bottom', 'right'];
     this.maxLength = 0;
-    this.animate = NotificationAnimationType.FromRight;
+    this.animate = NotificationAnimationType.fromRight;
     this.errorButtonConfig = {
       buttonVariant: "toggle"
       /* TOGGLE */
@@ -1259,9 +1255,9 @@ class NotificationCenterComponent {
       buttonStyle: "solid"
       /* SOLID */
       ,
-      buttonTheme: Color.DANGER,
+      buttonTheme: Color.danger,
       iconSVG: getIcon('error', '#ffffff'),
-      iconSVGActive: getIcon('error', this.getColorInHex(Color.DANGER)),
+      iconSVGActive: getIcon('error', this.getColorInHex(Color.danger)),
       iconStyle: "far"
       /* REGULAR */
 
@@ -1273,9 +1269,9 @@ class NotificationCenterComponent {
       buttonStyle: "solid"
       /* SOLID */
       ,
-      buttonTheme: Color.WARNING,
+      buttonTheme: Color.warning,
       iconSVG: getIcon('warning', '#ffffff'),
-      iconSVGActive: getIcon('warning', this.getColorInHex(Color.WARNING)),
+      iconSVGActive: getIcon('warning', this.getColorInHex(Color.warning)),
       iconStyle: "far"
       /* REGULAR */
 
@@ -1287,13 +1283,16 @@ class NotificationCenterComponent {
       buttonStyle: "solid"
       /* SOLID */
       ,
-      buttonTheme: Color.INFO,
+      buttonTheme: Color.info,
       iconSVG: getIcon('info', '#ffffff'),
-      iconSVGActive: getIcon('info', this.getColorInHex(Color.INFO)),
+      iconSVGActive: getIcon('info', this.getColorInHex(Color.info)),
       iconStyle: "far"
       /* REGULAR */
 
     };
+    this.lastOnBottom = true;
+    this.maxStack = 8;
+    this.usingComponentOptions = false;
   }
 
   set options(opt) {
@@ -1435,7 +1434,7 @@ class NotificationCenterComponent {
 
   onMinimize() {
     this.notifications.forEach(notif => {
-      if (notif.type !== NotificationType.Success) {
+      if (notif.type !== NotificationType.success) {
         notif.isMinimized = true;
         notif.isTouched = true;
       }
@@ -1480,7 +1479,7 @@ class NotificationCenterComponent {
     const showntypes = this.getShownTypes();
 
     if (showntypes.length === 2) {
-      const indexSucess = showntypes.indexOf(NotificationType.Success);
+      const indexSucess = showntypes.indexOf(NotificationType.success);
 
       if (indexSucess > -1) {
         showntypes.splice(indexSucess, 1);
@@ -1488,26 +1487,26 @@ class NotificationCenterComponent {
     }
 
     if (showntypes.length === 1) {
-      if (showntypes[0] === NotificationType.Success) {
-        return Color.SUCCESS;
-      } else if (showntypes[0] === NotificationType.Info) {
-        return Color.INFO;
-      } else if (showntypes[0] === NotificationType.Warning) {
-        return Color.WARNING;
-      } else if (showntypes[0] === NotificationType.Error) {
-        return Color.DANGER;
+      if (showntypes[0] === NotificationType.success) {
+        return Color.success;
+      } else if (showntypes[0] === NotificationType.info) {
+        return Color.info;
+      } else if (showntypes[0] === NotificationType.warning) {
+        return Color.warning;
+      } else if (showntypes[0] === NotificationType.error) {
+        return Color.danger;
       }
     }
 
-    return Color.BLACK;
+    return Color.black;
   }
 
   getMinimizeIcon() {
-    let upIconColor = Color.BLACK;
+    let upIconColor = Color.black;
     const showntypes = this.getShownTypes();
 
     if (showntypes.length === 2) {
-      const indexSucess = showntypes.indexOf(NotificationType.Success);
+      const indexSucess = showntypes.indexOf(NotificationType.success);
 
       if (indexSucess > -1) {
         showntypes.splice(indexSucess, 1);
@@ -1515,14 +1514,14 @@ class NotificationCenterComponent {
     }
 
     if (showntypes.length === 1) {
-      if (showntypes[0] === NotificationType.Success) {
-        upIconColor = Color.SUCCESS;
-      } else if (showntypes[0] === NotificationType.Info) {
-        upIconColor = Color.INFO;
-      } else if (showntypes[0] === NotificationType.Warning) {
-        upIconColor = Color.WARNING;
-      } else if (showntypes[0] === NotificationType.Error) {
-        upIconColor = Color.DANGER;
+      if (showntypes[0] === NotificationType.success) {
+        upIconColor = Color.success;
+      } else if (showntypes[0] === NotificationType.info) {
+        upIconColor = Color.info;
+      } else if (showntypes[0] === NotificationType.warning) {
+        upIconColor = Color.warning;
+      } else if (showntypes[0] === NotificationType.error) {
+        upIconColor = Color.danger;
       }
     }
 
@@ -1589,7 +1588,7 @@ NotificationCenterComponent.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORT
       selector: 'b2p-notification-center',
       encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewEncapsulation.None,
       changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
-      template: "<div *ngIf=\"notifications.length > 0\" class=\"vg-base-notification-wrapper\" [ngClass]=\"position\">\n\t<div class=\"notification-center_buttons\">\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.Error)\" [config]=\"errorButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.Error)\" (click)=\"onToggleNotification(notificationType.Error)\" ></b2p-button>\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.Warning)\" [config]=\"warningButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.Warning)\" (click)=\"onToggleNotification(notificationType.Warning)\" ></b2p-button>\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.Info)\" [config]=\"infoButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.Info)\" (click)=\"onToggleNotification(notificationType.Info)\"></b2p-button>\n\t</div>\n\t<div *ngIf=\"getNotificationToShow().length !== 0\" class=\"notification-wrapper\">\n\t\t<span *ngIf=\"getMinimizeButtonColor() !== 'success'\" class=\"minimize\" (click)=\"onMinimize()\">\n\t\t\t<div [innerHTML]=\"getMinimizeIcon()\"></div>\n\t\t</span>\n\t\t<div class=\"notifications-container hide-scrollbars\">\n\t\t\t<b2p-base-notification *ngFor=\"let a of getNotificationToShow(); let i = index\" [item]=\"a\"  [maxLength]=\"maxLength\" [animate]=\"animate\" [position]=\"i\">\n\t\t\t</b2p-base-notification>\n\t\t</div>\n\t</div>\n</div>\n",
+      template: "<div *ngIf=\"notifications.length > 0\" class=\"vg-base-notification-wrapper\" [ngClass]=\"position\">\n\t<div class=\"notification-center_buttons\">\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.error)\" [config]=\"errorButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.error)\" (click)=\"onToggleNotification(notificationType.error)\" ></b2p-button>\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.warning)\" [config]=\"warningButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.warning)\" (click)=\"onToggleNotification(notificationType.warning)\" ></b2p-button>\n    <b2p-button *ngIf=\"hasTouchedNotifications(notificationType.info)\" [config]=\"infoButtonConfig\" class=\"notification-center_button\" [isActive]=\"!hasMinimizedNotifications(notificationType.info)\" (click)=\"onToggleNotification(notificationType.info)\"></b2p-button>\n\t</div>\n\t<div *ngIf=\"getNotificationToShow().length !== 0\" class=\"notification-wrapper\">\n\t\t<span *ngIf=\"getMinimizeButtonColor() !== 'success'\" class=\"minimize\" (click)=\"onMinimize()\">\n\t\t\t<div [innerHTML]=\"getMinimizeIcon()\"></div>\n\t\t</span>\n\t\t<div class=\"notifications-container hide-scrollbars\">\n\t\t\t<b2p-base-notification *ngFor=\"let a of getNotificationToShow(); let i = index\" [item]=\"a\"  [maxLength]=\"maxLength\" [animate]=\"animate\" [position]=\"i\">\n\t\t\t</b2p-base-notification>\n\t\t</div>\n\t</div>\n</div>\n",
       styles: [".vg-base-notification-wrapper{position:fixed;width:300px;z-index:1000;margin-right:-2px}.vg-base-notification-wrapper.left{left:30px}.vg-base-notification-wrapper.top{top:80px}.vg-base-notification-wrapper.right{right:30px}.vg-base-notification-wrapper.bottom{bottom:20px}.vg-base-notification-wrapper.center{left:50%;transform:translate(-50%)}.vg-base-notification-wrapper.middle{top:50%;transform:translateY(-50%)}.vg-base-notification-wrapper.middle.center{transform:translate(-50%,-50%)}.notification-center_buttons{text-align:end;margin-right:11px;max-height:36px}.notification-center_button{margin-left:8px;border-radius:3px;box-shadow:0 3px 11px #c9c9c9}.notification-wrapper{position:absolute;width:300px;top:73px;margin-right:10px}.notifications-container{position:relative;top:33px;max-height:calc(100vh - 183px);overflow-y:auto}.minimize{position:absolute;right:120px;cursor:pointer}.hide-scrollbars{scrollbar-width:none;-ms-overflow-style:none}.hide-scrollbars::-webkit-scrollbar{width:0px;background:transparent}@media (max-width: 340px){.vg-base-notification-wrapper{width:auto;left:30px;right:30px}}\n"]
     }]
   }], function () {
@@ -1601,25 +1600,23 @@ NotificationCenterComponent.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORT
       type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectorRef
     }];
   }, {
-    options: [{
-      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
-    }],
     create: [{
       type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Output
     }],
     destroy: [{
       type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Output
+    }],
+    options: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
     }]
   });
 })();
 
 const OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('options');
 
-function optionsFactory(options) {
-  return { ...DEFAULT_OPTIONS,
-    ...options
-  };
-}
+const optionsFactory = options => ({ ...DEFAULT_OPTIONS,
+  ...options
+});
 
 class NotificationCenterModule {
   static forRoot(options = {}) {
