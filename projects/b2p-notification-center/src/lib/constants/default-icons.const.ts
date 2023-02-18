@@ -45,7 +45,7 @@ export const DEFAULT_ICONS: Icons = {
   `
 };
 
-export function getIcon(icon: string, color: string): string {
+export const getIcon = (icon: string, color: string): string => {
     switch (icon) {
     case 'alert':
         return `
@@ -98,4 +98,4 @@ export function getIcon(icon: string, color: string): string {
     default:
         return '';
     }
-}
+};

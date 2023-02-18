@@ -1,8 +1,8 @@
 <div *ngIf="notifications.length > 0" class="vg-base-notification-wrapper" [ngClass]="position">
 	<div class="notification-center_buttons">
-    <b2p-button *ngIf="hasTouchedNotifications(notificationType.Error)" [config]="errorButtonConfig" class="notification-center_button" [isActive]="!hasMinimizedNotifications(notificationType.Error)" (click)="onToggleNotification(notificationType.Error)" ></b2p-button>
-    <b2p-button *ngIf="hasTouchedNotifications(notificationType.Warning)" [config]="warningButtonConfig" class="notification-center_button" [isActive]="!hasMinimizedNotifications(notificationType.Warning)" (click)="onToggleNotification(notificationType.Warning)" ></b2p-button>
-    <b2p-button *ngIf="hasTouchedNotifications(notificationType.Info)" [config]="infoButtonConfig" class="notification-center_button" [isActive]="!hasMinimizedNotifications(notificationType.Info)" (click)="onToggleNotification(notificationType.Info)"></b2p-button>
+    <b2p-button *ngIf="hasTouchedNotifications(notificationType.error)" [config]="errorButtonConfig" class="notification-center_button" [isActive]="!hasMinimizedNotifications(notificationType.error)" (click)="onToggleNotification(notificationType.error)" ></b2p-button>
+    <b2p-button *ngIf="hasTouchedNotifications(notificationType.warning)" [config]="warningButtonConfig" class="notification-center_button" [isActive]="!hasMinimizedNotifications(notificationType.warning)" (click)="onToggleNotification(notificationType.warning)" ></b2p-button>
+    <b2p-button *ngIf="hasTouchedNotifications(notificationType.info)" [config]="infoButtonConfig" class="notification-center_button" [isActive]="!hasMinimizedNotifications(notificationType.info)" (click)="onToggleNotification(notificationType.info)"></b2p-button>
 	</div>
 	<div *ngIf="getNotificationToShow().length !== 0" class="notification-wrapper">
 		<span *ngIf="getMinimizeButtonColor() !== 'success'" class="minimize" (click)="onMinimize()">

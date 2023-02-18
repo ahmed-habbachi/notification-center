@@ -15,10 +15,10 @@ describe('NotificationCenterComponent', () => {
   const defaultNotification: Notification = {
     id: '0',
     title: 'Test title',
-    type: NotificationType.Info,
+    type: NotificationType.info,
     content: 'Test Content',
     maxLength: 0,
-    animate: NotificationAnimationType.FromTop,
+    animate: NotificationAnimationType.fromTop,
     createdOn: new Date(),
     destroyedOn: new Date()
   };
@@ -60,7 +60,7 @@ describe('NotificationCenterComponent', () => {
     defaultNotification.isTouched = true;
     component.add(defaultNotification);
     fixture.detectChanges();
-    expect(component.hasTouchedNotifications(NotificationType.Info)).toBeTruthy();
+    expect(component.hasTouchedNotifications(NotificationType.info)).toBeTruthy();
   });
 
   it('should have minimized notification', () => {
@@ -68,7 +68,7 @@ describe('NotificationCenterComponent', () => {
     fixture.detectChanges();
     component.onMinimize();
     fixture.detectChanges();
-    expect(component.hasMinimizedNotifications(NotificationType.Info)).toBeTruthy();
+    expect(component.hasMinimizedNotifications(NotificationType.info)).toBeTruthy();
   });
 
   it('should have minimize icon colored with info color', () => {
@@ -76,11 +76,11 @@ describe('NotificationCenterComponent', () => {
     component.add({
       id: '0',
       title: 'Test title',
-      type: NotificationType.Info,
+      type: NotificationType.info,
       content: 'Test Content'
     });
     fixture.detectChanges();
-    expect(component.getMinimizeButtonColor()).toBe(Color.INFO);
+    expect(component.getMinimizeButtonColor()).toBe(Color.info);
   });
 
   it('should have minimize icon colored with black color', () => {
@@ -88,13 +88,13 @@ describe('NotificationCenterComponent', () => {
     component.add({
       id: '0',
       title: 'Test title',
-      type: NotificationType.Warning,
+      type: NotificationType.warning,
       content: 'Test Content'
     });
     component.add({
       id: '0',
       title: 'Test title',
-      type: NotificationType.Error,
+      type: NotificationType.error,
       content: 'Test Content'
     });
     fixture.detectChanges();
@@ -106,7 +106,7 @@ describe('NotificationCenterComponent', () => {
     component.add({
       id: '0',
       title: 'Test title',
-      type: NotificationType.Warning,
+      type: NotificationType.warning,
       content: 'Test Content',
       isMinimized: true,
       isTouched: true
@@ -114,7 +114,7 @@ describe('NotificationCenterComponent', () => {
     component.add({
       id: '0',
       title: 'Test title',
-      type: NotificationType.Error,
+      type: NotificationType.error,
       content: 'Test Content',
       isMinimized: true,
       isTouched: true
@@ -122,10 +122,10 @@ describe('NotificationCenterComponent', () => {
     fixture.detectChanges();
     component.onMinimize();
     fixture.detectChanges();
-    component.onToggleNotification(NotificationType.Info);
+    component.onToggleNotification(NotificationType.info);
 
     for (const notification of component.getNotificationToShow()) {
-      expect(notification.type).toBe(NotificationType.Info);
+      expect(notification.type).toBe(NotificationType.info);
       expect(notification.isMinimized).toBeFalsy();
     }
   });

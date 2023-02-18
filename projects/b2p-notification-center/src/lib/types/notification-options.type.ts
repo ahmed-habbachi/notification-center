@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import {NotificationAnimationType} from './notification-animation-type.enum';
 
 export type VerticalPosition = 'top' | 'bottom' | 'middle';

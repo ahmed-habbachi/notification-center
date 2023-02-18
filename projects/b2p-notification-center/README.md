@@ -4,7 +4,7 @@
 Credits:
 > This library is heavily inspired and a re-write of [Angular2-Notifications](https://github.com/flauc/angular2-notifications), started with some tweaks that a client needed and ends up changing a lot of principals of the original project.
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Ahmed-Habbachi/notification-center/Build%20and%20Deploy)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ahmed-habbachi/notification-center/node.js.yml)
 [![NPM Version](https://img.shields.io/npm/v/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
 [![NPM Downloads](https://img.shields.io/npm/dt/b2p-notification-center.svg)](https://www.npmjs.com/package/b2p-notification-center)
 

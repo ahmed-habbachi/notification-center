@@ -1,6 +1,6 @@
 {
   "name": "b2p-notification-center",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Angular component to show/hide (manage) notification",
   "homepage": "https://github.com/Ahmed-Habbachi/notification-center",
   "bugs": {

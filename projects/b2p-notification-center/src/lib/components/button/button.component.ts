@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {BehaviorSubject, Subject, Subscription} from 'rxjs';
@@ -71,6 +72,21 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
   @Input() config: UiButtonConfig;
   @Input() badged: boolean | number;
 
+  active = false;
+
+  currentIconStyle: string;
+  currentIconName: string;
+  currentIconSVG: SafeHtml;
+  currentTooltip: string;
+
+  activeSubscription: Subscription;
+
+  constructor(private domSanitizer: DomSanitizer) {}
+
+  get isToggleButton(): boolean {
+    return this.config.buttonVariant === UI_BUTTON_VARIANTS.TOGGLE;
+  }
+
   public get isActive(): boolean {
     return this.active;
   }
@@ -81,27 +97,6 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
       this.toggleStatus({propagate: false});
     }
   }
-
-  active = false;
-
-  currentIconStyle: string;
-  currentIconName: string;
-  currentIconSVG: SafeHtml;
-  currentTooltip: string;
-
-  activeSubscription: Subscription;
-
-  // CONSTRUCTOR ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  constructor(private domSanitizer: DomSanitizer) {}
-
-  // GETTER / SETTER ////////////////////////////////////////////////////////////////////////////////////////////////
-
-  get isToggleButton(): boolean {
-    return this.config.buttonVariant === UI_BUTTON_VARIANTS.TOGGLE;
-  }
-
-  // PUBLIC FUNCTIONS ///////////////////////////////////////////////////////////////////////////////////////////////
 
   ngOnInit(): void {
     this.config.buttonVariant = this.config.buttonVariant || UI_BUTTON_VARIANTS.SIMPLE;

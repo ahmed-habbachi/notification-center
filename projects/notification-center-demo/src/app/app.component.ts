@@ -11,7 +11,7 @@ export class AppComponent {
   notification: Notification = {
     title: '',
     content: '',
-    type: NotificationType.Success,
+    type: NotificationType.success,
   }
   // notification: Notification = {
   //   title: 'Notification test',
@@ -35,13 +35,13 @@ export class AppComponent {
     }
 
     switch (notificationType) {
-      case NotificationType.Error:
+      case NotificationType.error:
         this.notificationservice.error(_notification.title, _notification.content);
         break;
-      case NotificationType.Warning:
+      case NotificationType.warning:
         this.notificationservice.warning(_notification.title, _notification.content);
         break;
-      case NotificationType.Info:
+      case NotificationType.info:
         this.notificationservice.info(_notification.title, _notification.content);
         break;
       default:

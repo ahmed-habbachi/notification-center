@@ -6,5 +6,5 @@ export const DEFAULT_OPTIONS: NotificationOptions = {
   lastOnBottom: true,
   maxLength: 0,
   maxStack: 100,
-  animate: NotificationAnimationType.FromTop
+  animate: NotificationAnimationType.fromTop
 };

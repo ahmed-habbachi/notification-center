@@ -17,10 +17,10 @@ describe('BaseNotificationComponent', () => {
   const defaultNotification: Notification = {
     id: '0',
     title: 'Test title',
-    type: NotificationType.Success,
+    type: NotificationType.success,
     content: 'Test Content',
     maxLength: 0,
-    animate: NotificationAnimationType.FromTop,
+    animate: NotificationAnimationType.fromTop,
     createdOn: new Date(),
     destroyedOn: new Date()
   };

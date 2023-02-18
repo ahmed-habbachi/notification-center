@@ -12,7 +12,7 @@
       },
       "root": "projects/notification-center-demo",
       "sourceRoot": "projects/notification-center-demo/src",
-      "prefix": "app",
+      "prefix": "b2p",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

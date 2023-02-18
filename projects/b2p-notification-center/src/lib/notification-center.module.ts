@@ -11,12 +11,10 @@ import {B2PButtonComponent} from './components/button/button.component';
 export const OPTIONS: InjectionToken<NotificationOptions> =
   new InjectionToken<NotificationOptions>('options');
 
-export function optionsFactory(options: NotificationOptions): NotificationOptions {
-    return {
+export const optionsFactory = (options: NotificationOptions): NotificationOptions => ({
         ...DEFAULT_OPTIONS,
         ...options
-    };
-}
+    });
 
 @NgModule({
     declarations: [

@@ -26,10 +26,10 @@ describe('NotificationCenterService', () => {
   const defaultNotification: Notification = {
     id: '0',
     title: 'Test title',
-    type: NotificationType.Success,
+    type: NotificationType.success,
     content: 'Test Content',
     maxLength: 0,
-    animate: NotificationAnimationType.FromTop,
+    animate: NotificationAnimationType.fromTop,
     createdOn: new Date(),
     destroyedOn: new Date()
   };
@@ -131,10 +131,10 @@ describe('NotificationCenterService', () => {
       let notificationEvent: NotificationEvent = null;
       service.emitter.subscribe(item => notificationEvent = item);
 
-      const notification: Notification = service.create('Title', 'Message', NotificationType.Error);
+      const notification: Notification = service.create('Title', 'Message', NotificationType.error);
 
       expect(notification.id !== undefined).toBeTruthy();
-      expect(notification.type).toBe(NotificationType.Error);
+      expect(notification.type).toBe(NotificationType.error);
 
       expect(notification.title).toBe('Title');
       expect(notification.content).toBe('Message');

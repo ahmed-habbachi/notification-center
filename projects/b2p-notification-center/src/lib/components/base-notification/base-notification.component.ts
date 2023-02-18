@@ -104,7 +104,7 @@ export class BaseNotificationComponent implements OnInit, OnDestroy {
     this.initNotificationContent(this.item.title, 'title');
     this.initNotificationContent(this.item.content, 'content');
 
-    if (this.item.type === NotificationType.Success) {
+    if (this.item.type === NotificationType.success) {
       const timeout = 5000;
       setTimeout(() => {
         this.remove();

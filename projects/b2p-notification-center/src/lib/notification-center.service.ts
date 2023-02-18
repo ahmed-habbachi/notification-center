@@ -28,7 +28,7 @@ export class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Success
+      type: NotificationType.success
     }, true);
   }
 
@@ -36,7 +36,7 @@ export class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Info
+      type: NotificationType.info
     }, true);
   }
 
@@ -44,7 +44,7 @@ export class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Error
+      type: NotificationType.error
     }, true);
   }
 
@@ -52,7 +52,7 @@ export class NotificationCenterService {
     return this.set({
       title,
       content: content || '',
-      type: NotificationType.Warning
+      type: NotificationType.warning
     }, true);
   }
 
@@ -60,7 +60,7 @@ export class NotificationCenterService {
   create(
     title: string | SafeHtml = '',
     content: string | SafeHtml = '',
-    type: NotificationType = NotificationType.Success
+    type: NotificationType = NotificationType.success
   ): Notification {
     return this.set({
       title,

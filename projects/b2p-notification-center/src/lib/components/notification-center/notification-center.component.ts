@@ -30,18 +30,8 @@ import {UiButtonConfig, UI_BUTTON_ICON_STYLE, UI_BUTTON_STYLES, UI_BUTTON_THEMES
 })
 export class NotificationCenterComponent implements OnInit, OnDestroy {
 
-  @Input() set options(opt: NotificationOptions) {
-    this.usingComponentOptions = true;
-    this.attachChanges(opt);
-  }
-
   @Output() create = new EventEmitter();
   @Output() destroy = new EventEmitter();
-
-  private listener: Subscription;
-  private lastOnBottom = true;
-  private maxStack = 8;
-  private usingComponentOptions = false;
 
   // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
   // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
@@ -51,40 +41,50 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
   notifications: Array<Notification> = [];
   position: Position = ['bottom', 'right'];
   maxLength = 0;
-  animate: NotificationAnimationType = NotificationAnimationType.FromRight;
+  animate: NotificationAnimationType = NotificationAnimationType.fromRight;
 
   errorButtonConfig: UiButtonConfig = {
     buttonVariant: UI_BUTTON_VARIANTS.TOGGLE,
     buttonStyle: UI_BUTTON_STYLES.SOLID,
-    buttonTheme: Color.DANGER,
+    buttonTheme: Color.danger,
     iconSVG: getIcon('error', '#ffffff'),
-    iconSVGActive: getIcon('error', this.getColorInHex(Color.DANGER)),
+    iconSVGActive: getIcon('error', this.getColorInHex(Color.danger)),
     iconStyle: UI_BUTTON_ICON_STYLE.REGULAR,
   };
 
   warningButtonConfig: UiButtonConfig = {
     buttonVariant: UI_BUTTON_VARIANTS.TOGGLE,
     buttonStyle: UI_BUTTON_STYLES.SOLID,
-    buttonTheme: Color.WARNING,
+    buttonTheme: Color.warning,
     iconSVG: getIcon('warning', '#ffffff'),
-    iconSVGActive: getIcon('warning', this.getColorInHex(Color.WARNING)),
+    iconSVGActive: getIcon('warning', this.getColorInHex(Color.warning)),
     iconStyle: UI_BUTTON_ICON_STYLE.REGULAR,
   };
 
   infoButtonConfig: UiButtonConfig = {
     buttonVariant: UI_BUTTON_VARIANTS.TOGGLE,
     buttonStyle: UI_BUTTON_STYLES.SOLID,
-    buttonTheme: Color.INFO,
+    buttonTheme: Color.info,
     iconSVG: getIcon('info', '#ffffff'),
-    iconSVGActive: getIcon('info', this.getColorInHex(Color.INFO)),
+    iconSVGActive: getIcon('info', this.getColorInHex(Color.info)),
     iconStyle: UI_BUTTON_ICON_STYLE.REGULAR,
   };
+
+  private listener: Subscription;
+  private lastOnBottom = true;
+  private maxStack = 8;
+  private usingComponentOptions = false;
 
   constructor(
     private service: NotificationCenterService,
     private domSanitizer: DomSanitizer,
     private cd: ChangeDetectorRef
   ) {}
+
+  @Input() set options(opt: NotificationOptions) {
+    this.usingComponentOptions = true;
+    this.attachChanges(opt);
+  }
 
   ngOnInit(): void {
     if (!this.usingComponentOptions) {
@@ -224,7 +224,7 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
 
   onMinimize(): void {
     this.notifications.forEach(notif => {
-      if (notif.type !== NotificationType.Success) {
+      if (notif.type !== NotificationType.success) {
         notif.isMinimized = true;
         notif.isTouched = true;
       }
@@ -268,46 +268,46 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
   getMinimizeButtonColor(): Color {
     const showntypes: Array<NotificationType> = this.getShownTypes();
     if (showntypes.length === 2) {
-      const indexSucess: number = showntypes.indexOf(NotificationType.Success);
+      const indexSucess: number = showntypes.indexOf(NotificationType.success);
       if (indexSucess > -1) {
         showntypes.splice(indexSucess, 1);
       }
     }
 
     if (showntypes.length === 1) {
-      if (showntypes[0] === NotificationType.Success) {
-        return Color.SUCCESS;
-      } else if (showntypes[0] === NotificationType.Info) {
-        return Color.INFO;
-      } else if (showntypes[0] === NotificationType.Warning) {
-        return Color.WARNING;
-      } else if (showntypes[0] === NotificationType.Error) {
-        return Color.DANGER;
+      if (showntypes[0] === NotificationType.success) {
+        return Color.success;
+      } else if (showntypes[0] === NotificationType.info) {
+        return Color.info;
+      } else if (showntypes[0] === NotificationType.warning) {
+        return Color.warning;
+      } else if (showntypes[0] === NotificationType.error) {
+        return Color.danger;
       }
     }
 
-    return Color.BLACK;
+    return Color.black;
   }
 
   getMinimizeIcon(): SafeHtml {
-    let upIconColor: string = Color.BLACK;
+    let upIconColor: string = Color.black;
     const showntypes: Array<NotificationType> = this.getShownTypes();
     if (showntypes.length === 2) {
-      const indexSucess: number = showntypes.indexOf(NotificationType.Success);
+      const indexSucess: number = showntypes.indexOf(NotificationType.success);
       if (indexSucess > -1) {
         showntypes.splice(indexSucess, 1);
       }
     }
 
     if (showntypes.length === 1) {
-      if (showntypes[0] === NotificationType.Success) {
-        upIconColor = Color.SUCCESS;
-      } else if (showntypes[0] === NotificationType.Info) {
-        upIconColor = Color.INFO;
-      } else if (showntypes[0] === NotificationType.Warning) {
-        upIconColor = Color.WARNING;
-      } else if (showntypes[0] === NotificationType.Error) {
-        upIconColor = Color.DANGER;
+      if (showntypes[0] === NotificationType.success) {
+        upIconColor = Color.success;
+      } else if (showntypes[0] === NotificationType.info) {
+        upIconColor = Color.info;
+      } else if (showntypes[0] === NotificationType.warning) {
+        upIconColor = Color.warning;
+      } else if (showntypes[0] === NotificationType.error) {
+        upIconColor = Color.danger;
       }
     }
     return this.domSanitizer.bypassSecurityTrustHtml(getIcon('up', this.getColorInHex(upIconColor)));
