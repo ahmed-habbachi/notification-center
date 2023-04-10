@@ -1,0 +1,22 @@
+{
+    "sourceFile": "projects/b2p-notification-center/tsconfig.lib.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1681111813074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681111894222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n {\r\n   \"extends\": \"../../tsconfig.json\",\r\n   \"compilerOptions\": {\r\n     \"outDir\": \"../../out-tsc/lib\",\r\n-    \"target\": \"es2020\",\r\n+    \"target\": \"es2022\",\r\n     \"declaration\": true,\r\n     \"declarationMap\": true,\r\n     \"inlineSources\": true,\r\n     \"types\": [],\r\n     \"lib\": [\r\n       \"dom\",\r\n-      \"es2018\"\r\n+      \"es2022\"\r\n     ]\r\n   },\r\n   \"angularCompilerOptions\": {\r\n     \"skipTemplateCodegen\": true,\r\n"
+                }
+            ],
+            "date": 1681111813074,
+            "name": "Commit-0",
+            "content": "/* To learn more about this file see: https://angular.io/config/tsconfig. */\r\n{\r\n  \"extends\": \"../../tsconfig.json\",\r\n  \"compilerOptions\": {\r\n    \"outDir\": \"../../out-tsc/lib\",\r\n    \"target\": \"es2020\",\r\n    \"declaration\": true,\r\n    \"declarationMap\": true,\r\n    \"inlineSources\": true,\r\n    \"types\": [],\r\n    \"lib\": [\r\n      \"dom\",\r\n      \"es2018\"\r\n    ]\r\n  },\r\n  \"angularCompilerOptions\": {\r\n    \"skipTemplateCodegen\": true,\r\n    \"strictMetadataEmit\": true,\r\n    \"enableResourceInlining\": true\r\n  },\r\n  \"exclude\": [\r\n    \"**/*.spec.ts\"\r\n  ]\r\n}"
+        }
+    ]
+}

@@ -1,11 +1,11 @@
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit, ViewEncapsulation, ChangeDetectorRef} from '@angular/core';
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {DEFAULT_ICONS} from '../../constants/default-icons.const';
-import {NotificationCenterService} from '../../notification-center.service';
-import {NotificationAnimationType} from '../../types/notification-animation-type.enum';
-import {NotificationType} from '../../types/notification-type.enum';
-import {Notification} from '../../types/notification.type';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DEFAULT_ICONS } from '../../constants/default-icons.const';
+import { NotificationCenterService } from '../../notification-center.service';
+import { NotificationAnimationType } from '../../types/notification-animation-type.enum';
+import { NotificationType } from '../../types/notification-type.enum';
+import { Notification } from '../../types/notification.type';
 
 @Component({
   selector: 'b2p-base-notification',
@@ -14,62 +14,62 @@ import {Notification} from '../../types/notification.type';
     trigger('enterLeave', [
 
       // Fade
-      state('fade', style({opacity: 1})),
+      state('fade', style({ opacity: 1 })),
       transition('* => fade', [
-        style({opacity: 0}),
+        style({ opacity: 0 }),
         animate('400ms ease-in-out')
       ]),
-      state('fadeOut', style({opacity: 0})),
+      state('fadeOut', style({ opacity: 0 })),
       transition('fade => fadeOut', [
-        style({opacity: 1}),
+        style({ opacity: 1 }),
         animate('300ms ease-in-out')
       ]),
 
       // Enter from top
-      state('fromTop', style({opacity: 1, transform: 'translateY(0)'})),
+      state('fromTop', style({ opacity: 1, transform: 'translateY(0)' })),
       transition('* => fromTop', [
-        style({opacity: 0, transform: 'translateY(-5%)'}),
+        style({ opacity: 0, transform: 'translateY(-5%)' }),
         animate('400ms ease-in-out')
       ]),
-      state('fromTopOut', style({opacity: 0, transform: 'translateY(5%)'})),
+      state('fromTopOut', style({ opacity: 0, transform: 'translateY(5%)' })),
       transition('fromTop => fromTopOut', [
-        style({opacity: 1, transform: 'translateY(0)'}),
+        style({ opacity: 1, transform: 'translateY(0)' }),
         animate('300ms ease-in-out')
       ]),
 
       // Enter from right
-      state('fromRight', style({opacity: 1, transform: 'translateX(0)'})),
+      state('fromRight', style({ opacity: 1, transform: 'translateX(0)' })),
       transition('* => fromRight', [
-        style({opacity: 0, transform: 'translateX(5%)'}),
+        style({ opacity: 0, transform: 'translateX(5%)' }),
         animate('400ms ease-in-out')
       ]),
-      state('fromRightOut', style({opacity: 0, transform: 'translateX(-5%)'})),
+      state('fromRightOut', style({ opacity: 0, transform: 'translateX(-5%)' })),
       transition('fromRight => fromRightOut', [
-        style({opacity: 1, transform: 'translateX(0)'}),
+        style({ opacity: 1, transform: 'translateX(0)' }),
         animate('300ms ease-in-out')
       ]),
 
       // Enter from bottom
-      state('fromBottom', style({opacity: 1, transform: 'translateY(0)'})),
+      state('fromBottom', style({ opacity: 1, transform: 'translateY(0)' })),
       transition('* => fromBottom', [
-        style({opacity: 0, transform: 'translateY(5%)'}),
+        style({ opacity: 0, transform: 'translateY(5%)' }),
         animate('400ms ease-in-out')
       ]),
-      state('fromBottomOut', style({opacity: 0, transform: 'translateY(-5%)'})),
+      state('fromBottomOut', style({ opacity: 0, transform: 'translateY(-5%)' })),
       transition('fromBottom => fromBottomOut', [
-        style({opacity: 1, transform: 'translateY(0)'}),
+        style({ opacity: 1, transform: 'translateY(0)' }),
         animate('300ms ease-in-out')
       ]),
 
       // Enter from left
-      state('fromLeft', style({opacity: 1, transform: 'translateX(0)'})),
+      state('fromLeft', style({ opacity: 1, transform: 'translateX(0)' })),
       transition('* => fromLeft', [
-        style({opacity: 0, transform: 'translateX(-5%)'}),
+        style({ opacity: 0, transform: 'translateX(-5%)' }),
         animate('400ms ease-in-out')
       ]),
-      state('fromLeftOut', style({opacity: 0, transform: 'translateX(5%)'})),
+      state('fromLeftOut', style({ opacity: 0, transform: 'translateX(5%)' })),
       transition('fromLeft => fromLeftOut', [
-        style({opacity: 1, transform: 'translateX(0)'}),
+        style({ opacity: 1, transform: 'translateX(0)' }),
         animate('300ms ease-in-out')
       ])
     ])
@@ -86,7 +86,7 @@ export class BaseNotificationComponent implements OnInit, OnDestroy {
   @Input() animate: NotificationAnimationType;
   @Input() item: Notification;
 
-  closeIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.close);
+  closeIcons!: SafeHtml;
   title: string | SafeHtml;
   content: string | SafeHtml;
 
@@ -94,7 +94,9 @@ export class BaseNotificationComponent implements OnInit, OnDestroy {
     private notificationService: NotificationCenterService,
     private domSanitizer: DomSanitizer,
     private cd: ChangeDetectorRef
-  ) {}
+  ) {
+    this.closeIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.close);
+  }
 
   ngOnInit(): void {
     if (this.animate) {

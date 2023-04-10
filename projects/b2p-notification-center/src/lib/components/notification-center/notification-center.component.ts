@@ -8,18 +8,19 @@ import {
   Output,
   ViewEncapsulation,
   ChangeDetectorRef,
-  ViewRef} from '@angular/core';
-import {Subscription} from 'rxjs';
-import {NotificationAnimationType} from '../../types/notification-animation-type.enum';
-import {Notification} from '../../types/notification.type';
-import {NotificationOptions, Position} from '../../types/notification-options.type';
-import {NotificationCenterService} from '../../notification-center.service';
-import {NotificationType} from '../../types/notification-type.enum';
-import {NotificationEvent} from '../../types/notification-event.type';
-import {Color} from '../../types/color.type';
-import {DEFAULT_ICONS, getIcon} from '../../constants/default-icons.const';
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {UiButtonConfig, UI_BUTTON_ICON_STYLE, UI_BUTTON_STYLES, UI_BUTTON_THEMES, UI_BUTTON_VARIANTS} from '../button/button.component';
+  ViewRef
+} from '@angular/core';
+import { Subscription } from 'rxjs';
+import { NotificationAnimationType } from '../../types/notification-animation-type.enum';
+import { Notification } from '../../types/notification.type';
+import { NotificationOptions, Position } from '../../types/notification-options.type';
+import { NotificationCenterService } from '../../notification-center.service';
+import { NotificationType } from '../../types/notification-type.enum';
+import { NotificationEvent } from '../../types/notification-event.type';
+import { Color } from '../../types/color.type';
+import { DEFAULT_ICONS, getIcon } from '../../constants/default-icons.const';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { UiButtonConfig, UI_BUTTON_ICON_STYLE, UI_BUTTON_STYLES, UI_BUTTON_VARIANTS } from '../button/button.component';
 
 @Component({
   selector: 'b2p-notification-center',
@@ -29,14 +30,13 @@ import {UiButtonConfig, UI_BUTTON_ICON_STYLE, UI_BUTTON_STYLES, UI_BUTTON_THEMES
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NotificationCenterComponent implements OnInit, OnDestroy {
-
   @Output() create = new EventEmitter();
   @Output() destroy = new EventEmitter();
 
   // errorIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.error);
   // warningIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.warning);
   // infoIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.info);
-  upIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.up);
+  upIcons: SafeHtml;
   notificationType = NotificationType;
   notifications: Array<Notification> = [];
   position: Position = ['bottom', 'right'];
@@ -79,7 +79,9 @@ export class NotificationCenterComponent implements OnInit, OnDestroy {
     private service: NotificationCenterService,
     private domSanitizer: DomSanitizer,
     private cd: ChangeDetectorRef
-  ) {}
+  ) {
+    this.upIcons = this.domSanitizer.bypassSecurityTrustHtml(DEFAULT_ICONS.up);
+  }
 
   @Input() set options(opt: NotificationOptions) {
     this.usingComponentOptions = true;

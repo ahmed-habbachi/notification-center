@@ -1,0 +1,22 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1681110613427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681110792981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\r\n   \"name\": \"notification-center-demo\",\r\n-  \"version\": \"1.2.0\",\r\n+  \"version\": \"1.3.0\",\r\n   \"scripts\": {\r\n     \"ng\": \"ng\",\r\n     \"start\": \"ng serve notification-center-demo\",\r\n     \"build:lib:watch\": \"ng build b2p-notification-center --watch\",\r\n"
+                }
+            ],
+            "date": 1681110613427,
+            "name": "Commit-0",
+            "content": "{\r\n  \"name\": \"notification-center-demo\",\r\n  \"version\": \"1.2.0\",\r\n  \"scripts\": {\r\n    \"ng\": \"ng\",\r\n    \"start\": \"ng serve notification-center-demo\",\r\n    \"build:lib:watch\": \"ng build b2p-notification-center --watch\",\r\n    \"build:lib\": \"ng build b2p-notification-center --configuration production\",\r\n    \"build:demo\": \"ng build notification-center-demo\",\r\n    \"test\": \"ng test b2p-notification-center\",\r\n    \"test:ci\": \"ng test b2p-notification-center --browsers=ChromeHeadlessCI --watch=false\",\r\n    \"lint\": \"ng lint b2p-notification-center\",\r\n    \"e2e\": \"ng e2e b2p-notification-center\",\r\n    \"lib:package\": \"cd dist/b2p-notification-center && npm pack\"\r\n  },\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@angular/animations\": \"^15.2.6\",\r\n    \"@angular/common\": \"^15.2.6\",\r\n    \"@angular/compiler\": \"^15.2.6\",\r\n    \"@angular/core\": \"^15.2.6\",\r\n    \"@angular/forms\": \"^15.2.6\",\r\n    \"@angular/platform-browser\": \"^15.2.6\",\r\n    \"@angular/platform-browser-dynamic\": \"^15.2.6\",\r\n    \"@angular/router\": \"^15.2.6\",\r\n    \"ngx-markdown\": \"^15.1.2\",\r\n    \"rxjs\": \"~7.8.0\",\r\n    \"tslib\": \"^2.5.0\",\r\n    \"zone.js\": \"~0.13.0\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@angular-devkit/build-angular\": \"^15.2.5\",\r\n    \"@angular-eslint/builder\": \"15.2.1\",\r\n    \"@angular-eslint/eslint-plugin\": \"15.2.1\",\r\n    \"@angular-eslint/eslint-plugin-template\": \"15.2.1\",\r\n    \"@angular-eslint/schematics\": \"15.2.1\",\r\n    \"@angular-eslint/template-parser\": \"15.2.1\",\r\n    \"@angular/cli\": \"^15.2.5\",\r\n    \"@angular/compiler-cli\": \"^15.2.6\",\r\n    \"@types/jasmine\": \"~4.3.1\",\r\n    \"@types/jasminewd2\": \"~2.0.10\",\r\n    \"@types/node\": \"^18.15.11\",\r\n    \"@typescript-eslint/eslint-plugin\": \"5.57.1\",\r\n    \"@typescript-eslint/parser\": \"5.57.1\",\r\n    \"eslint\": \"^8.38.0\",\r\n    \"eslint-plugin-import\": \"latest\",\r\n    \"eslint-plugin-jsdoc\": \"latest\",\r\n    \"eslint-plugin-prefer-arrow\": \"latest\",\r\n    \"jasmine-core\": \"~4.6.0\",\r\n    \"jasmine-spec-reporter\": \"~7.0.0\",\r\n    \"karma\": \"~6.4.1\",\r\n    \"karma-chrome-launcher\": \"~3.1.1\",\r\n    \"karma-coverage-istanbul-reporter\": \"~3.0.3\",\r\n    \"karma-jasmine\": \"~5.1.0\",\r\n    \"karma-jasmine-html-reporter\": \"^2.0.0\",\r\n    \"ng-packagr\": \"^15.2.2\",\r\n    \"protractor\": \"~7.0.0\",\r\n    \"ts-node\": \"~10.9.1\",\r\n    \"typescript\": \"~4.9.5\"\r\n  }\r\n}"
+        }
+    ]
+}

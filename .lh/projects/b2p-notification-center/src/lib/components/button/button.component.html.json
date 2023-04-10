@@ -1,0 +1,18 @@
+{
+    "sourceFile": "projects/b2p-notification-center/src/lib/components/button/button.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1681114942261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1681114942261,
+            "name": "Commit-0",
+            "content": "<button [ngClass]=\"{\r\n\t'active': active,\r\n\t'wiggle-1': wiggle(0),\r\n\t'wiggle-2': wiggle(1)\r\n\t}\" class=\"ui-button ui-button--{{config.buttonVariant}} ui-button--{{config.buttonTheme}} ui-button--{{config.buttonStyle}}\"\r\n\t(click)=\"onClick()\">\r\n\t<span *ngIf=\"config.buttonLabel\" class=\"ui-button__label\">{{config.buttonLabel}}</span>\r\n\t<i *ngIf=\"currentIconName\" class=\"ui-button__icon {{currentIconStyle}} fa-{{currentIconName}}\"></i>\r\n\t<div *ngIf=\"!currentIconName && currentIconSVG\" class=\"ui-button__icon {{currentIconStyle}}\"\r\n\t\t[innerHTML]=\"currentIconSVG\"></div>\r\n\t<div *ngIf=\"badged && !active\" class=\"notification-badge\">{{badged}}</div>\r\n</button>"
+        }
+    ]
+}
