@@ -1,14 +1,13 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import SpyObj = jasmine.SpyObj;
-import {BaseNotificationComponent} from './base-notification.component';
-import {Notification} from '../../types/notification.type';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DomSanitizer} from '@angular/platform-browser';
-import {NotificationType} from '../../types/notification-type.enum';
-import {NotificationAnimationType} from '../../types/notification-animation-type.enum';
-import {NotificationCenterService} from '../../notification-center.service';
-import {OPTIONS, optionsFactory} from '../../notification-center.module';
+import { BaseNotificationComponent } from './base-notification.component';
+import { Notification } from '../../types/notification.type';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DomSanitizer } from '@angular/platform-browser';
+import { NotificationType } from '../../types/notification-type.enum';
+import { NotificationAnimationType } from '../../types/notification-animation-type.enum';
+import { NotificationCenterService } from '../../notification-center.service';
+import { OPTIONS, optionsFactory } from '../../notification-center.module';
 
 describe('BaseNotificationComponent', () => {
   let component: BaseNotificationComponent;

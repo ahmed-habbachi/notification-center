@@ -6,7 +6,8 @@
 						'blink': !item.isTouched
         }">
 	<span (click)="onClose()">
-		<div class="icon close_icon" [ngClass]="item.type === 'warning' ? 'black' : 'white'" [innerHTML]="closeIcons"></div>
+		<div class="icon close_icon" [ngClass]="item.type === 'warning' ? 'black' : 'white'" [innerHTML]="closeIcons">
+		</div>
 	</span>
 	<div class="vgbn-body">
 		<div class="vgbn-title">

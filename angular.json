@@ -100,10 +100,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/notification-center-demo/src/test.ts",
-            "polyfills": "projects/notification-center-demo/src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "projects/notification-center-demo/tsconfig.spec.json",
             "karmaConfig": "projects/notification-center-demo/karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/notification-center-demo/src/favicon.ico",
               "projects/notification-center-demo/src/assets"
@@ -158,9 +161,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/b2p-notification-center/src/test.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "projects/b2p-notification-center/tsconfig.spec.json",
-            "karmaConfig": "projects/b2p-notification-center/karma.conf.js"
+            "karmaConfig": "projects/b2p-notification-center/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "scripts": []
           }
         },
         "lint": {

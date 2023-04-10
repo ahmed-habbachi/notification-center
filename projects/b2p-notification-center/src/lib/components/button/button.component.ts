@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {BehaviorSubject, Subject, Subscription} from 'rxjs';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { BehaviorSubject, Subject, Subscription } from 'rxjs';
 
 export const enum UI_BUTTON_VARIANTS {
   SIMPLE = 'simple',
@@ -54,9 +54,9 @@ export interface UiButtonConfig {
   tooltipActive?: string;
   tooltipTheme?: string;
   tooltipOrientation?: string;
-  active$?: BehaviorSubject<boolean | undefined>;
-  clicked$?: Subject<never>;
-  onClick?;
+  active$?: BehaviorSubject<boolean>;
+  clicked$?: Subject<string>;
+  onClick?: any;
   onClick2?: (active: boolean) => void;
 }
 
@@ -69,19 +69,21 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
 
   // PROPERTIES /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  @Input() config: UiButtonConfig;
-  @Input() badged: boolean | number;
+  @Input()
+  config!: UiButtonConfig;
+  @Input()
+  badged!: boolean | number;
 
   active = false;
 
-  currentIconStyle: string;
-  currentIconName: string;
-  currentIconSVG: SafeHtml;
-  currentTooltip: string;
+  currentIconStyle!: string;
+  currentIconName!: string;
+  currentIconSVG!: SafeHtml;
+  currentTooltip!: string;
 
-  activeSubscription: Subscription;
+  activeSubscription!: Subscription;
 
-  constructor(private domSanitizer: DomSanitizer) {}
+  constructor(private domSanitizer: DomSanitizer) { }
 
   get isToggleButton(): boolean {
     return this.config.buttonVariant === UI_BUTTON_VARIANTS.TOGGLE;
@@ -94,7 +96,7 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
   @Input()
   public set isActive(value: boolean) {
     if (value !== this.active) {
-      this.toggleStatus({propagate: false});
+      this.toggleStatus({ propagate: false });
     }
   }
 
@@ -125,7 +127,7 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
 
     this.activeSubscription = this.config.active$.subscribe(active => {
       if (active !== undefined && active !== this.active) {
-        this.toggleStatus({propagate: false});
+        this.toggleStatus({ propagate: false });
       }
     });
   }
@@ -138,7 +140,7 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
 
   // •◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦•◦
 
-  toggleStatus({propagate = true} = {}): void {
+  toggleStatus({ propagate = true } = {}): void {
 
     this.active = !this.active;
 
@@ -166,8 +168,7 @@ export class B2PButtonComponent implements OnInit, OnDestroy {
   onClick(): void {
 
     if (this.config.clicked$) {
-
-      this.config.clicked$.next();
+      this.config.clicked$.next('');
 
       if (this.isToggleButton) {
         this.toggleStatus();

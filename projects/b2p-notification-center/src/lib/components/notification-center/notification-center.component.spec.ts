@@ -1,12 +1,12 @@
-import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {NotificationCenterComponent} from './notification-center.component';
-import {StubBaseNotificationComponent} from '../base-notification/base-notification.component.stub';
-import {NotificationCenterService} from '../../notification-center.service';
-import {OPTIONS, optionsFactory} from '../../notification-center.module';
-import {Notification} from '../../types/notification.type';
-import {NotificationType} from '../../types/notification-type.enum';
-import {NotificationAnimationType} from '../../types/notification-animation-type.enum';
-import {Color} from '../../types/color.type';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NotificationCenterComponent } from './notification-center.component';
+import { StubBaseNotificationComponent } from '../base-notification/base-notification.component.stub';
+import { NotificationCenterService } from '../../notification-center.service';
+import { OPTIONS, optionsFactory } from '../../notification-center.module';
+import { Notification } from '../../types/notification.type';
+import { NotificationType } from '../../types/notification-type.enum';
+import { NotificationAnimationType } from '../../types/notification-animation-type.enum';
+import { Color } from '../../types/color.type';
 
 describe('NotificationCenterComponent', () => {
   let component: NotificationCenterComponent;
@@ -35,7 +35,8 @@ describe('NotificationCenterComponent', () => {
           provide: 'options',
           useFactory: optionsFactory,
           deps: [OPTIONS]
-        }]
+        }
+      ],
     })
       .compileComponents();
   }));

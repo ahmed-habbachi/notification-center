@@ -2,9 +2,11 @@
 	'active': active,
 	'wiggle-1': wiggle(0),
 	'wiggle-2': wiggle(1)
-	}" class="ui-button ui-button--{{config.buttonVariant}} ui-button--{{config.buttonTheme}} ui-button--{{config.buttonStyle}}" (click)="onClick()">
-  <span *ngIf="config.buttonLabel" class="ui-button__label">{{config.buttonLabel}}</span>
-    <i *ngIf="currentIconName" class="ui-button__icon {{currentIconStyle}} fa-{{currentIconName}}"></i>
-    <div *ngIf="!currentIconName && currentIconSVG" class="ui-button__icon {{currentIconStyle}}" [innerHTML]="currentIconSVG"></div>
+	}" class="ui-button ui-button--{{config.buttonVariant}} ui-button--{{config.buttonTheme}} ui-button--{{config.buttonStyle}}"
+	(click)="onClick()">
+	<span *ngIf="config.buttonLabel" class="ui-button__label">{{config.buttonLabel}}</span>
+	<i *ngIf="currentIconName" class="ui-button__icon {{currentIconStyle}} fa-{{currentIconName}}"></i>
+	<div *ngIf="!currentIconName && currentIconSVG" class="ui-button__icon {{currentIconStyle}}"
+		[innerHTML]="currentIconSVG"></div>
 	<div *ngIf="badged && !active" class="notification-badge">{{badged}}</div>
 </button>
